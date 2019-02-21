@@ -27,6 +27,7 @@ composer.lock
 
 # Custom extensions
 /public/extensions/custom/*/*
+!/public/extensions/custom/exceptions/*
 
 ##  Auth
 /public/extensions/custom/auth
@@ -41,6 +42,7 @@ composer.lock
 ##  Hooks
 !/public/extensions/custom/hooks/_products
 !/public/extensions/custom/hooks/_webhook
+!/public/extensions/custom/hooks/feedback
 
 # Storage
 /public/uploads/*/
