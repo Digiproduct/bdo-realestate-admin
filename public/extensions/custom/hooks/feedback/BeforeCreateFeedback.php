@@ -31,7 +31,7 @@ class BeforeCreateFeedback implements HookInterface
         $validator = Validation::createValidator();
         $hebrewPattern = '/\p{Hebrew}+/u';
 
-        $firstNameError = 'First name should contain hebrew characters';
+        $firstNameError = 'נא לכתוב שם בעברית בלבד';
         $violations = $validator->validate($payload->get('first_name'), [
             new NotBlank([
                 'message' => $firstNameError,
@@ -46,7 +46,7 @@ class BeforeCreateFeedback implements HookInterface
             throw new UnprocessableFirstNameException($violations[0]->getMessage());
         }
 
-        $lastNameError = 'Last name should contain hebrew characters';
+        $lastNameError = 'נא לכתוב שם משפחה בעברית בלבד';
         $violations = $validator->validate($payload->get('last_name'), [
             new NotBlank([
                 'message' => $lastNameError,
@@ -72,10 +72,10 @@ class BeforeCreateFeedback implements HookInterface
                 $phoneUtil->format($numberProto, PhoneNumberFormat::E164)
             );
         } catch (NumberParseException $e) {
-            throw new UnprocessablePhoneException($e->getMessage());
+            throw new UnprocessablePhoneException('נא להזין מספר טלפון תקין');
         }
 
-        $emailError = 'This value is not a valid email address.';
+        $emailError = 'נא להזין כתובת מייל תקינה';
         $violations = $validator->validate($payload->get('email'), [
             new NotBlank([
                 'message' => $emailError,
@@ -95,7 +95,7 @@ class BeforeCreateFeedback implements HookInterface
             $violations = $validator->validate($payload->get('details'), [
                 new Length([
                     'max' => 400,
-                    'maxMessage' => 'This value cannot be large than 400 chars.',
+                    'maxMessage' => 'ניתן להזין עד 400 תווים',
                 ]),
             ]);
             if (count($violations) !== 0) {
