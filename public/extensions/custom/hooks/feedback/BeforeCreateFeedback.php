@@ -36,6 +36,10 @@ class BeforeCreateFeedback implements HookInterface
             new NotBlank([
                 'message' => $firstNameError,
             ]),
+            new Length([
+                'max' => 50,
+                'maxMessage' => $firstNameError,
+            ]),
             new Regex([
                 'pattern' => $hebrewPattern,
                 'message' => $firstNameError,
@@ -50,6 +54,10 @@ class BeforeCreateFeedback implements HookInterface
         $violations = $validator->validate($payload->get('last_name'), [
             new NotBlank([
                 'message' => $lastNameError,
+            ]),
+            new Length([
+                'max' => 50,
+                'maxMessage' => $lastNameError,
             ]),
             new Regex([
                 'pattern' => $hebrewPattern,
