@@ -43,6 +43,7 @@ composer.lock
 !/public/extensions/custom/hooks/_products
 !/public/extensions/custom/hooks/_webhook
 !/public/extensions/custom/hooks/feedback
+!/public/extensions/custom/hooks/profiles
 
 # Storage
 /public/uploads/*/
