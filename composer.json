@@ -39,7 +39,8 @@
     "ext-mbstring": "*",
     "ext-openssl": "*",
     "ext-gd": "*",
-    "giggsey/libphonenumber-for-php": "^8.10"
+    "giggsey/libphonenumber-for-php": "^8.10",
+    "league/csv": "^9.1"
   },
   "require-dev": {
     "phpunit/phpunit": "^5.7.25"
@@ -56,10 +57,20 @@
       "Directus\\Custom\\Embed\\Provider\\": "public/extensions/custom/embeds/",
       "Directus\\Custom\\Hooks\\": "public/extensions/custom/hooks/",
       "Directus\\Custom\\Hasher\\": "public/extensions/custom/hashers/",
-      "Directus\\Custom\\Exceptions\\": "public/extensions/custom/exceptions/"
+      "Directus\\Custom\\Exceptions\\": "public/extensions/custom/exceptions/",
+      "Directus\\Custom\\Parsers\\": "public/extensions/custom/parsers/"
     },
     "files": [
       "src/helpers/all.php"
     ]
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Directus\\Custom\\Parsers\\": "tests/extensions/custom/parsers/"
+    }
+  },
+  "scripts": {
+    "test": "phpunit",
+    "test-parsers": "phpunit --testsuite parsers"
   }
 }
