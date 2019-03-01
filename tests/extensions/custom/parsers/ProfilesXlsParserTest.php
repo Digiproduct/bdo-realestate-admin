@@ -3,25 +3,25 @@
 namespace Directus\Custom\Parsers;
 
 use PHPUnit\Framework\TestCase;
-use Directus\Custom\Parsers\ProfilesCsvParser;
+use Directus\Custom\Parsers\ProfilesXlsParser;
 
 /**
- * @coversDefaultClass \Directus\Custom\Parsers\ProfilesCsvParser
+ * @coversDefaultClass \Directus\Custom\Parsers\ProfilesXlsParser
  */
-class ProfilesCsvParserTest extends TestCase {
+class ProfilesXlsParserTest extends TestCase {
 
     /**
-     * Tests parse method of ProfilesCsvParser
+     * Tests parse method of ProfilesXlsParser
      *
      * @covers ::parse
-     * @dataProvider provideCsvFiles
+     * @dataProvider provideXlsFiles
      */
     public function testParse(
         $filePath,
         $expectedStartFiveRecords,
         $expectedLastFiveRecords
     ) {
-        $resultedArray = ProfilesCsvParser::parse($filePath);
+        $resultedArray = ProfilesXlsParser::parse($filePath);
         $this->assertCount(53, $resultedArray);
         $startFiveRecords = array_slice($resultedArray, 0, 5);
         $endFiveRecords = array_slice($resultedArray, -5);
@@ -29,7 +29,7 @@ class ProfilesCsvParserTest extends TestCase {
         $this->assertEquals($expectedLastFiveRecords, $endFiveRecords);
     }
 
-    public function provideCsvFiles()
+    public function provideXlsFiles()
     {
         $firstFiveRecords = [
             [
@@ -199,17 +199,7 @@ class ProfilesCsvParserTest extends TestCase {
 
         return [
             [
-                __DIR__ . '/profiles_utf8.csv',
-                $firstFiveRecords,
-                $lastFiveRecords,
-            ],
-            [
-                __DIR__ . '/profiles_utf8_update.csv',
-                $firstFiveRecords,
-                $lastFiveRecords,
-            ],
-            [
-                __DIR__ . '/profiles_win1255.csv',
+                __DIR__ . '/profiles_openoffice.xls',
                 $firstFiveRecords,
                 $lastFiveRecords,
             ],
