@@ -104,17 +104,22 @@ class BaseXlsParser
                     switch ($dataType) {
                         case XlsParserHeading::TYPE_DATE:
                             if (Date::isDateTime($cell)) {
-                                $dateTime = Date::excelToDateTimeObject($cell->getValue());
+                                $excelDateValue = ($cell->isFormula) ? trim($cell->getCalculatedValue()) : $cell->getValue();
+                                $dateTime = Date::excelToDateTimeObject($excelDateValue);
                                 $value = $dateTime->format('Y-m-d');
                                 break;
                             }
-                            $value = trim($cell->getValue());
+                            $value = ($cell->isFormula) ? trim($cell->getCalculatedValue()) : trim($cell->getValue());
                             break;
                         case XlsParserHeading::TYPE_BOOLEAN:
                             $value = !empty(trim($cell->getValue()));
                             break;
                         default:
-                            $value = trim($cell->getValue());
+                            if ($cell->isFormula()) {
+                                $value = trim($cell->getCalculatedValue());
+                            } else {
+                                $value = trim($cell->getValue());
+                            }
                     }
 
                     if (!empty($value)) {
@@ -126,12 +131,24 @@ class BaseXlsParser
                 }
 
                 if (!$recordIsEmpty) {
-                    $result[] = $record;
+                    $result[] = $this->postProcessRecord($record);
                 }
             }
         }
 
         return $result;
+    }
+
+    /**
+     * Process each parsed record when needed.
+     *
+     * @param array $record Record
+     *
+     * @return array
+     */
+    protected function postProcessRecord($record)
+    {
+        return $record;
     }
 
     /**
@@ -149,10 +166,12 @@ class BaseXlsParser
             $cellIterator = $column->getCellIterator();
             $cellIterator->setIterateOnlyExistingCells(TRUE);
             foreach ($cellIterator as $cell) {
-                $value = $cell->getValue();
+                $value = trim(strval($cell->getValue()));
                 if (in_array($value, $headingNames, true) || in_array($value, $headingAliases, true)) {
                     foreach($xlsParserHeadings as $heading) {
-                        if ($heading->getHeadingName() === $value || $heading->getHeadingAlias() === $value) {
+                        $headingName = $heading->getHeadingName();
+                        $headingAlias = ($heading->getHeadingAlias()) ? $heading->getHeadingAlias() : null;
+                        if ($headingName === $value || $headingAlias === $value) {
                             $heading->addCellCoordinate($cell->getCoordinate());
                         }
                     }
