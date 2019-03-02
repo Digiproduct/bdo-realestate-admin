@@ -81,11 +81,20 @@ class BaseXlsParser
                     $columnIndex = Coordinate::columnIndexFromString($column);
                     $cell = $sheet->getCellByColumnAndRow($columnIndex, $row->getRowIndex());
                     $value = null;
-                    if (Date::isDateTime($cell) && $dataType === XlsParserHeading::TYPE_DATE) {
-                        // datetime value
-                        $value = Date::excelToDateTimeObject($cell->getValue())->format('Y-m-d');
-                    } else {
-                        $value = trim($cell->getValue());
+                    switch ($dataType) {
+                        case XlsParserHeading::TYPE_DATE:
+                            if (Date::isDateTime($cell)) {
+                                $dateTime = Date::excelToDateTimeObject($cell->getValue());
+                                $value = $dateTime->format('Y-m-d');
+                                break;
+                            }
+                            $value = trim($cell->getValue());
+                            break;
+                        case XlsParserHeading::TYPE_BOOLEAN:
+                            $value = !empty(trim($cell->getValue()));
+                            break;
+                        default:
+                            $value = trim($cell->getValue());
                     }
 
                     if (!empty($value)) {

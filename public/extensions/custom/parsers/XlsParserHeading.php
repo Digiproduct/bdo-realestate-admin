@@ -20,6 +20,9 @@ final class XlsParserHeading
     /* @var string String data type */
     const TYPE_STRING = 'string';
 
+    /* @var string Boolean data type */
+    const TYPE_BOOLEAN = 'bool';
+
     /* @var string Heading name */
     protected $headingName;
 
@@ -54,7 +57,7 @@ final class XlsParserHeading
             $this->headingAlias = $headingAlias;
         }
 
-        $invalidDataTypeMessage = '\$dataType argument must be one of \'date\', \'int\', \'string\' or NULL';
+        $invalidDataTypeMessage = '\$dataType argument must be one of \'date\', \'int\', \'string\', \'bool\' or NULL';
         if ($dataType !== null && !is_string($dataType)) {
             throw new InvalidArgumentException($invalidDataTypeMessage);
         }
@@ -62,6 +65,7 @@ final class XlsParserHeading
         switch ($dataType) {
             case self::TYPE_DATE:
             case self::TYPE_INTEGER:
+            case self::TYPE_BOOLEAN:
                 $this->dataType = $dataType;
                 break;
             case self::TYPE_STRING:
