@@ -93,7 +93,7 @@ class ConstructionProgressXlsParserTest extends TestCase {
 
         return [
             [
-                __DIR__ . '/construction_progress_openoffice.xls',
+                __DIR__ . '/files/construction_progress_openoffice.xls',
                 $records,
             ],
         ];

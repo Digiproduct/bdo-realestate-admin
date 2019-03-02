@@ -200,7 +200,7 @@ class ProfilesXlsParserTest extends TestCase {
 
         return [
             [
-                __DIR__ . '/profiles_openoffice.xls',
+                __DIR__ . '/files/profiles_openoffice.xls',
                 $firstFiveRecords,
                 $lastFiveRecords,
             ],
