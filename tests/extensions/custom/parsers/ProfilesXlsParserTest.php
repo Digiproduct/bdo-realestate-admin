@@ -21,7 +21,8 @@ class ProfilesXlsParserTest extends TestCase {
         $expectedStartFiveRecords,
         $expectedLastFiveRecords
     ) {
-        $resultedArray = ProfilesXlsParser::parse($filePath);
+        $parser = new ProfilesXlsParser();
+        $resultedArray = $parser->parse($filePath);
         $this->assertCount(53, $resultedArray);
         $startFiveRecords = array_slice($resultedArray, 0, 5);
         $endFiveRecords = array_slice($resultedArray, -5);
