@@ -5,6 +5,8 @@ namespace Directus\Custom\Parsers;
 use PhpOffice\PhpSpreadsheet\IOFactory;
 use PhpOffice\PhpSpreadsheet\Shared\Date;
 use PhpOffice\PhpSpreadsheet\Worksheet\Worksheet;
+use PhpOffice\PhpSpreadsheet\Worksheet\Row;
+use PhpOffice\PhpSpreadsheet\Worksheet\Column;
 use PhpOffice\PhpSpreadsheet\Cell\Coordinate;
 use PhpOffice\PhpSpreadsheet\Exception as PhpOfficeException;
 use Directus\Custom\Parsers\XlsParserHeading;
@@ -18,7 +20,7 @@ class BaseXlsParser
     /**
      * Class constructor
      *
-     * @param XlsParserHeadings[] $xlsParserHeadings
+     * @param XlsParserHeadings[] $xlsParserHeadings Array with headings
      *
      * @throws InvalidArgumentException
      */
@@ -43,20 +45,38 @@ class BaseXlsParser
     /**
      * Parse spreadsheet data.
      *
-     * @param string $filePath path to file
+     * @param string $filePath Path to file
+     * @param array  $options  Assoc array with options
      *
      * @return array
      */
-    public function parse($filePath, $spreadsheetIndex = 0)
+    public function parse($filePath, $options = null)
     {
         $result = [];
 
+        // prepare parsing options
+        $options = (is_array($options)) ? $options : [];
+        $options = array_merge([
+            'spreadsheetIndex' => 0,
+            'parseHiddenCells' => false,
+            'parseCollapsedCells' => false,
+        ], $options);
+
         $xls = IOFactory::load($filePath);
-        $xls->setActiveSheetIndex($spreadsheetIndex);
+        $xls->setActiveSheetIndex($options['spreadsheetIndex']);
         $sheet = $xls->getActiveSheet();
 
+        // clear hidden and collapsed columns/rows
+        if ($options['parseHiddenCells'] === false) {
+            $this->clearHiddenColumnsAndRows($sheet);
+        }
+
+        if ($options['parseCollapsedCells'] === false) {
+            $this->clearCollapsedColumnsAndRows($sheet);
+        }
+
         // search headings
-        $this->headings = $this->findHeadingsInSpreadsheet($this->headings, $sheet);
+        $this->findHeadingsInSpreadsheet($this->headings, $sheet);
 
         // find rows where headings presented
         $headingRows = $this->getHeadingRows($this->headings);
@@ -117,10 +137,8 @@ class BaseXlsParser
     /**
      * Finds headings in spreadsheet cells.
      *
-     * @param XlsParserHeading[] Array with targeted headings
-     * @param Worksheet          Target spreadsheet
-     *
-     * @return XlsParserHeading[]
+     * @param XlsParserHeading[] $xlsParserHeadings Array with targeted headings
+     * @param Worksheet          $spreadsheet       Target spreadsheet
      */
     protected function findHeadingsInSpreadsheet(array $xlsParserHeadings, $spreadsheet)
     {
@@ -141,10 +159,15 @@ class BaseXlsParser
                 }
             }
         }
-
-        return $xlsParserHeadings;
     }
 
+    /**
+     * Returns all headings names as flat array.
+     *
+     * @param XlsParserHeading[] $xlsParserHeadings Array with targeted headings
+     *
+     * @return string[]
+     */
     protected function getAllHeadingNames(array $xlsParserHeadings)
     {
         $headingNames = [];
@@ -157,6 +180,13 @@ class BaseXlsParser
         return $headingNames;
     }
 
+    /**
+     * Returns all headings aliases as flat array.
+     *
+     * @param XlsParserHeading[] $xlsParserHeadings Array with targeted headings
+     *
+     * @return string[]
+     */
     protected function getAllHeadingAliases(array $xlsParserHeadings)
     {
         $headingAliases = [];
@@ -170,6 +200,14 @@ class BaseXlsParser
         return $headingAliases;
     }
 
+    /**
+     * Returns row indexes where headings exists.
+     * Indexes will be arranged from lowest to highest
+     *
+     * @param XlsParserHeading[] $xlsParserHeadings Array with targeted headings
+     *
+     * @return int[]
+     */
     protected function getHeadingRows(array $xlsParserHeadings)
     {
         $headingRows = [];
@@ -189,5 +227,80 @@ class BaseXlsParser
         sort($headingRows);
 
         return $headingRows;
+    }
+
+    /**
+     * Clears cells in hidden columns and rows.
+     *
+     * @param Worksheet $spreadsheet Target spreadsheet
+     */
+    protected function clearHiddenColumnsAndRows($spreadsheet)
+    {
+        $rowIndex = 1;
+        $highestRow = $spreadsheet->getHighestDataRow();
+        while ($highestRow >= $rowIndex) {
+            $rowDimension = $spreadsheet->getRowDimension($rowIndex);
+            if (!$rowDimension->getVisible()) {
+                $row = new Row($spreadsheet, $rowIndex);
+                $iterator = $row->getCellIterator();
+                foreach ($iterator as $cell) {
+                    $cell->setValue(NULL);
+                }
+            }
+            $rowIndex++;
+        }
+
+        $columnIndex = 1;
+        $highestColumn = Coordinate::columnIndexFromString($spreadsheet->getHighestDataColumn());
+        while ($highestColumn >= $columnIndex) {
+            $columnLiteral = Coordinate::stringFromColumnIndex($columnIndex);
+            $columnDimension = $spreadsheet->getColumnDimension($columnLiteral);
+            if (!$columnDimension->getVisible()) {
+                $column = new Column($spreadsheet, $columnLiteral);
+                $iterator = $column->getCellIterator();
+                foreach ($iterator as $cell) {
+                    $cell->setValue(NULL);
+                }
+            }
+            $columnIndex++;
+        }
+    }
+
+    /**
+     * Clears cells in collapsed columns and rows.
+     *
+     * @param Worksheet $spreadsheet Target spreadsheet
+     */
+    protected function clearCollapsedColumnsAndRows($spreadsheet)
+    {
+
+        $rowIndex = 1;
+        $highestRow = $spreadsheet->getHighestDataRow();
+        while ($highestRow >= $rowIndex) {
+            $rowDimension = $spreadsheet->getRowDimension($rowIndex);
+            if ($rowDimension->getCollapsed()) {
+                $row = new Row($spreadsheet, $rowIndex);
+                $iterator = $row->getCellIterator();
+                foreach ($iterator as $cell) {
+                    $cell->setValue(NULL);
+                }
+            }
+            $rowIndex++;
+        }
+
+        $columnIndex = 1;
+        $highestColumn = Coordinate::columnIndexFromString($spreadsheet->getHighestDataColumn());
+        while ($highestColumn >= $columnIndex) {
+            $columnLiteral = Coordinate::stringFromColumnIndex($columnIndex);
+            $columnDimension = $spreadsheet->getColumnDimension($columnLiteral);
+            if ($columnDimension->getCollapsed()) {
+                $column = new Column($spreadsheet, $columnLiteral);
+                $iterator = $column->getCellIterator();
+                foreach ($iterator as $cell) {
+                    $cell->setValue(NULL);
+                }
+            }
+            $columnIndex++;
+        }
     }
 }

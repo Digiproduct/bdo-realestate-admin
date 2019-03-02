@@ -96,6 +96,10 @@ class ConstructionProgressXlsParserTest extends TestCase {
                 __DIR__ . '/files/construction_progress_openoffice.xls',
                 $records,
             ],
+            [
+                __DIR__ . '/files/construction_progress_hidden_rows.xlsx',
+                $records,
+            ],
         ];
     }
 }
