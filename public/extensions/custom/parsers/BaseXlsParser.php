@@ -8,6 +8,7 @@ use PhpOffice\PhpSpreadsheet\Worksheet\Worksheet;
 use PhpOffice\PhpSpreadsheet\Worksheet\Row;
 use PhpOffice\PhpSpreadsheet\Worksheet\Column;
 use PhpOffice\PhpSpreadsheet\Cell\Coordinate;
+use PhpOffice\PhpSpreadsheet\Style\NumberFormat;
 use PhpOffice\PhpSpreadsheet\Exception as PhpOfficeException;
 use Directus\Custom\Parsers\XlsParserHeading;
 use InvalidArgumentException;
@@ -94,39 +95,24 @@ class BaseXlsParser
                 $recordIsEmpty = true;
 
                 foreach ($currentHeadings as $heading) {
-                    $dataKey = $heading->getHeadingName();
-                    $dataType = $heading->getDataType();
-                    $cellCoordinate = $heading->getCellCoordinatesByRow($headingRowIndex)[0];
-                    list($column) = Coordinate::coordinateFromString($cellCoordinate);
-                    $columnIndex = Coordinate::columnIndexFromString($column);
-                    $cell = $sheet->getCellByColumnAndRow($columnIndex, $row->getRowIndex());
-                    $value = null;
-                    switch ($dataType) {
-                        case XlsParserHeading::TYPE_DATE:
-                            if (Date::isDateTime($cell)) {
-                                $excelDateValue = ($cell->isFormula) ? trim($cell->getCalculatedValue()) : $cell->getValue();
-                                $dateTime = Date::excelToDateTimeObject($excelDateValue);
-                                $value = $dateTime->format('Y-m-d');
-                                break;
-                            }
-                            $value = ($cell->isFormula) ? trim($cell->getCalculatedValue()) : trim($cell->getValue());
-                            break;
-                        case XlsParserHeading::TYPE_BOOLEAN:
-                            $value = !empty(trim($cell->getValue()));
-                            break;
-                        default:
-                            if ($cell->isFormula()) {
-                                $value = trim($cell->getCalculatedValue());
-                            } else {
-                                $value = trim($cell->getValue());
-                            }
-                    }
+                    $headingName = $heading->getHeadingName();
+                    $headingCellCoordinate = $heading->getCellCoordinatesByRow($headingRowIndex)[0];
+                    list($column) = Coordinate::coordinateFromString($headingCellCoordinate);
+                    $cellCoordinate = $column . $row->getRowIndex();
+                    $cellCollapsed = $this->isRowCollapsed($sheet, $row->getRowIndex())
+                        || $this->isColumnCollapsed($sheet, $column);
+                    $cellVisible = $this->isRowVisible($sheet, $row->getRowIndex())
+                        && $this->isColumnVisible($sheet, $column);
 
-                    if (!empty($value)) {
-                        $recordIsEmpty = false;
-                        $record[$dataKey] = $value;
-                    } else {
-                        $record[$dataKey] = null;
+                    if (!$cellCollapsed && $cellVisible) {
+                        // process not collapsed and visible cells only
+                        $value = $this->cellValueToHeadingType($sheet, $cellCoordinate, $heading);
+                        if (!empty($value)) {
+                            $recordIsEmpty = false;
+                            $record[$headingName] = $value;
+                        } else {
+                            $record[$headingName] = null;
+                        }
                     }
                 }
 
@@ -137,6 +123,61 @@ class BaseXlsParser
         }
 
         return $result;
+    }
+
+    /**
+     * Converts cell value to heading type.
+     *
+     * @param Worksheet        $sheet            Spreadsheet
+     * @param string           $cellCoordinate   Cell coordinate eg. A1
+     * @param XlsParserHeading $xlsParserHeading Heading
+     *
+     * @return string|int|boolean
+     */
+    protected function cellValueToHeadingType($sheet, $cellCoordinate, $xlsParserHeading)
+    {
+        $value = null;
+        if (!$sheet->cellExists($cellCoordinate)) {
+            return $value;
+        }
+
+        $dataType = $xlsParserHeading->getDataType();
+        $cell = $sheet->getCell($cellCoordinate);
+
+        switch ($dataType) {
+            case XlsParserHeading::TYPE_DATE:
+                if (Date::isDateTime($cell)) {
+                    $excelDateValue = ($cell->isFormula) ? trim($cell->getCalculatedValue()) : $cell->getValue();
+                    $dateTime = Date::excelToDateTimeObject($excelDateValue);
+                    $value = $dateTime->format('Y-m-d');
+                    break;
+                }
+                $value = ($cell->isFormula) ? trim($cell->getCalculatedValue()) : trim($cell->getValue());
+                break;
+            case XlsParserHeading::TYPE_BOOLEAN:
+                $value = !empty(trim($cell->getValue()));
+                break;
+            case XlsParserHeading::TYPE_PERCENT:
+                $numberFormat = $cell->getStyle()->getNumberFormat();
+                $numberFormatCode = $numberFormat->getFormatCode();
+                if ($numberFormatCode === NumberFormat::FORMAT_PERCENTAGE || $numberFormat === NumberFormat::FORMAT_PERCENTAGE_00) {
+                    $value = (int) round($cell->getCalculatedValue() * 100, 0);
+                    break;
+                }
+                $value = trim($cell->getCalculatedValue());
+                break;
+            case XlsParserHeading::TYPE_INTEGER:
+                $value = (int) round($cell->getCalculatedValue(), 0);
+                break;
+            default:
+                if ($cell->isFormula()) {
+                    $value = trim($cell->getCalculatedValue());
+                } else {
+                    $value = trim($cell->getValue());
+                }
+        }
+
+        return $value;
     }
 
     /**
@@ -164,7 +205,6 @@ class BaseXlsParser
 
         foreach ($spreadsheet->getColumnIterator() as $column) {
             $cellIterator = $column->getCellIterator();
-            $cellIterator->setIterateOnlyExistingCells(TRUE);
             foreach ($cellIterator as $cell) {
                 $value = trim(strval($cell->getValue()));
                 if (in_array($value, $headingNames, true) || in_array($value, $headingAliases, true)) {
@@ -253,13 +293,12 @@ class BaseXlsParser
      *
      * @param Worksheet $spreadsheet Target spreadsheet
      */
-    protected function clearHiddenColumnsAndRows($spreadsheet)
+    final protected function clearHiddenColumnsAndRows($spreadsheet)
     {
         $rowIndex = 1;
         $highestRow = $spreadsheet->getHighestDataRow();
         while ($highestRow >= $rowIndex) {
-            $rowDimension = $spreadsheet->getRowDimension($rowIndex);
-            if (!$rowDimension->getVisible()) {
+            if (!$this->isRowVisible($spreadsheet, $rowIndex)) {
                 $row = new Row($spreadsheet, $rowIndex);
                 $iterator = $row->getCellIterator();
                 foreach ($iterator as $cell) {
@@ -272,9 +311,8 @@ class BaseXlsParser
         $columnIndex = 1;
         $highestColumn = Coordinate::columnIndexFromString($spreadsheet->getHighestDataColumn());
         while ($highestColumn >= $columnIndex) {
-            $columnLiteral = Coordinate::stringFromColumnIndex($columnIndex);
-            $columnDimension = $spreadsheet->getColumnDimension($columnLiteral);
-            if (!$columnDimension->getVisible()) {
+            if (!$this->isColumnVisible($spreadsheet, $columnIndex)) {
+                $columnLiteral = Coordinate::stringFromColumnIndex($columnIndex);
                 $column = new Column($spreadsheet, $columnLiteral);
                 $iterator = $column->getCellIterator();
                 foreach ($iterator as $cell) {
@@ -290,14 +328,13 @@ class BaseXlsParser
      *
      * @param Worksheet $spreadsheet Target spreadsheet
      */
-    protected function clearCollapsedColumnsAndRows($spreadsheet)
+    final protected function clearCollapsedColumnsAndRows($spreadsheet)
     {
 
         $rowIndex = 1;
         $highestRow = $spreadsheet->getHighestDataRow();
         while ($highestRow >= $rowIndex) {
-            $rowDimension = $spreadsheet->getRowDimension($rowIndex);
-            if ($rowDimension->getCollapsed()) {
+            if ($this->isRowCollapsed($spreadsheet, $rowIndex)) {
                 $row = new Row($spreadsheet, $rowIndex);
                 $iterator = $row->getCellIterator();
                 foreach ($iterator as $cell) {
@@ -310,9 +347,8 @@ class BaseXlsParser
         $columnIndex = 1;
         $highestColumn = Coordinate::columnIndexFromString($spreadsheet->getHighestDataColumn());
         while ($highestColumn >= $columnIndex) {
-            $columnLiteral = Coordinate::stringFromColumnIndex($columnIndex);
-            $columnDimension = $spreadsheet->getColumnDimension($columnLiteral);
-            if ($columnDimension->getCollapsed()) {
+            if ($this->isColumnCollapsed($spreadsheet, $columnIndex)) {
+                $columnLiteral = Coordinate::stringFromColumnIndex($columnIndex);
                 $column = new Column($spreadsheet, $columnLiteral);
                 $iterator = $column->getCellIterator();
                 foreach ($iterator as $cell) {
@@ -321,5 +357,65 @@ class BaseXlsParser
             }
             $columnIndex++;
         }
+    }
+
+    /**
+     * Checks if column is collapsed.
+     *
+     * @param Worksheet  $sheet       Spreadsheet
+     * @param string|int $columnIndex Column index
+     *
+     * @return bool
+     */
+    final protected function isColumnCollapsed($sheet, $columnIndex)
+    {
+        if (is_string($columnIndex)) {
+            return $sheet->getColumnDimension($columnIndex, true)->getCollapsed();
+        }
+
+        return $sheet->getColumnDimensionByColumn($columnIndex, true)->getCollapsed();
+    }
+
+    /**
+     * Checks if column is visible.
+     *
+     * @param Worksheet  $sheet       Spreadsheet
+     * @param string|int $columnIndex Column index
+     *
+     * @return bool
+     */
+    final protected function isColumnVisible($sheet, $columnIndex)
+    {
+        if (is_string($columnIndex)) {
+            return $sheet->getColumnDimension($columnIndex, true)->getVisible();
+        }
+
+        return $sheet->getColumnDimensionByColumn($columnIndex, true)->getVisible();
+    }
+
+    /**
+     * Checks if row is collapsed.
+     *
+     * @param Worksheet  $sheet    Spreadsheet
+     * @param string|int $rowIndex Row index
+     *
+     * @return bool
+     */
+    final protected function isRowCollapsed($sheet, $rowIndex)
+    {
+        return $sheet->getRowDimension($rowIndex, true)->getCollapsed();
+    }
+
+    /**
+     * Checks if row is visible.
+     *
+     * @param Worksheet  $sheet    Spreadsheet
+     * @param string|int $rowIndex Row index
+     *
+     * @return bool
+     */
+    final protected function isRowVisible($sheet, $rowIndex)
+    {
+        return $sheet->getRowDimension($rowIndex, true)->getVisible();
     }
 }
