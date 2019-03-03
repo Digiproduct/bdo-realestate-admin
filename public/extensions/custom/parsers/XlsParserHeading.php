@@ -52,12 +52,12 @@ final class XlsParserHeading
         if (!is_string($headingName)) {
             throw new InvalidArgumentException('\$headingName argument must be string');
         }
-        $this->headingName = $headingName;
+        $this->headingName = trim($headingName);
 
         if (!empty($headingAlias) && !is_string($headingAlias)) {
             throw new InvalidArgumentException('\$headingAlias argument must be string');
         } elseif (!empty($headingAlias)) {
-            $this->headingAlias = $headingAlias;
+            $this->headingAlias = trim($headingAlias);
         }
 
         $invalidDataTypeMessage = '\$dataType argument must be one of \'date\', \'int\', \'string\', \'bool\', \'percent\' or NULL';

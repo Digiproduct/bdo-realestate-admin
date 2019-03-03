@@ -27,7 +27,7 @@ final class ReceiptsXlsParser extends BaseXlsParser
         ]);
     }
 
-    protected function postProcessRecord($record)
+    protected function postProcessRecord($record, $sheet)
     {
         $record['request_date_2'] = ($record['request_amount_2']) ? $record['request_date'] : null;
         $record['request_date_3'] = ($record['request_amount_3']) ? $record['request_date'] : null;

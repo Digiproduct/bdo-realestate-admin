@@ -63,9 +63,7 @@ class BaseXlsParser
             'parseCollapsedCells' => false,
         ], $options);
 
-        $xls = IOFactory::load($filePath);
-        $xls->setActiveSheetIndex($options['spreadsheetIndex']);
-        $sheet = $xls->getActiveSheet();
+        $sheet = $this->loadSpreadsheet($filePath, $options['spreadsheetIndex']);
 
         // clear hidden and collapsed columns/rows
         if ($options['parseHiddenCells'] === false) {
@@ -117,7 +115,7 @@ class BaseXlsParser
                 }
 
                 if (!$recordIsEmpty) {
-                    $result[] = $this->postProcessRecord($record);
+                    $result[] = $this->postProcessRecord($record, $sheet);
                 }
             }
         }
@@ -183,13 +181,28 @@ class BaseXlsParser
     /**
      * Process each parsed record when needed.
      *
-     * @param array $record Record
+     * @param array     $record Record
+     * @param Worksheet $sheet  Source spreadsheet
      *
      * @return array
      */
-    protected function postProcessRecord($record)
+    protected function postProcessRecord($record, $sheet)
     {
         return $record;
+    }
+
+    /**
+     * Loads spreadsheet.
+     *
+     * @param string $filePath   File path
+     * @param int    $sheetIndex Spreadsheet index
+     *
+     * @return Worksheet
+     */
+    final protected function loadSpreadsheet($filePath, $sheetIndex = 0)
+    {
+        return IOFactory::load($filePath)
+            ->setActiveSheetIndex($sheetIndex);
     }
 
     /**
