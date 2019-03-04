@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<mysqldump xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<database name="bdo_realestate">
+	<table_data name="directus_users">
+	<row>
+		<field name="id">1</field>
+		<field name="status">active</field>
+		<field name="first_name">Admin</field>
+		<field name="last_name">User</field>
+		<field name="email">admin@example.com</field>
+		<field name="password">$2y$10$v2lxYD5LANkUsmzj19AyceEE9IScwTsjsG1qMXuezGI86drvdcreK</field>
+		<field name="token" xsi:nil="true" />
+		<field name="timezone">Asia/Jerusalem</field>
+		<field name="locale">en-US</field>
+		<field name="locale_options" xsi:nil="true" />
+		<field name="avatar" xsi:nil="true" />
+		<field name="company" xsi:nil="true" />
+		<field name="title" xsi:nil="true" />
+		<field name="email_notifications">0</field>
+		<field name="last_access_on">2019-03-03 22:12:10</field>
+		<field name="last_page">/collections/funding_reports</field>
+		<field name="external_id" xsi:nil="true" />
+	</row>
+	<row>
+		<field name="id">2</field>
+		<field name="status">deleted</field>
+		<field name="first_name">John</field>
+		<field name="last_name">Doe</field>
+		<field name="email">johndoe@test.com</field>
+		<field name="password">$2y$10$lcaKpGQFDKIz5hjyJPgaReEeLTqBtw8oiAynfDQGq1M7kSzJZ.6me</field>
+		<field name="token" xsi:nil="true" />
+		<field name="timezone">merica/New_Yor</field>
+		<field name="locale">n-U</field>
+		<field name="locale_options" xsi:nil="true" />
+		<field name="avatar" xsi:nil="true" />
+		<field name="company" xsi:nil="true" />
+		<field name="title" xsi:nil="true" />
+		<field name="email_notifications">0</field>
+		<field name="last_access_on" xsi:nil="true" />
+		<field name="last_page" xsi:nil="true" />
+		<field name="external_id">61f1b167-085f-476c-9fa8-02330fbd1886</field>
+	</row>
+	<row>
+		<field name="id">3</field>
+		<field name="status">active</field>
+		<field name="first_name">ישראל ישראלי</field>
+		<field name="last_name">ישראל ישראלי</field>
+		<field name="email">demo@example.com</field>
+		<field name="password">$2y$10$VRcx5zhtZiCd3eTMWKjBv.IzI8jfMWD5hOa.t4WZn9i32ge/YNDjO</field>
+		<field name="token" xsi:nil="true" />
+		<field name="timezone">Asia/Jerusalem</field>
+		<field name="locale">en-US</field>
+		<field name="locale_options" xsi:nil="true" />
+		<field name="avatar" xsi:nil="true" />
+		<field name="company" xsi:nil="true" />
+		<field name="title" xsi:nil="true" />
+		<field name="email_notifications">0</field>
+		<field name="last_access_on">2019-01-24 07:24:01</field>
+		<field name="last_page">/collections</field>
+		<field name="external_id">5d1d1125-b406-456f-9c79-23303cea4ad4</field>
+	</row>
+	</table_data>
+	<table_data name="directus_user_roles">
+	<row>
+		<field name="id">1</field>
+		<field name="user">1</field>
+		<field name="role">1</field>
+	</row>
+	<row>
+		<field name="id">3</field>
+		<field name="user">2</field>
+		<field name="role">3</field>
+	</row>
+	<row>
+		<field name="id">2</field>
+		<field name="user">3</field>
+		<field name="role">3</field>
+	</row>
+	</table_data>
+</database>
+</mysqldump>

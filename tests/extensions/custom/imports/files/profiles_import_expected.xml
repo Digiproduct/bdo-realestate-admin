@@ -1,0 +1,825 @@
+<?xml version="1.0"?>
+<mysqldump xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<database name="bdo_realestate">
+	<table_data name="directus_users">
+	<row>
+		<field name="id">1</field>
+		<field name="status">active</field>
+		<field name="first_name">Admin</field>
+		<field name="last_name">User</field>
+		<field name="email">admin@example.com</field>
+		<field name="password">$2y$10$v2lxYD5LANkUsmzj19AyceEE9IScwTsjsG1qMXuezGI86drvdcreK</field>
+		<field name="token" xsi:nil="true" />
+		<field name="timezone">Asia/Jerusalem</field>
+		<field name="locale">en-US</field>
+		<field name="locale_options" xsi:nil="true" />
+		<field name="avatar" xsi:nil="true" />
+		<field name="company" xsi:nil="true" />
+		<field name="title" xsi:nil="true" />
+		<field name="email_notifications">0</field>
+		<field name="last_access_on">2019-03-03 23:05:31</field>
+		<field name="last_page">/users/5</field>
+		<field name="external_id" xsi:nil="true" />
+	</row>
+	<row>
+		<field name="id">2</field>
+		<field name="status">deleted</field>
+		<field name="first_name">John</field>
+		<field name="last_name">Doe</field>
+		<field name="email">johndoe@test.com</field>
+		<field name="password">$2y$10$lcaKpGQFDKIz5hjyJPgaReEeLTqBtw8oiAynfDQGq1M7kSzJZ.6me</field>
+		<field name="token" xsi:nil="true" />
+		<field name="timezone">merica/New_Yor</field>
+		<field name="locale">n-U</field>
+		<field name="locale_options" xsi:nil="true" />
+		<field name="avatar" xsi:nil="true" />
+		<field name="company" xsi:nil="true" />
+		<field name="title" xsi:nil="true" />
+		<field name="email_notifications">0</field>
+		<field name="last_access_on" xsi:nil="true" />
+		<field name="last_page" xsi:nil="true" />
+		<field name="external_id">61f1b167-085f-476c-9fa8-02330fbd1886</field>
+	</row>
+	<row>
+		<field name="id">3</field>
+		<field name="status">active</field>
+		<field name="first_name">ישראל ישראלי</field>
+		<field name="last_name">ישראל ישראלי</field>
+		<field name="email">demo@example.com</field>
+		<field name="password">$2y$10$VRcx5zhtZiCd3eTMWKjBv.IzI8jfMWD5hOa.t4WZn9i32ge/YNDjO</field>
+		<field name="token" xsi:nil="true" />
+		<field name="timezone">Asia/Jerusalem</field>
+		<field name="locale">en-US</field>
+		<field name="locale_options" xsi:nil="true" />
+		<field name="avatar" xsi:nil="true" />
+		<field name="company" xsi:nil="true" />
+		<field name="title" xsi:nil="true" />
+		<field name="email_notifications">0</field>
+		<field name="last_access_on">2019-01-24 07:24:01</field>
+		<field name="last_page">/collections</field>
+		<field name="external_id">5d1d1125-b406-456f-9c79-23303cea4ad4</field>
+	</row>
+	<row>
+		<field name="id">4</field>
+		<field name="status">invited</field>
+		<field name="first_name">דהן משה ואורית - 803 חדש</field>
+		<field name="last_name">דהן משה ואורית - 803 חדש</field>
+		<field name="email">tamarsn12@gmail.com</field>
+		<field name="password">$2y$10$p4trYvx8Tzy0Fsl9vWSHEO18hlNnT2TCVoTU.D0ZZStTu13DBK/mu</field>
+		<field name="token" xsi:nil="true" />
+		<field name="timezone">Asia/Jerusalem</field>
+		<field name="locale">en-US</field>
+		<field name="locale_options" xsi:nil="true" />
+		<field name="avatar" xsi:nil="true" />
+		<field name="company" xsi:nil="true" />
+		<field name="title" xsi:nil="true" />
+		<field name="email_notifications">0</field>
+		<field name="last_access_on" xsi:nil="true" />
+		<field name="last_page" xsi:nil="true" />
+		<field name="external_id">edabe7f5-dda3-4678-9311-61d2181737d0</field>
+	</row>
+	<row>
+		<field name="id">5</field>
+		<field name="status">invited</field>
+		<field name="first_name">גרשון הכהן טל - 803</field>
+		<field name="last_name">גרשון הכהן טל - 803</field>
+		<field name="email">mishcan1@gmail.com</field>
+		<field name="password">$2y$10$.C2V20CsreZIM7/lyjI3EumtGeDR6jH6ulpwkfRoyLFgSJugvEfQ.</field>
+		<field name="token" xsi:nil="true" />
+		<field name="timezone">Asia/Jerusalem</field>
+		<field name="locale">en-US</field>
+		<field name="locale_options" xsi:nil="true" />
+		<field name="avatar" xsi:nil="true" />
+		<field name="company" xsi:nil="true" />
+		<field name="title" xsi:nil="true" />
+		<field name="email_notifications">0</field>
+		<field name="last_access_on" xsi:nil="true" />
+		<field name="last_page" xsi:nil="true" />
+		<field name="external_id">b58e293b-26f1-46e2-b8fd-b3fc70ebebb5</field>
+	</row>
+	<row>
+		<field name="id">6</field>
+		<field name="status">invited</field>
+		<field name="first_name">קורן מיכה -803</field>
+		<field name="last_name">קורן מיכה -803</field>
+		<field name="email">lealeam1@gmail.com</field>
+		<field name="password">$2y$10$kRo/xIqW6aOesgjEW1vt9Os0mRQNqZHOqb.bN5bLn1kalyAIvT.bm</field>
+		<field name="token" xsi:nil="true" />
+		<field name="timezone">Asia/Jerusalem</field>
+		<field name="locale">en-US</field>
+		<field name="locale_options" xsi:nil="true" />
+		<field name="avatar" xsi:nil="true" />
+		<field name="company" xsi:nil="true" />
+		<field name="title" xsi:nil="true" />
+		<field name="email_notifications">0</field>
+		<field name="last_access_on" xsi:nil="true" />
+		<field name="last_page" xsi:nil="true" />
+		<field name="external_id">c807cdbb-6aa5-43d4-99c4-db34aad56c4b</field>
+	</row>
+	<row>
+		<field name="id">7</field>
+		<field name="status">invited</field>
+		<field name="first_name">מרק נתנאל -803</field>
+		<field name="last_name">מרק נתנאל -803</field>
+		<field name="email">להודיע: 0533141727c@gmail.com</field>
+		<field name="password">$2y$10$mGD8XnuvJnZJ7s90eGeI.eI.rOTlRNYleQ87iIJn5wNy3GaQlTjHS</field>
+		<field name="token" xsi:nil="true" />
+		<field name="timezone">Asia/Jerusalem</field>
+		<field name="locale">en-US</field>
+		<field name="locale_options" xsi:nil="true" />
+		<field name="avatar" xsi:nil="true" />
+		<field name="company" xsi:nil="true" />
+		<field name="title" xsi:nil="true" />
+		<field name="email_notifications">0</field>
+		<field name="last_access_on" xsi:nil="true" />
+		<field name="last_page" xsi:nil="true" />
+		<field name="external_id">d77d97b2-c459-4559-81eb-0b117da8b3cf</field>
+	</row>
+	<row>
+		<field name="id">8</field>
+		<field name="status">invited</field>
+		<field name="first_name">נויבירט שאול שמחה - 803</field>
+		<field name="last_name">נויבירט שאול שמחה - 803</field>
+		<field name="email">yz054844@okmail.co.i</field>
+		<field name="password">$2y$10$7/.FOzwdgAKvuSk5K5C0MuEYFkBJwfutxvlXm9QNZy3bHl/srl95C</field>
+		<field name="token" xsi:nil="true" />
+		<field name="timezone">Asia/Jerusalem</field>
+		<field name="locale">en-US</field>
+		<field name="locale_options" xsi:nil="true" />
+		<field name="avatar" xsi:nil="true" />
+		<field name="company" xsi:nil="true" />
+		<field name="title" xsi:nil="true" />
+		<field name="email_notifications">0</field>
+		<field name="last_access_on" xsi:nil="true" />
+		<field name="last_page" xsi:nil="true" />
+		<field name="external_id">6b7e3d2d-cbc3-4982-9102-627d6ef69135</field>
+	</row>
+	<row>
+		<field name="id">9</field>
+		<field name="status">invited</field>
+		<field name="first_name">כרמל לוי שושנה- 803</field>
+		<field name="last_name">כרמל לוי שושנה- 803</field>
+		<field name="email">yz054844@okmail.co.il</field>
+		<field name="password">$2y$10$709LbG0PdzvmAPHQzUQTO.mmVirsguiXruzOOaKSc6CDt0mBs0YmO</field>
+		<field name="token" xsi:nil="true" />
+		<field name="timezone">Asia/Jerusalem</field>
+		<field name="locale">en-US</field>
+		<field name="locale_options" xsi:nil="true" />
+		<field name="avatar" xsi:nil="true" />
+		<field name="company" xsi:nil="true" />
+		<field name="title" xsi:nil="true" />
+		<field name="email_notifications">0</field>
+		<field name="last_access_on" xsi:nil="true" />
+		<field name="last_page" xsi:nil="true" />
+		<field name="external_id">990599ec-2060-4900-a99c-b924de402f15</field>
+	</row>
+	<row>
+		<field name="id">10</field>
+		<field name="status">invited</field>
+		<field name="first_name">שטרן עקיבא זלמן - 803</field>
+		<field name="last_name">שטרן עקיבא זלמן - 803</field>
+		<field name="email">y.n.wolbe@gmail.com</field>
+		<field name="password">$2y$10$KMuHBC8YsLFy6kImcgACJOhqHl2Lm25gZ86eJIXTSchyX62yqzKV.</field>
+		<field name="token" xsi:nil="true" />
+		<field name="timezone">Asia/Jerusalem</field>
+		<field name="locale">en-US</field>
+		<field name="locale_options" xsi:nil="true" />
+		<field name="avatar" xsi:nil="true" />
+		<field name="company" xsi:nil="true" />
+		<field name="title" xsi:nil="true" />
+		<field name="email_notifications">0</field>
+		<field name="last_access_on" xsi:nil="true" />
+		<field name="last_page" xsi:nil="true" />
+		<field name="external_id">b2819520-d519-443f-8eb3-b19c84199352</field>
+	</row>
+	<row>
+		<field name="id">11</field>
+		<field name="status">invited</field>
+		<field name="first_name">שוב נתנאל וצופיה - 803</field>
+		<field name="last_name">שוב נתנאל וצופיה - 803</field>
+		<field name="email">tehilacohen015@gmail.com</field>
+		<field name="password">$2y$10$WODRPfWHkKMouF544EUxkOUS7WCLFc.M619Oy91X1vxyHilGKphdi</field>
+		<field name="token" xsi:nil="true" />
+		<field name="timezone">Asia/Jerusalem</field>
+		<field name="locale">en-US</field>
+		<field name="locale_options" xsi:nil="true" />
+		<field name="avatar" xsi:nil="true" />
+		<field name="company" xsi:nil="true" />
+		<field name="title" xsi:nil="true" />
+		<field name="email_notifications">0</field>
+		<field name="last_access_on" xsi:nil="true" />
+		<field name="last_page" xsi:nil="true" />
+		<field name="external_id">aae41aeb-fdfd-4422-8ba7-bbdca35595e9</field>
+	</row>
+	<row>
+		<field name="id">12</field>
+		<field name="status">invited</field>
+		<field name="first_name">ביטן שלום ומזל - 803</field>
+		<field name="last_name">ביטן שלום ומזל - 803</field>
+		<field name="email">d0548483339@gmail.com</field>
+		<field name="password">$2y$10$xtzUUfDYVTdFcq.q0zTALe9aMLli5Vu9zL04AppOUuxowWUzVgAGO</field>
+		<field name="token" xsi:nil="true" />
+		<field name="timezone">Asia/Jerusalem</field>
+		<field name="locale">en-US</field>
+		<field name="locale_options" xsi:nil="true" />
+		<field name="avatar" xsi:nil="true" />
+		<field name="company" xsi:nil="true" />
+		<field name="title" xsi:nil="true" />
+		<field name="email_notifications">0</field>
+		<field name="last_access_on" xsi:nil="true" />
+		<field name="last_page" xsi:nil="true" />
+		<field name="external_id">4f1566e4-ff00-48b3-a3c3-d6d9365f05b4</field>
+	</row>
+	<row>
+		<field name="id">13</field>
+		<field name="status">invited</field>
+		<field name="first_name">קרקובר חיים ונחמה - 803</field>
+		<field name="last_name">קרקובר חיים ונחמה - 803</field>
+		<field name="email">urielkahana@gmail.com</field>
+		<field name="password">$2y$10$3Z20lDDTpOv4xSCxN.HFUuIew4dNQSZi2Z7cvg58ZQ7t2ObNlQatK</field>
+		<field name="token" xsi:nil="true" />
+		<field name="timezone">Asia/Jerusalem</field>
+		<field name="locale">en-US</field>
+		<field name="locale_options" xsi:nil="true" />
+		<field name="avatar" xsi:nil="true" />
+		<field name="company" xsi:nil="true" />
+		<field name="title" xsi:nil="true" />
+		<field name="email_notifications">0</field>
+		<field name="last_access_on" xsi:nil="true" />
+		<field name="last_page" xsi:nil="true" />
+		<field name="external_id">f0a2adbe-b0ec-4aa0-bf92-b1bb877b8b9f</field>
+	</row>
+	<row>
+		<field name="id">14</field>
+		<field name="status">invited</field>
+		<field name="first_name">גרמן יצחק וחיה שרה 3- 803</field>
+		<field name="last_name">גרמן יצחק וחיה שרה 3- 803</field>
+		<field name="email">kaplannc@gmail.com</field>
+		<field name="password">$2y$10$Pxjhb9GKZdy9nTyaspxcB.Ka91xN3.ZVaXr2qnaXnnyqOTQxyWstq</field>
+		<field name="token" xsi:nil="true" />
+		<field name="timezone">Asia/Jerusalem</field>
+		<field name="locale">en-US</field>
+		<field name="locale_options" xsi:nil="true" />
+		<field name="avatar" xsi:nil="true" />
+		<field name="company" xsi:nil="true" />
+		<field name="title" xsi:nil="true" />
+		<field name="email_notifications">0</field>
+		<field name="last_access_on" xsi:nil="true" />
+		<field name="last_page" xsi:nil="true" />
+		<field name="external_id">7038216d-780d-40a2-9611-de1007789802</field>
+	</row>
+	<row>
+		<field name="id">15</field>
+		<field name="status">invited</field>
+		<field name="first_name">רדעי נועם וציונה - 803</field>
+		<field name="last_name">רדעי נועם וציונה - 803</field>
+		<field name="email">a0545699096@gmail.com</field>
+		<field name="password">$2y$10$Xcj.qkenfovFUMBzilSy/.Co9A8cIIbDfyKu441.xAxFfD4QXudjC</field>
+		<field name="token" xsi:nil="true" />
+		<field name="timezone">Asia/Jerusalem</field>
+		<field name="locale">en-US</field>
+		<field name="locale_options" xsi:nil="true" />
+		<field name="avatar" xsi:nil="true" />
+		<field name="company" xsi:nil="true" />
+		<field name="title" xsi:nil="true" />
+		<field name="email_notifications">0</field>
+		<field name="last_access_on" xsi:nil="true" />
+		<field name="last_page" xsi:nil="true" />
+		<field name="external_id">85ee4dc4-4421-49e4-b188-500229bc0e14</field>
+	</row>
+	<row>
+		<field name="id">16</field>
+		<field name="status">invited</field>
+		<field name="first_name">נחשון מנחם מנדל -803</field>
+		<field name="last_name">נחשון מנחם מנדל -803</field>
+		<field name="email">ac741147@gmail.com</field>
+		<field name="password">$2y$10$Msx74WzL3w8WLa90PkboauxS7a3LKj/9n8MXu8aazP1tSkgTJs6r2</field>
+		<field name="token" xsi:nil="true" />
+		<field name="timezone">Asia/Jerusalem</field>
+		<field name="locale">en-US</field>
+		<field name="locale_options" xsi:nil="true" />
+		<field name="avatar" xsi:nil="true" />
+		<field name="company" xsi:nil="true" />
+		<field name="title" xsi:nil="true" />
+		<field name="email_notifications">0</field>
+		<field name="last_access_on" xsi:nil="true" />
+		<field name="last_page" xsi:nil="true" />
+		<field name="external_id">d7e26443-2c64-450d-90eb-1670de402dc3</field>
+	</row>
+	<row>
+		<field name="id">17</field>
+		<field name="status">invited</field>
+		<field name="first_name">שטרן בלומה (במקום רייס נחמה לאה) - 803</field>
+		<field name="last_name">שטרן בלומה (במקום רייס נחמה לאה) - 803</field>
+		<field name="email">horoviz_r@bbm.org.il</field>
+		<field name="password">$2y$10$4rBZ1uc59Rf3uHISpOVP5.kW8diw00fgGTRyaQUvWyZc7DT7vVNiS</field>
+		<field name="token" xsi:nil="true" />
+		<field name="timezone">Asia/Jerusalem</field>
+		<field name="locale">en-US</field>
+		<field name="locale_options" xsi:nil="true" />
+		<field name="avatar" xsi:nil="true" />
+		<field name="company" xsi:nil="true" />
+		<field name="title" xsi:nil="true" />
+		<field name="email_notifications">0</field>
+		<field name="last_access_on" xsi:nil="true" />
+		<field name="last_page" xsi:nil="true" />
+		<field name="external_id">b12c6219-62d1-41be-b1aa-8475c0581f2b</field>
+	</row>
+	<row>
+		<field name="id">18</field>
+		<field name="status">invited</field>
+		<field name="first_name">צייכנר נתנאל 803 חדש</field>
+		<field name="last_name">צייכנר נתנאל 803 חדש</field>
+		<field name="email">rachelidavid90@gmail.com</field>
+		<field name="password">$2y$10$ICdxadUHFX1i3DpYINn0AOteUhAKrC5M6JxNK9Lb6wz7R5EpGekaO</field>
+		<field name="token" xsi:nil="true" />
+		<field name="timezone">Asia/Jerusalem</field>
+		<field name="locale">en-US</field>
+		<field name="locale_options" xsi:nil="true" />
+		<field name="avatar" xsi:nil="true" />
+		<field name="company" xsi:nil="true" />
+		<field name="title" xsi:nil="true" />
+		<field name="email_notifications">0</field>
+		<field name="last_access_on" xsi:nil="true" />
+		<field name="last_page" xsi:nil="true" />
+		<field name="external_id">aaede1a0-26d6-429a-b9c1-a76152f0f2e1</field>
+	</row>
+	<row>
+		<field name="id">19</field>
+		<field name="status">invited</field>
+		<field name="first_name">דירה כרמל (פלמן חסר הסכם)- 804</field>
+		<field name="last_name">דירה כרמל (פלמן חסר הסכם)- 804</field>
+		<field name="email">naftaly6462@gmail.com</field>
+		<field name="password">$2y$10$Mcx1NVpj2jprpdJbUJoC5e43n2Q85nSHVuwLNZF6VuD4mSQbO1ana</field>
+		<field name="token" xsi:nil="true" />
+		<field name="timezone">Asia/Jerusalem</field>
+		<field name="locale">en-US</field>
+		<field name="locale_options" xsi:nil="true" />
+		<field name="avatar" xsi:nil="true" />
+		<field name="company" xsi:nil="true" />
+		<field name="title" xsi:nil="true" />
+		<field name="email_notifications">0</field>
+		<field name="last_access_on" xsi:nil="true" />
+		<field name="last_page" xsi:nil="true" />
+		<field name="external_id">4f3a44b9-80d7-4587-88f6-ba623e790eb2</field>
+	</row>
+	<row>
+		<field name="id">20</field>
+		<field name="status">invited</field>
+		<field name="first_name">דירה כרמל נהנה 1 - 804</field>
+		<field name="last_name">דירה כרמל נהנה 1 - 804</field>
+		<field name="email">brian_kinsbursky@hotmail.com</field>
+		<field name="password">$2y$10$Dd/FpeX53gm.IfE/eW9EKOAOEhx0DevXgCzt9MzBaqFcpDjTk3HHW</field>
+		<field name="token" xsi:nil="true" />
+		<field name="timezone">Asia/Jerusalem</field>
+		<field name="locale">en-US</field>
+		<field name="locale_options" xsi:nil="true" />
+		<field name="avatar" xsi:nil="true" />
+		<field name="company" xsi:nil="true" />
+		<field name="title" xsi:nil="true" />
+		<field name="email_notifications">0</field>
+		<field name="last_access_on" xsi:nil="true" />
+		<field name="last_page" xsi:nil="true" />
+		<field name="external_id">320566fd-2cf3-4c77-9688-332ccc0d155e</field>
+	</row>
+	<row>
+		<field name="id">21</field>
+		<field name="status">invited</field>
+		<field name="first_name">דירה כרמל נהנה 2 - 804</field>
+		<field name="last_name">דירה כרמל נהנה 2 - 804</field>
+		<field name="email">dvoriwei175@gmail.com</field>
+		<field name="password">$2y$10$Tq6BAGyLbeBZB13yQXO3NuGs.Ah1LREp0CFnGwnrLyaUhnKhLxZ2y</field>
+		<field name="token" xsi:nil="true" />
+		<field name="timezone">Asia/Jerusalem</field>
+		<field name="locale">en-US</field>
+		<field name="locale_options" xsi:nil="true" />
+		<field name="avatar" xsi:nil="true" />
+		<field name="company" xsi:nil="true" />
+		<field name="title" xsi:nil="true" />
+		<field name="email_notifications">0</field>
+		<field name="last_access_on" xsi:nil="true" />
+		<field name="last_page" xsi:nil="true" />
+		<field name="external_id">76ea8c52-6ffd-405e-8670-d277963b8c42</field>
+	</row>
+	<row>
+		<field name="id">22</field>
+		<field name="status">invited</field>
+		<field name="first_name">קרואני יהודה-804</field>
+		<field name="last_name">קרואני יהודה-804</field>
+		<field name="email">7652585@gmail.com</field>
+		<field name="password">$2y$10$UqYN7rHYFwvTUd1XNvYckOgI5R6v2OorQMRYp7XNClcw0JVhRNhve</field>
+		<field name="token" xsi:nil="true" />
+		<field name="timezone">Asia/Jerusalem</field>
+		<field name="locale">en-US</field>
+		<field name="locale_options" xsi:nil="true" />
+		<field name="avatar" xsi:nil="true" />
+		<field name="company" xsi:nil="true" />
+		<field name="title" xsi:nil="true" />
+		<field name="email_notifications">0</field>
+		<field name="last_access_on" xsi:nil="true" />
+		<field name="last_page" xsi:nil="true" />
+		<field name="external_id">e927bb4c-00aa-404d-8fbd-e40f84f0634f</field>
+	</row>
+	<row>
+		<field name="id">23</field>
+		<field name="status">invited</field>
+		<field name="first_name">דירה כרמל נהנה 3- 804</field>
+		<field name="last_name">דירה כרמל נהנה 3- 804</field>
+		<field name="email">geullalevi@gmail.com</field>
+		<field name="password">$2y$10$wwyqLmISL2v.NoqERXCtpOTd8ZtUIqlTF3wCMYhXVk5NT77o32YPy</field>
+		<field name="token" xsi:nil="true" />
+		<field name="timezone">Asia/Jerusalem</field>
+		<field name="locale">en-US</field>
+		<field name="locale_options" xsi:nil="true" />
+		<field name="avatar" xsi:nil="true" />
+		<field name="company" xsi:nil="true" />
+		<field name="title" xsi:nil="true" />
+		<field name="email_notifications">0</field>
+		<field name="last_access_on" xsi:nil="true" />
+		<field name="last_page" xsi:nil="true" />
+		<field name="external_id">f1ce8889-b090-4242-b5e8-74a78c7b9006</field>
+	</row>
+	<row>
+		<field name="id">24</field>
+		<field name="status">invited</field>
+		<field name="first_name">קראווני אחיה- חדש- 804</field>
+		<field name="last_name">קראווני אחיה- חדש- 804</field>
+		<field name="email">Tovi.S@fibi.co.il</field>
+		<field name="password">$2y$10$idztOrJIJdm8xJ9Bl0QK3O9Z12pDhvDNyQpzZAjBtGQViMN2HK56.</field>
+		<field name="token" xsi:nil="true" />
+		<field name="timezone">Asia/Jerusalem</field>
+		<field name="locale">en-US</field>
+		<field name="locale_options" xsi:nil="true" />
+		<field name="avatar" xsi:nil="true" />
+		<field name="company" xsi:nil="true" />
+		<field name="title" xsi:nil="true" />
+		<field name="email_notifications">0</field>
+		<field name="last_access_on" xsi:nil="true" />
+		<field name="last_page" xsi:nil="true" />
+		<field name="external_id">b5d178bb-583c-44e7-a5bf-2ab5ba75b599</field>
+	</row>
+	<row>
+		<field name="id">25</field>
+		<field name="status">invited</field>
+		<field name="first_name">דירה כרמל נהנה 4- 804</field>
+		<field name="last_name">דירה כרמל נהנה 4- 804</field>
+		<field name="email">e0525307770@gmail.com</field>
+		<field name="password">$2y$10$Fz5s.0y5N3inVFU5491s.ujG2FXpwoAUQB3weExDTCuQAChRopn1W</field>
+		<field name="token" xsi:nil="true" />
+		<field name="timezone">Asia/Jerusalem</field>
+		<field name="locale">en-US</field>
+		<field name="locale_options" xsi:nil="true" />
+		<field name="avatar" xsi:nil="true" />
+		<field name="company" xsi:nil="true" />
+		<field name="title" xsi:nil="true" />
+		<field name="email_notifications">0</field>
+		<field name="last_access_on" xsi:nil="true" />
+		<field name="last_page" xsi:nil="true" />
+		<field name="external_id">ca224f2b-25b3-4ab4-b252-eb4d3272c564</field>
+	</row>
+	<row>
+		<field name="id">26</field>
+		<field name="status">invited</field>
+		<field name="first_name">פישר יעקב -804</field>
+		<field name="last_name">פישר יעקב -804</field>
+		<field name="email">michalgershon26@gmail.com</field>
+		<field name="password">$2y$10$/vMJs.vyPBBv1zu1Or.brePydqyam/J6i9qunxsJsVOVeLPwL7Y7q</field>
+		<field name="token" xsi:nil="true" />
+		<field name="timezone">Asia/Jerusalem</field>
+		<field name="locale">en-US</field>
+		<field name="locale_options" xsi:nil="true" />
+		<field name="avatar" xsi:nil="true" />
+		<field name="company" xsi:nil="true" />
+		<field name="title" xsi:nil="true" />
+		<field name="email_notifications">0</field>
+		<field name="last_access_on" xsi:nil="true" />
+		<field name="last_page" xsi:nil="true" />
+		<field name="external_id">2972835c-25ad-4635-a30c-1bfe93da3520</field>
+	</row>
+	<row>
+		<field name="id">27</field>
+		<field name="status">invited</field>
+		<field name="first_name">דירה כרמל (הילמן) - 804</field>
+		<field name="last_name">דירה כרמל (הילמן) - 804</field>
+		<field name="email">miriserber@gmail.com</field>
+		<field name="password">$2y$10$33TAPGB758doehPHfb4TgOc7tuMLePFPRbusq2gDhPO04BYkHuWFa</field>
+		<field name="token" xsi:nil="true" />
+		<field name="timezone">Asia/Jerusalem</field>
+		<field name="locale">en-US</field>
+		<field name="locale_options" xsi:nil="true" />
+		<field name="avatar" xsi:nil="true" />
+		<field name="company" xsi:nil="true" />
+		<field name="title" xsi:nil="true" />
+		<field name="email_notifications">0</field>
+		<field name="last_access_on" xsi:nil="true" />
+		<field name="last_page" xsi:nil="true" />
+		<field name="external_id">43a1a78d-4879-420e-bf88-08c5bcfedb73</field>
+	</row>
+	<row>
+		<field name="id">28</field>
+		<field name="status">invited</field>
+		<field name="first_name">דירה כרמל נהנה 5 - 804</field>
+		<field name="last_name">דירה כרמל נהנה 5 - 804</field>
+		<field name="email">moishimichal@gmail.com</field>
+		<field name="password">$2y$10$B.tjRvoLnQHncXUCahvU7OsyToS4kSPB/I1208r1nyG0cqGzgsal2</field>
+		<field name="token" xsi:nil="true" />
+		<field name="timezone">Asia/Jerusalem</field>
+		<field name="locale">en-US</field>
+		<field name="locale_options" xsi:nil="true" />
+		<field name="avatar" xsi:nil="true" />
+		<field name="company" xsi:nil="true" />
+		<field name="title" xsi:nil="true" />
+		<field name="email_notifications">0</field>
+		<field name="last_access_on" xsi:nil="true" />
+		<field name="last_page" xsi:nil="true" />
+		<field name="external_id">e955b3bd-d008-4d6a-aba1-a4043b12550d</field>
+	</row>
+	<row>
+		<field name="id">29</field>
+		<field name="status">invited</field>
+		<field name="first_name">דירה כרמל נהנה 7 - 804</field>
+		<field name="last_name">דירה כרמל נהנה 7 - 804</field>
+		<field name="email">chanimark1@gmail.com</field>
+		<field name="password">$2y$10$eugX/zZ9nbLCGVqVaLguXu9Jid7Lo37jmVfe7mtdIqolkJT0Bfk3q</field>
+		<field name="token" xsi:nil="true" />
+		<field name="timezone">Asia/Jerusalem</field>
+		<field name="locale">en-US</field>
+		<field name="locale_options" xsi:nil="true" />
+		<field name="avatar" xsi:nil="true" />
+		<field name="company" xsi:nil="true" />
+		<field name="title" xsi:nil="true" />
+		<field name="email_notifications">0</field>
+		<field name="last_access_on" xsi:nil="true" />
+		<field name="last_page" xsi:nil="true" />
+		<field name="external_id">dcd74b35-ee3d-4c87-8334-444c295dbbd8</field>
+	</row>
+	<row>
+		<field name="id">30</field>
+		<field name="status">invited</field>
+		<field name="first_name">כהן אליהו אריה 2 - 804</field>
+		<field name="last_name">כהן אליהו אריה 2 - 804</field>
+		<field name="email">s0504140282@gmail.com</field>
+		<field name="password">$2y$10$.zvqHzlj2c6pez8o1IPjrO5hTmFtyJNd/HUuWkCWYGmoudpiMGiqW</field>
+		<field name="token" xsi:nil="true" />
+		<field name="timezone">Asia/Jerusalem</field>
+		<field name="locale">en-US</field>
+		<field name="locale_options" xsi:nil="true" />
+		<field name="avatar" xsi:nil="true" />
+		<field name="company" xsi:nil="true" />
+		<field name="title" xsi:nil="true" />
+		<field name="email_notifications">0</field>
+		<field name="last_access_on" xsi:nil="true" />
+		<field name="last_page" xsi:nil="true" />
+		<field name="external_id">c982bbd5-1ae6-436e-a2b7-f39520c893e7</field>
+	</row>
+	<row>
+		<field name="id">31</field>
+		<field name="status">invited</field>
+		<field name="first_name">דירה כרמל נהנה 8 - 804</field>
+		<field name="last_name">דירה כרמל נהנה 8 - 804</field>
+		<field name="email">pozenm@gmail.com</field>
+		<field name="password">$2y$10$GDfcE2EHkI9nbo9jaEI5Vu/wPjO92T4KtulY2ysSPrzWD0ys2Se7S</field>
+		<field name="token" xsi:nil="true" />
+		<field name="timezone">Asia/Jerusalem</field>
+		<field name="locale">en-US</field>
+		<field name="locale_options" xsi:nil="true" />
+		<field name="avatar" xsi:nil="true" />
+		<field name="company" xsi:nil="true" />
+		<field name="title" xsi:nil="true" />
+		<field name="email_notifications">0</field>
+		<field name="last_access_on" xsi:nil="true" />
+		<field name="last_page" xsi:nil="true" />
+		<field name="external_id">9ff5bc08-6eaf-494b-b103-cb7ca816f020</field>
+	</row>
+	<row>
+		<field name="id">32</field>
+		<field name="status">invited</field>
+		<field name="first_name">דירה כרמל- 804</field>
+		<field name="last_name">דירה כרמל- 804</field>
+		<field name="email">dv119903@gmail.com</field>
+		<field name="password">$2y$10$FDMeDjvlTaKSfsm/N1sVh.XKxkp43J.nDTwgzwYkgJtVa.D1/t1Jy</field>
+		<field name="token" xsi:nil="true" />
+		<field name="timezone">Asia/Jerusalem</field>
+		<field name="locale">en-US</field>
+		<field name="locale_options" xsi:nil="true" />
+		<field name="avatar" xsi:nil="true" />
+		<field name="company" xsi:nil="true" />
+		<field name="title" xsi:nil="true" />
+		<field name="email_notifications">0</field>
+		<field name="last_access_on" xsi:nil="true" />
+		<field name="last_page" xsi:nil="true" />
+		<field name="external_id">e15d65f8-4813-4fbe-871b-3ad4d4760f88</field>
+	</row>
+	<row>
+		<field name="id">33</field>
+		<field name="status">invited</field>
+		<field name="first_name">גולדברג מנחם (קירזון פנחס)- 804</field>
+		<field name="last_name">גולדברג מנחם (קירזון פנחס)- 804</field>
+		<field name="email">mvaknin3232@gmail.com</field>
+		<field name="password">$2y$10$FbbzW9iKrw/.1I84jSnqsOOAf8Tu4gVqdj8yqmfWmMm/VW0OeEtrG</field>
+		<field name="token" xsi:nil="true" />
+		<field name="timezone">Asia/Jerusalem</field>
+		<field name="locale">en-US</field>
+		<field name="locale_options" xsi:nil="true" />
+		<field name="avatar" xsi:nil="true" />
+		<field name="company" xsi:nil="true" />
+		<field name="title" xsi:nil="true" />
+		<field name="email_notifications">0</field>
+		<field name="last_access_on" xsi:nil="true" />
+		<field name="last_page" xsi:nil="true" />
+		<field name="external_id">43aff21e-c4af-4ff2-9fb7-6c21bcde76ed</field>
+	</row>
+	<row>
+		<field name="id">34</field>
+		<field name="status">invited</field>
+		<field name="first_name">אהרונוביץ במקום ריזל-804</field>
+		<field name="last_name">אהרונוביץ במקום ריזל-804</field>
+		<field name="email">a8933@okmail.co.il</field>
+		<field name="password">$2y$10$eklfKOfNUMTtMV1CS.wixOnb1v5EzkCX/JRVsIhOaIXQPDFndHYUS</field>
+		<field name="token" xsi:nil="true" />
+		<field name="timezone">Asia/Jerusalem</field>
+		<field name="locale">en-US</field>
+		<field name="locale_options" xsi:nil="true" />
+		<field name="avatar" xsi:nil="true" />
+		<field name="company" xsi:nil="true" />
+		<field name="title" xsi:nil="true" />
+		<field name="email_notifications">0</field>
+		<field name="last_access_on" xsi:nil="true" />
+		<field name="last_page" xsi:nil="true" />
+		<field name="external_id">9c308608-5d5d-4280-86f3-5a89f503cb07</field>
+	</row>
+	</table_data>
+	<table_data name="directus_user_roles">
+	<row>
+		<field name="id">1</field>
+		<field name="user">1</field>
+		<field name="role">1</field>
+	</row>
+	<row>
+		<field name="id">3</field>
+		<field name="user">2</field>
+		<field name="role">3</field>
+	</row>
+	<row>
+		<field name="id">2</field>
+		<field name="user">3</field>
+		<field name="role">3</field>
+	</row>
+	<row>
+		<field name="id">4</field>
+		<field name="user">4</field>
+		<field name="role">3</field>
+	</row>
+	<row>
+		<field name="id">5</field>
+		<field name="user">5</field>
+		<field name="role">3</field>
+	</row>
+	<row>
+		<field name="id">6</field>
+		<field name="user">6</field>
+		<field name="role">3</field>
+	</row>
+	<row>
+		<field name="id">7</field>
+		<field name="user">7</field>
+		<field name="role">3</field>
+	</row>
+	<row>
+		<field name="id">8</field>
+		<field name="user">8</field>
+		<field name="role">3</field>
+	</row>
+	<row>
+		<field name="id">9</field>
+		<field name="user">9</field>
+		<field name="role">3</field>
+	</row>
+	<row>
+		<field name="id">10</field>
+		<field name="user">10</field>
+		<field name="role">3</field>
+	</row>
+	<row>
+		<field name="id">11</field>
+		<field name="user">11</field>
+		<field name="role">3</field>
+	</row>
+	<row>
+		<field name="id">12</field>
+		<field name="user">12</field>
+		<field name="role">3</field>
+	</row>
+	<row>
+		<field name="id">13</field>
+		<field name="user">13</field>
+		<field name="role">3</field>
+	</row>
+	<row>
+		<field name="id">14</field>
+		<field name="user">14</field>
+		<field name="role">3</field>
+	</row>
+	<row>
+		<field name="id">15</field>
+		<field name="user">15</field>
+		<field name="role">3</field>
+	</row>
+	<row>
+		<field name="id">16</field>
+		<field name="user">16</field>
+		<field name="role">3</field>
+	</row>
+	<row>
+		<field name="id">17</field>
+		<field name="user">17</field>
+		<field name="role">3</field>
+	</row>
+	<row>
+		<field name="id">18</field>
+		<field name="user">18</field>
+		<field name="role">3</field>
+	</row>
+	<row>
+		<field name="id">19</field>
+		<field name="user">19</field>
+		<field name="role">3</field>
+	</row>
+	<row>
+		<field name="id">20</field>
+		<field name="user">20</field>
+		<field name="role">3</field>
+	</row>
+	<row>
+		<field name="id">21</field>
+		<field name="user">21</field>
+		<field name="role">3</field>
+	</row>
+	<row>
+		<field name="id">22</field>
+		<field name="user">22</field>
+		<field name="role">3</field>
+	</row>
+	<row>
+		<field name="id">23</field>
+		<field name="user">23</field>
+		<field name="role">3</field>
+	</row>
+	<row>
+		<field name="id">24</field>
+		<field name="user">24</field>
+		<field name="role">3</field>
+	</row>
+	<row>
+		<field name="id">25</field>
+		<field name="user">25</field>
+		<field name="role">3</field>
+	</row>
+	<row>
+		<field name="id">26</field>
+		<field name="user">26</field>
+		<field name="role">3</field>
+	</row>
+	<row>
+		<field name="id">27</field>
+		<field name="user">27</field>
+		<field name="role">3</field>
+	</row>
+	<row>
+		<field name="id">28</field>
+		<field name="user">28</field>
+		<field name="role">3</field>
+	</row>
+	<row>
+		<field name="id">29</field>
+		<field name="user">29</field>
+		<field name="role">3</field>
+	</row>
+	<row>
+		<field name="id">30</field>
+		<field name="user">30</field>
+		<field name="role">3</field>
+	</row>
+	<row>
+		<field name="id">31</field>
+		<field name="user">31</field>
+		<field name="role">3</field>
+	</row>
+	<row>
+		<field name="id">32</field>
+		<field name="user">32</field>
+		<field name="role">3</field>
+	</row>
+	<row>
+		<field name="id">33</field>
+		<field name="user">33</field>
+		<field name="role">3</field>
+	</row>
+	<row>
+		<field name="id">34</field>
+		<field name="user">34</field>
+		<field name="role">3</field>
+	</row>
+	</table_data>
+</database>
+</mysqldump>

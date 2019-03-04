@@ -13,9 +13,18 @@
     stopOnRisky="false"
     verbose="false"
 >
+    <php>
+        <var name="DB_DSN" value="mysql:dbname=bdo_realestate;host=127.0.0.1;port=8889" />
+        <var name="DB_USER" value="root" />
+        <var name="DB_PASSWD" value="root" />
+        <var name="DB_DBNAME" value="bdo_realestate" />
+    </php>
     <testsuites>
         <testsuite name="parsers">
             <directory>tests/extensions/custom/parsers/</directory>
+        </testsuite>
+        <testsuite name="imports">
+            <directory>tests/extensions/custom/imports/</directory>
         </testsuite>
     </testsuites>
 </phpunit>

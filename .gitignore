@@ -46,6 +46,7 @@ composer.lock
 !/public/extensions/custom/hooks/profiles
 !/public/extensions/custom/hooks/messages
 !/public/extensions/custom/parsers/*
+!/public/extensions/custom/imports/*
 
 # Storage
 /public/uploads/*/
