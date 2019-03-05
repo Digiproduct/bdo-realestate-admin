@@ -17,8 +17,8 @@
 		<field name="company" xsi:nil="true" />
 		<field name="title" xsi:nil="true" />
 		<field name="email_notifications">0</field>
-		<field name="last_access_on">2019-03-03 23:05:31</field>
-		<field name="last_page">/users/5</field>
+		<field name="last_access_on">2019-03-05 00:57:52</field>
+		<field name="last_page">/settings/collections/profiles</field>
 		<field name="external_id" xsi:nil="true" />
 	</row>
 	<row>
@@ -819,6 +819,62 @@
 		<field name="id">34</field>
 		<field name="user">34</field>
 		<field name="role">3</field>
+	</row>
+	</table_data>
+	<table_data name="profiles">
+	<row>
+		<field name="id">1</field>
+		<field name="status">deleted</field>
+		<field name="created_by">2</field>
+		<field name="created_on">2019-01-23 10:18:54</field>
+		<field name="modified_by">1</field>
+		<field name="modified_on">2019-03-03 21:56:33</field>
+		<field name="passport" xsi:nil="true" />
+		<field name="phone_1" xsi:nil="true" />
+		<field name="phone_2" xsi:nil="true" />
+		<field name="customer">2</field>
+		<field name="home_address" xsi:nil="true" />
+	</row>
+	<row>
+		<field name="id">2</field>
+		<field name="status">published</field>
+		<field name="created_by">3</field>
+		<field name="created_on">2019-01-24 00:25:50</field>
+		<field name="modified_by">1</field>
+		<field name="modified_on">2019-02-24 05:06:24</field>
+		<field name="passport">50599448</field>
+		<field name="phone_1" xsi:nil="true" />
+		<field name="phone_2" xsi:nil="true" />
+		<field name="customer">1</field>
+		<field name="home_address" xsi:nil="true" />
+	</row>
+	</table_data>
+	<table_data name="contracts">
+	<row>
+		<field name="status">deleted</field>
+		<field name="created_by">2</field>
+		<field name="created_on">2019-01-23 10:55:34</field>
+		<field name="customer">2</field>
+		<field name="building_plot">803</field>
+		<field name="building_number">D13</field>
+		<field name="floor">קרקע</field>
+		<field name="apartment">1</field>
+		<field name="rooms">גן 4 חד'</field>
+		<field name="contract_number">704001</field>
+		<field name="group">1</field>
+	</row>
+	<row>
+		<field name="status">published</field>
+		<field name="created_by">3</field>
+		<field name="created_on">2019-01-24 00:27:53</field>
+		<field name="customer">3</field>
+		<field name="building_plot">803</field>
+		<field name="building_number">E14</field>
+		<field name="floor">1</field>
+		<field name="apartment">3</field>
+		<field name="rooms">4 חד'</field>
+		<field name="contract_number">711006</field>
+		<field name="group">1</field>
 	</row>
 	</table_data>
 </database>
