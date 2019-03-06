@@ -17,8 +17,8 @@
 		<field name="company" xsi:nil="true" />
 		<field name="title" xsi:nil="true" />
 		<field name="email_notifications">0</field>
-		<field name="last_access_on">2019-03-06 01:37:16</field>
-		<field name="last_page">/collections/group_info/2</field>
+		<field name="last_access_on">2019-03-06 03:32:56</field>
+		<field name="last_page">/collections/group_info</field>
 		<field name="external_id" xsi:nil="true" />
 	</row>
 	<row>
@@ -65,7 +65,7 @@
 		<field name="first_name">דהן משה ואורית - 803 חדש</field>
 		<field name="last_name">דהן משה ואורית - 803 חדש</field>
 		<field name="email">tamarsn12@gmail.com</field>
-		<field name="password">$2y$10$p4trYvx8Tzy0Fsl9vWSHEO18hlNnT2TCVoTU.D0ZZStTu13DBK/mu</field>
+		<field name="password">$2y$04$UrumadpG6bXT3XnSCgWRVuSVtLdpkKqtwsAXVqx9nlYXviCKsFEQa</field>
 		<field name="token" xsi:nil="true" />
 		<field name="timezone">Asia/Jerusalem</field>
 		<field name="locale">en-US</field>
@@ -76,7 +76,7 @@
 		<field name="email_notifications">0</field>
 		<field name="last_access_on" xsi:nil="true" />
 		<field name="last_page" xsi:nil="true" />
-		<field name="external_id">edabe7f5-dda3-4678-9311-61d2181737d0</field>
+		<field name="external_id" xsi:nil="true" />
 	</row>
 	<row>
 		<field name="id">5</field>
@@ -84,7 +84,7 @@
 		<field name="first_name">גרשון הכהן טל - 803</field>
 		<field name="last_name">גרשון הכהן טל - 803</field>
 		<field name="email">mishcan1@gmail.com</field>
-		<field name="password">$2y$10$.C2V20CsreZIM7/lyjI3EumtGeDR6jH6ulpwkfRoyLFgSJugvEfQ.</field>
+		<field name="password">$2y$04$4fYjmyg9ZlR2WFjdWxJTkefdXPBNstyUBRW5PrZg25OZFhSk/Fk..</field>
 		<field name="token" xsi:nil="true" />
 		<field name="timezone">Asia/Jerusalem</field>
 		<field name="locale">en-US</field>
@@ -95,7 +95,7 @@
 		<field name="email_notifications">0</field>
 		<field name="last_access_on" xsi:nil="true" />
 		<field name="last_page" xsi:nil="true" />
-		<field name="external_id">b58e293b-26f1-46e2-b8fd-b3fc70ebebb5</field>
+		<field name="external_id" xsi:nil="true" />
 	</row>
 	<row>
 		<field name="id">6</field>
@@ -103,7 +103,7 @@
 		<field name="first_name">קורן מיכה -803</field>
 		<field name="last_name">קורן מיכה -803</field>
 		<field name="email">lealeam1@gmail.com</field>
-		<field name="password">$2y$10$kRo/xIqW6aOesgjEW1vt9Os0mRQNqZHOqb.bN5bLn1kalyAIvT.bm</field>
+		<field name="password">$2y$04$1Rqfcj0xiPDP0d9kekaBZe2GOK3Kv8RtyYwbJ8dnvoDV4O2tGpwPi</field>
 		<field name="token" xsi:nil="true" />
 		<field name="timezone">Asia/Jerusalem</field>
 		<field name="locale">en-US</field>
@@ -114,7 +114,7 @@
 		<field name="email_notifications">0</field>
 		<field name="last_access_on" xsi:nil="true" />
 		<field name="last_page" xsi:nil="true" />
-		<field name="external_id">c807cdbb-6aa5-43d4-99c4-db34aad56c4b</field>
+		<field name="external_id" xsi:nil="true" />
 	</row>
 	<row>
 		<field name="id">7</field>
@@ -122,7 +122,7 @@
 		<field name="first_name">מרק נתנאל -803</field>
 		<field name="last_name">מרק נתנאל -803</field>
 		<field name="email">להודיע: 0533141727c@gmail.com</field>
-		<field name="password">$2y$10$mGD8XnuvJnZJ7s90eGeI.eI.rOTlRNYleQ87iIJn5wNy3GaQlTjHS</field>
+		<field name="password">$2y$04$.1y2bro64ySGpOIOUVcq8ezcaYUoNbIt1xVrU/aPfmilejZETwyTi</field>
 		<field name="token" xsi:nil="true" />
 		<field name="timezone">Asia/Jerusalem</field>
 		<field name="locale">en-US</field>
@@ -133,7 +133,7 @@
 		<field name="email_notifications">0</field>
 		<field name="last_access_on" xsi:nil="true" />
 		<field name="last_page" xsi:nil="true" />
-		<field name="external_id">d77d97b2-c459-4559-81eb-0b117da8b3cf</field>
+		<field name="external_id" xsi:nil="true" />
 	</row>
 	<row>
 		<field name="id">8</field>
@@ -141,7 +141,7 @@
 		<field name="first_name">נויבירט שאול שמחה - 803</field>
 		<field name="last_name">נויבירט שאול שמחה - 803</field>
 		<field name="email">yz054844@okmail.co.i</field>
-		<field name="password">$2y$10$7/.FOzwdgAKvuSk5K5C0MuEYFkBJwfutxvlXm9QNZy3bHl/srl95C</field>
+		<field name="password">$2y$04$fweyAELRzy3tuAotsLVA0.7ouuAKb.GdzTGf8MZ4FvJtBnQYvlAzW</field>
 		<field name="token" xsi:nil="true" />
 		<field name="timezone">Asia/Jerusalem</field>
 		<field name="locale">en-US</field>
@@ -152,7 +152,7 @@
 		<field name="email_notifications">0</field>
 		<field name="last_access_on" xsi:nil="true" />
 		<field name="last_page" xsi:nil="true" />
-		<field name="external_id">6b7e3d2d-cbc3-4982-9102-627d6ef69135</field>
+		<field name="external_id" xsi:nil="true" />
 	</row>
 	<row>
 		<field name="id">9</field>
@@ -160,7 +160,7 @@
 		<field name="first_name">כרמל לוי שושנה- 803</field>
 		<field name="last_name">כרמל לוי שושנה- 803</field>
 		<field name="email">yz054844@okmail.co.il</field>
-		<field name="password">$2y$10$709LbG0PdzvmAPHQzUQTO.mmVirsguiXruzOOaKSc6CDt0mBs0YmO</field>
+		<field name="password">$2y$04$ouBECOmS2GHM4mY5Rz0dgOSi/9fPcmwT4QDsVv4pdxNOsrjfQmFR.</field>
 		<field name="token" xsi:nil="true" />
 		<field name="timezone">Asia/Jerusalem</field>
 		<field name="locale">en-US</field>
@@ -171,7 +171,7 @@
 		<field name="email_notifications">0</field>
 		<field name="last_access_on" xsi:nil="true" />
 		<field name="last_page" xsi:nil="true" />
-		<field name="external_id">990599ec-2060-4900-a99c-b924de402f15</field>
+		<field name="external_id" xsi:nil="true" />
 	</row>
 	<row>
 		<field name="id">10</field>
@@ -179,7 +179,7 @@
 		<field name="first_name">שטרן עקיבא זלמן - 803</field>
 		<field name="last_name">שטרן עקיבא זלמן - 803</field>
 		<field name="email">y.n.wolbe@gmail.com</field>
-		<field name="password">$2y$10$KMuHBC8YsLFy6kImcgACJOhqHl2Lm25gZ86eJIXTSchyX62yqzKV.</field>
+		<field name="password">$2y$04$0Er6W4Yiowvd22nMT8bVGO3wO8sanSpNTQCA2gwXdMmXxfASDu8NO</field>
 		<field name="token" xsi:nil="true" />
 		<field name="timezone">Asia/Jerusalem</field>
 		<field name="locale">en-US</field>
@@ -190,7 +190,7 @@
 		<field name="email_notifications">0</field>
 		<field name="last_access_on" xsi:nil="true" />
 		<field name="last_page" xsi:nil="true" />
-		<field name="external_id">b2819520-d519-443f-8eb3-b19c84199352</field>
+		<field name="external_id" xsi:nil="true" />
 	</row>
 	<row>
 		<field name="id">11</field>
@@ -198,7 +198,7 @@
 		<field name="first_name">שוב נתנאל וצופיה - 803</field>
 		<field name="last_name">שוב נתנאל וצופיה - 803</field>
 		<field name="email">tehilacohen015@gmail.com</field>
-		<field name="password">$2y$10$WODRPfWHkKMouF544EUxkOUS7WCLFc.M619Oy91X1vxyHilGKphdi</field>
+		<field name="password">$2y$04$aGtH2BRrMYkppgF47CJIeemx.V7T3ZTHbOkIfhNgQ3RIZJnv0hbZa</field>
 		<field name="token" xsi:nil="true" />
 		<field name="timezone">Asia/Jerusalem</field>
 		<field name="locale">en-US</field>
@@ -209,7 +209,7 @@
 		<field name="email_notifications">0</field>
 		<field name="last_access_on" xsi:nil="true" />
 		<field name="last_page" xsi:nil="true" />
-		<field name="external_id">aae41aeb-fdfd-4422-8ba7-bbdca35595e9</field>
+		<field name="external_id" xsi:nil="true" />
 	</row>
 	<row>
 		<field name="id">12</field>
@@ -217,7 +217,7 @@
 		<field name="first_name">ביטן שלום ומזל - 803</field>
 		<field name="last_name">ביטן שלום ומזל - 803</field>
 		<field name="email">d0548483339@gmail.com</field>
-		<field name="password">$2y$10$xtzUUfDYVTdFcq.q0zTALe9aMLli5Vu9zL04AppOUuxowWUzVgAGO</field>
+		<field name="password">$2y$04$a4BKtpo3qm3B0DRe/WG1H.0iu3Ef8WgavMpGTWo.ujuiSMt1F7VuS</field>
 		<field name="token" xsi:nil="true" />
 		<field name="timezone">Asia/Jerusalem</field>
 		<field name="locale">en-US</field>
@@ -228,7 +228,7 @@
 		<field name="email_notifications">0</field>
 		<field name="last_access_on" xsi:nil="true" />
 		<field name="last_page" xsi:nil="true" />
-		<field name="external_id">4f1566e4-ff00-48b3-a3c3-d6d9365f05b4</field>
+		<field name="external_id" xsi:nil="true" />
 	</row>
 	<row>
 		<field name="id">13</field>
@@ -236,7 +236,7 @@
 		<field name="first_name">קרקובר חיים ונחמה - 803</field>
 		<field name="last_name">קרקובר חיים ונחמה - 803</field>
 		<field name="email">urielkahana@gmail.com</field>
-		<field name="password">$2y$10$3Z20lDDTpOv4xSCxN.HFUuIew4dNQSZi2Z7cvg58ZQ7t2ObNlQatK</field>
+		<field name="password">$2y$04$kcgH/sWc7T.dEAbl3GQyzuooq4wEuTwq/XvsjgYb9HxdL5Kw.aZ7i</field>
 		<field name="token" xsi:nil="true" />
 		<field name="timezone">Asia/Jerusalem</field>
 		<field name="locale">en-US</field>
@@ -247,7 +247,7 @@
 		<field name="email_notifications">0</field>
 		<field name="last_access_on" xsi:nil="true" />
 		<field name="last_page" xsi:nil="true" />
-		<field name="external_id">f0a2adbe-b0ec-4aa0-bf92-b1bb877b8b9f</field>
+		<field name="external_id" xsi:nil="true" />
 	</row>
 	<row>
 		<field name="id">14</field>
@@ -255,7 +255,7 @@
 		<field name="first_name">גרמן יצחק וחיה שרה 3- 803</field>
 		<field name="last_name">גרמן יצחק וחיה שרה 3- 803</field>
 		<field name="email">kaplannc@gmail.com</field>
-		<field name="password">$2y$10$Pxjhb9GKZdy9nTyaspxcB.Ka91xN3.ZVaXr2qnaXnnyqOTQxyWstq</field>
+		<field name="password">$2y$04$FLRNJ4SWH94hpfWS/Yu59uIPFhmP1k.uAlUq.q7212YBncVfQl13u</field>
 		<field name="token" xsi:nil="true" />
 		<field name="timezone">Asia/Jerusalem</field>
 		<field name="locale">en-US</field>
@@ -266,7 +266,7 @@
 		<field name="email_notifications">0</field>
 		<field name="last_access_on" xsi:nil="true" />
 		<field name="last_page" xsi:nil="true" />
-		<field name="external_id">7038216d-780d-40a2-9611-de1007789802</field>
+		<field name="external_id" xsi:nil="true" />
 	</row>
 	<row>
 		<field name="id">15</field>
@@ -274,7 +274,7 @@
 		<field name="first_name">רדעי נועם וציונה - 803</field>
 		<field name="last_name">רדעי נועם וציונה - 803</field>
 		<field name="email">a0545699096@gmail.com</field>
-		<field name="password">$2y$10$Xcj.qkenfovFUMBzilSy/.Co9A8cIIbDfyKu441.xAxFfD4QXudjC</field>
+		<field name="password">$2y$04$i3kEUaWn4/42x5Nd3d.iGeJJaZCdQvahgS9AMtgj2NdoGud837awe</field>
 		<field name="token" xsi:nil="true" />
 		<field name="timezone">Asia/Jerusalem</field>
 		<field name="locale">en-US</field>
@@ -285,7 +285,7 @@
 		<field name="email_notifications">0</field>
 		<field name="last_access_on" xsi:nil="true" />
 		<field name="last_page" xsi:nil="true" />
-		<field name="external_id">85ee4dc4-4421-49e4-b188-500229bc0e14</field>
+		<field name="external_id" xsi:nil="true" />
 	</row>
 	<row>
 		<field name="id">16</field>
@@ -293,7 +293,7 @@
 		<field name="first_name">נחשון מנחם מנדל -803</field>
 		<field name="last_name">נחשון מנחם מנדל -803</field>
 		<field name="email">ac741147@gmail.com</field>
-		<field name="password">$2y$10$Msx74WzL3w8WLa90PkboauxS7a3LKj/9n8MXu8aazP1tSkgTJs6r2</field>
+		<field name="password">$2y$04$MICU0HrHClPUvkXQt8lKGeXFOgnwHhyMGAsCPzraPuiMZZ2qbwmTG</field>
 		<field name="token" xsi:nil="true" />
 		<field name="timezone">Asia/Jerusalem</field>
 		<field name="locale">en-US</field>
@@ -304,7 +304,7 @@
 		<field name="email_notifications">0</field>
 		<field name="last_access_on" xsi:nil="true" />
 		<field name="last_page" xsi:nil="true" />
-		<field name="external_id">d7e26443-2c64-450d-90eb-1670de402dc3</field>
+		<field name="external_id" xsi:nil="true" />
 	</row>
 	<row>
 		<field name="id">17</field>
@@ -312,7 +312,7 @@
 		<field name="first_name">שטרן בלומה (במקום רייס נחמה לאה) - 803</field>
 		<field name="last_name">שטרן בלומה (במקום רייס נחמה לאה) - 803</field>
 		<field name="email">horoviz_r@bbm.org.il</field>
-		<field name="password">$2y$10$4rBZ1uc59Rf3uHISpOVP5.kW8diw00fgGTRyaQUvWyZc7DT7vVNiS</field>
+		<field name="password">$2y$04$cyTD52PEkUHyWLV7RrQ8r.TvXwMYKkIktzj5XL.7OcAJvsg7QydnK</field>
 		<field name="token" xsi:nil="true" />
 		<field name="timezone">Asia/Jerusalem</field>
 		<field name="locale">en-US</field>
@@ -323,7 +323,7 @@
 		<field name="email_notifications">0</field>
 		<field name="last_access_on" xsi:nil="true" />
 		<field name="last_page" xsi:nil="true" />
-		<field name="external_id">b12c6219-62d1-41be-b1aa-8475c0581f2b</field>
+		<field name="external_id" xsi:nil="true" />
 	</row>
 	<row>
 		<field name="id">18</field>
@@ -331,7 +331,7 @@
 		<field name="first_name">צייכנר נתנאל 803 חדש</field>
 		<field name="last_name">צייכנר נתנאל 803 חדש</field>
 		<field name="email">rachelidavid90@gmail.com</field>
-		<field name="password">$2y$10$ICdxadUHFX1i3DpYINn0AOteUhAKrC5M6JxNK9Lb6wz7R5EpGekaO</field>
+		<field name="password">$2y$04$yxRaebg4ECcOJJb8S5ur2uiiyFAVZYdBm.u04cIYOKMWneWItRrFu</field>
 		<field name="token" xsi:nil="true" />
 		<field name="timezone">Asia/Jerusalem</field>
 		<field name="locale">en-US</field>
@@ -342,7 +342,7 @@
 		<field name="email_notifications">0</field>
 		<field name="last_access_on" xsi:nil="true" />
 		<field name="last_page" xsi:nil="true" />
-		<field name="external_id">aaede1a0-26d6-429a-b9c1-a76152f0f2e1</field>
+		<field name="external_id" xsi:nil="true" />
 	</row>
 	<row>
 		<field name="id">19</field>
@@ -350,7 +350,7 @@
 		<field name="first_name">דירה כרמל (פלמן חסר הסכם)- 804</field>
 		<field name="last_name">דירה כרמל (פלמן חסר הסכם)- 804</field>
 		<field name="email">naftaly6462@gmail.com</field>
-		<field name="password">$2y$10$Mcx1NVpj2jprpdJbUJoC5e43n2Q85nSHVuwLNZF6VuD4mSQbO1ana</field>
+		<field name="password">$2y$04$Y0VOaoizgN4pjwrWi/vTgOInbr40c5oiZgE9gyGqpW5wKTL4cpk2a</field>
 		<field name="token" xsi:nil="true" />
 		<field name="timezone">Asia/Jerusalem</field>
 		<field name="locale">en-US</field>
@@ -361,7 +361,7 @@
 		<field name="email_notifications">0</field>
 		<field name="last_access_on" xsi:nil="true" />
 		<field name="last_page" xsi:nil="true" />
-		<field name="external_id">4f3a44b9-80d7-4587-88f6-ba623e790eb2</field>
+		<field name="external_id" xsi:nil="true" />
 	</row>
 	<row>
 		<field name="id">20</field>
@@ -369,7 +369,7 @@
 		<field name="first_name">דירה כרמל נהנה 1 - 804</field>
 		<field name="last_name">דירה כרמל נהנה 1 - 804</field>
 		<field name="email">brian_kinsbursky@hotmail.com</field>
-		<field name="password">$2y$10$Dd/FpeX53gm.IfE/eW9EKOAOEhx0DevXgCzt9MzBaqFcpDjTk3HHW</field>
+		<field name="password">$2y$04$Tg0sRRz8UF8UuOCT68usV.L69ukreTIDSjPqLd1QWb/P3OgUUPpry</field>
 		<field name="token" xsi:nil="true" />
 		<field name="timezone">Asia/Jerusalem</field>
 		<field name="locale">en-US</field>
@@ -380,7 +380,7 @@
 		<field name="email_notifications">0</field>
 		<field name="last_access_on" xsi:nil="true" />
 		<field name="last_page" xsi:nil="true" />
-		<field name="external_id">320566fd-2cf3-4c77-9688-332ccc0d155e</field>
+		<field name="external_id" xsi:nil="true" />
 	</row>
 	<row>
 		<field name="id">21</field>
@@ -388,7 +388,7 @@
 		<field name="first_name">דירה כרמל נהנה 2 - 804</field>
 		<field name="last_name">דירה כרמל נהנה 2 - 804</field>
 		<field name="email">dvoriwei175@gmail.com</field>
-		<field name="password">$2y$10$Tq6BAGyLbeBZB13yQXO3NuGs.Ah1LREp0CFnGwnrLyaUhnKhLxZ2y</field>
+		<field name="password">$2y$04$E2VhrDkZVMUznmaI/hHFQOhwAXqTKDyLp9jNlsJ.yuFgOac2pdobe</field>
 		<field name="token" xsi:nil="true" />
 		<field name="timezone">Asia/Jerusalem</field>
 		<field name="locale">en-US</field>
@@ -399,7 +399,7 @@
 		<field name="email_notifications">0</field>
 		<field name="last_access_on" xsi:nil="true" />
 		<field name="last_page" xsi:nil="true" />
-		<field name="external_id">76ea8c52-6ffd-405e-8670-d277963b8c42</field>
+		<field name="external_id" xsi:nil="true" />
 	</row>
 	<row>
 		<field name="id">22</field>
@@ -407,7 +407,7 @@
 		<field name="first_name">קרואני יהודה-804</field>
 		<field name="last_name">קרואני יהודה-804</field>
 		<field name="email">7652585@gmail.com</field>
-		<field name="password">$2y$10$UqYN7rHYFwvTUd1XNvYckOgI5R6v2OorQMRYp7XNClcw0JVhRNhve</field>
+		<field name="password">$2y$04$CUrA.Iv4cwAbYYa3WaO/beNjK6qdG8N9fbR6t2Kkl1khA6uxSQHRu</field>
 		<field name="token" xsi:nil="true" />
 		<field name="timezone">Asia/Jerusalem</field>
 		<field name="locale">en-US</field>
@@ -418,7 +418,7 @@
 		<field name="email_notifications">0</field>
 		<field name="last_access_on" xsi:nil="true" />
 		<field name="last_page" xsi:nil="true" />
-		<field name="external_id">e927bb4c-00aa-404d-8fbd-e40f84f0634f</field>
+		<field name="external_id" xsi:nil="true" />
 	</row>
 	<row>
 		<field name="id">23</field>
@@ -426,7 +426,7 @@
 		<field name="first_name">דירה כרמל נהנה 3- 804</field>
 		<field name="last_name">דירה כרמל נהנה 3- 804</field>
 		<field name="email">geullalevi@gmail.com</field>
-		<field name="password">$2y$10$wwyqLmISL2v.NoqERXCtpOTd8ZtUIqlTF3wCMYhXVk5NT77o32YPy</field>
+		<field name="password">$2y$04$A/ihG42bDXpEyAs0u4MScO9A7vroIdqORyjJ8WLRu9jrVh/GhI9Bq</field>
 		<field name="token" xsi:nil="true" />
 		<field name="timezone">Asia/Jerusalem</field>
 		<field name="locale">en-US</field>
@@ -437,7 +437,7 @@
 		<field name="email_notifications">0</field>
 		<field name="last_access_on" xsi:nil="true" />
 		<field name="last_page" xsi:nil="true" />
-		<field name="external_id">f1ce8889-b090-4242-b5e8-74a78c7b9006</field>
+		<field name="external_id" xsi:nil="true" />
 	</row>
 	<row>
 		<field name="id">24</field>
@@ -445,7 +445,7 @@
 		<field name="first_name">קראווני אחיה- חדש- 804</field>
 		<field name="last_name">קראווני אחיה- חדש- 804</field>
 		<field name="email">Tovi.S@fibi.co.il</field>
-		<field name="password">$2y$10$idztOrJIJdm8xJ9Bl0QK3O9Z12pDhvDNyQpzZAjBtGQViMN2HK56.</field>
+		<field name="password">$2y$04$ntelILBKbMLjxSpWB0YsWuccqQ90ItLIFP0imciR12e/q0sV./E3u</field>
 		<field name="token" xsi:nil="true" />
 		<field name="timezone">Asia/Jerusalem</field>
 		<field name="locale">en-US</field>
@@ -456,7 +456,7 @@
 		<field name="email_notifications">0</field>
 		<field name="last_access_on" xsi:nil="true" />
 		<field name="last_page" xsi:nil="true" />
-		<field name="external_id">b5d178bb-583c-44e7-a5bf-2ab5ba75b599</field>
+		<field name="external_id" xsi:nil="true" />
 	</row>
 	<row>
 		<field name="id">25</field>
@@ -464,7 +464,7 @@
 		<field name="first_name">דירה כרמל נהנה 4- 804</field>
 		<field name="last_name">דירה כרמל נהנה 4- 804</field>
 		<field name="email">e0525307770@gmail.com</field>
-		<field name="password">$2y$10$Fz5s.0y5N3inVFU5491s.ujG2FXpwoAUQB3weExDTCuQAChRopn1W</field>
+		<field name="password">$2y$04$ub3ChUsZ1hw7ZxssOmXFPuW9l3Ve/APyyhu.IxjQYK9UUyFWWVkhy</field>
 		<field name="token" xsi:nil="true" />
 		<field name="timezone">Asia/Jerusalem</field>
 		<field name="locale">en-US</field>
@@ -475,7 +475,7 @@
 		<field name="email_notifications">0</field>
 		<field name="last_access_on" xsi:nil="true" />
 		<field name="last_page" xsi:nil="true" />
-		<field name="external_id">ca224f2b-25b3-4ab4-b252-eb4d3272c564</field>
+		<field name="external_id" xsi:nil="true" />
 	</row>
 	<row>
 		<field name="id">26</field>
@@ -483,7 +483,7 @@
 		<field name="first_name">פישר יעקב -804</field>
 		<field name="last_name">פישר יעקב -804</field>
 		<field name="email">michalgershon26@gmail.com</field>
-		<field name="password">$2y$10$/vMJs.vyPBBv1zu1Or.brePydqyam/J6i9qunxsJsVOVeLPwL7Y7q</field>
+		<field name="password">$2y$04$PaaFYlm7X.kGce0tbOrXh.h74TSmBByIVM92easx5GvSECiVmjWbK</field>
 		<field name="token" xsi:nil="true" />
 		<field name="timezone">Asia/Jerusalem</field>
 		<field name="locale">en-US</field>
@@ -494,7 +494,7 @@
 		<field name="email_notifications">0</field>
 		<field name="last_access_on" xsi:nil="true" />
 		<field name="last_page" xsi:nil="true" />
-		<field name="external_id">2972835c-25ad-4635-a30c-1bfe93da3520</field>
+		<field name="external_id" xsi:nil="true" />
 	</row>
 	<row>
 		<field name="id">27</field>
@@ -502,7 +502,7 @@
 		<field name="first_name">דירה כרמל (הילמן) - 804</field>
 		<field name="last_name">דירה כרמל (הילמן) - 804</field>
 		<field name="email">miriserber@gmail.com</field>
-		<field name="password">$2y$10$33TAPGB758doehPHfb4TgOc7tuMLePFPRbusq2gDhPO04BYkHuWFa</field>
+		<field name="password">$2y$04$LStp5M70cKv0gaUxJOM0ge8TUa2sfzPPIid/mResYJn5/E91H2wJu</field>
 		<field name="token" xsi:nil="true" />
 		<field name="timezone">Asia/Jerusalem</field>
 		<field name="locale">en-US</field>
@@ -513,7 +513,7 @@
 		<field name="email_notifications">0</field>
 		<field name="last_access_on" xsi:nil="true" />
 		<field name="last_page" xsi:nil="true" />
-		<field name="external_id">43a1a78d-4879-420e-bf88-08c5bcfedb73</field>
+		<field name="external_id" xsi:nil="true" />
 	</row>
 	<row>
 		<field name="id">28</field>
@@ -521,7 +521,7 @@
 		<field name="first_name">דירה כרמל נהנה 5 - 804</field>
 		<field name="last_name">דירה כרמל נהנה 5 - 804</field>
 		<field name="email">moishimichal@gmail.com</field>
-		<field name="password">$2y$10$B.tjRvoLnQHncXUCahvU7OsyToS4kSPB/I1208r1nyG0cqGzgsal2</field>
+		<field name="password">$2y$04$fpwzttRb7oGm.XPcSHH5/u5DxU0nc.7polBjPtXClB9oORX9lYt/q</field>
 		<field name="token" xsi:nil="true" />
 		<field name="timezone">Asia/Jerusalem</field>
 		<field name="locale">en-US</field>
@@ -532,7 +532,7 @@
 		<field name="email_notifications">0</field>
 		<field name="last_access_on" xsi:nil="true" />
 		<field name="last_page" xsi:nil="true" />
-		<field name="external_id">e955b3bd-d008-4d6a-aba1-a4043b12550d</field>
+		<field name="external_id" xsi:nil="true" />
 	</row>
 	<row>
 		<field name="id">29</field>
@@ -540,7 +540,7 @@
 		<field name="first_name">דירה כרמל נהנה 7 - 804</field>
 		<field name="last_name">דירה כרמל נהנה 7 - 804</field>
 		<field name="email">chanimark1@gmail.com</field>
-		<field name="password">$2y$10$eugX/zZ9nbLCGVqVaLguXu9Jid7Lo37jmVfe7mtdIqolkJT0Bfk3q</field>
+		<field name="password">$2y$04$vHfnezQU.se7.S024lKeZulqpSilOW4zrAY0pfOye7h3VPt9gQ6m2</field>
 		<field name="token" xsi:nil="true" />
 		<field name="timezone">Asia/Jerusalem</field>
 		<field name="locale">en-US</field>
@@ -551,7 +551,7 @@
 		<field name="email_notifications">0</field>
 		<field name="last_access_on" xsi:nil="true" />
 		<field name="last_page" xsi:nil="true" />
-		<field name="external_id">dcd74b35-ee3d-4c87-8334-444c295dbbd8</field>
+		<field name="external_id" xsi:nil="true" />
 	</row>
 	<row>
 		<field name="id">30</field>
@@ -559,7 +559,7 @@
 		<field name="first_name">כהן אליהו אריה 2 - 804</field>
 		<field name="last_name">כהן אליהו אריה 2 - 804</field>
 		<field name="email">s0504140282@gmail.com</field>
-		<field name="password">$2y$10$.zvqHzlj2c6pez8o1IPjrO5hTmFtyJNd/HUuWkCWYGmoudpiMGiqW</field>
+		<field name="password">$2y$04$cy77ie.cNxVp1DpDpqqq6.OF9s95cWzL0DhW.GrkLxw/uxPPFc6WO</field>
 		<field name="token" xsi:nil="true" />
 		<field name="timezone">Asia/Jerusalem</field>
 		<field name="locale">en-US</field>
@@ -570,7 +570,7 @@
 		<field name="email_notifications">0</field>
 		<field name="last_access_on" xsi:nil="true" />
 		<field name="last_page" xsi:nil="true" />
-		<field name="external_id">c982bbd5-1ae6-436e-a2b7-f39520c893e7</field>
+		<field name="external_id" xsi:nil="true" />
 	</row>
 	<row>
 		<field name="id">31</field>
@@ -578,7 +578,7 @@
 		<field name="first_name">דירה כרמל נהנה 8 - 804</field>
 		<field name="last_name">דירה כרמל נהנה 8 - 804</field>
 		<field name="email">pozenm@gmail.com</field>
-		<field name="password">$2y$10$GDfcE2EHkI9nbo9jaEI5Vu/wPjO92T4KtulY2ysSPrzWD0ys2Se7S</field>
+		<field name="password">$2y$04$u58c40ra2GtYv9vsIiaoDuF1gaFAM9ycpoktipHU9RoiGccxtbymy</field>
 		<field name="token" xsi:nil="true" />
 		<field name="timezone">Asia/Jerusalem</field>
 		<field name="locale">en-US</field>
@@ -589,7 +589,7 @@
 		<field name="email_notifications">0</field>
 		<field name="last_access_on" xsi:nil="true" />
 		<field name="last_page" xsi:nil="true" />
-		<field name="external_id">9ff5bc08-6eaf-494b-b103-cb7ca816f020</field>
+		<field name="external_id" xsi:nil="true" />
 	</row>
 	<row>
 		<field name="id">32</field>
@@ -597,7 +597,7 @@
 		<field name="first_name">דירה כרמל- 804</field>
 		<field name="last_name">דירה כרמל- 804</field>
 		<field name="email">dv119903@gmail.com</field>
-		<field name="password">$2y$10$FDMeDjvlTaKSfsm/N1sVh.XKxkp43J.nDTwgzwYkgJtVa.D1/t1Jy</field>
+		<field name="password">$2y$04$MsOVY36X7qR.JSuCLOH3qOePxdtl/ZHs9/6p1uo5.GjLwhEq8l33a</field>
 		<field name="token" xsi:nil="true" />
 		<field name="timezone">Asia/Jerusalem</field>
 		<field name="locale">en-US</field>
@@ -608,7 +608,7 @@
 		<field name="email_notifications">0</field>
 		<field name="last_access_on" xsi:nil="true" />
 		<field name="last_page" xsi:nil="true" />
-		<field name="external_id">e15d65f8-4813-4fbe-871b-3ad4d4760f88</field>
+		<field name="external_id" xsi:nil="true" />
 	</row>
 	<row>
 		<field name="id">33</field>
@@ -616,7 +616,7 @@
 		<field name="first_name">גולדברג מנחם (קירזון פנחס)- 804</field>
 		<field name="last_name">גולדברג מנחם (קירזון פנחס)- 804</field>
 		<field name="email">mvaknin3232@gmail.com</field>
-		<field name="password">$2y$10$FbbzW9iKrw/.1I84jSnqsOOAf8Tu4gVqdj8yqmfWmMm/VW0OeEtrG</field>
+		<field name="password">$2y$04$JsPR5nA8OBvrdyE/ctKbSu47Su6y8FYonOJ0HuiqK4DtQoZ.TbQxi</field>
 		<field name="token" xsi:nil="true" />
 		<field name="timezone">Asia/Jerusalem</field>
 		<field name="locale">en-US</field>
@@ -627,7 +627,7 @@
 		<field name="email_notifications">0</field>
 		<field name="last_access_on" xsi:nil="true" />
 		<field name="last_page" xsi:nil="true" />
-		<field name="external_id">43aff21e-c4af-4ff2-9fb7-6c21bcde76ed</field>
+		<field name="external_id" xsi:nil="true" />
 	</row>
 	<row>
 		<field name="id">34</field>
@@ -635,7 +635,7 @@
 		<field name="first_name">אהרונוביץ במקום ריזל-804</field>
 		<field name="last_name">אהרונוביץ במקום ריזל-804</field>
 		<field name="email">a8933@okmail.co.il</field>
-		<field name="password">$2y$10$eklfKOfNUMTtMV1CS.wixOnb1v5EzkCX/JRVsIhOaIXQPDFndHYUS</field>
+		<field name="password">$2y$04$JSHpjiR6U2tDl5jZuGNZ1uA.hadFP1HItHsfrEoN9qsxX8qE3U7FS</field>
 		<field name="token" xsi:nil="true" />
 		<field name="timezone">Asia/Jerusalem</field>
 		<field name="locale">en-US</field>
@@ -646,7 +646,7 @@
 		<field name="email_notifications">0</field>
 		<field name="last_access_on" xsi:nil="true" />
 		<field name="last_page" xsi:nil="true" />
-		<field name="external_id">9c308608-5d5d-4280-86f3-5a89f503cb07</field>
+		<field name="external_id" xsi:nil="true" />
 	</row>
 	</table_data>
 	<table_data name="directus_user_roles">
@@ -852,9 +852,9 @@
 		<field name="id">3</field>
 		<field name="status">published</field>
 		<field name="created_by">4</field>
-		<field name="created_on">2019-03-05 22:43:46</field>
-		<field name="modified_by">1</field>
-		<field name="modified_on">2019-03-05 22:43:46</field>
+		<field name="created_on">2019-03-06 02:29:00</field>
+		<field name="modified_by" xsi:nil="true" />
+		<field name="modified_on" xsi:nil="true" />
 		<field name="passport">200503308</field>
 		<field name="phone_1">97236196934</field>
 		<field name="phone_2">972504110079</field>
@@ -865,9 +865,9 @@
 		<field name="id">4</field>
 		<field name="status">published</field>
 		<field name="created_by">5</field>
-		<field name="created_on">2019-03-05 22:44:15</field>
-		<field name="modified_by">1</field>
-		<field name="modified_on">2019-03-05 22:44:15</field>
+		<field name="created_on">2019-03-06 02:29:00</field>
+		<field name="modified_by" xsi:nil="true" />
+		<field name="modified_on" xsi:nil="true" />
 		<field name="passport">36904233</field>
 		<field name="phone_1">972548483339</field>
 		<field name="phone_2" xsi:nil="true" />
@@ -878,9 +878,9 @@
 		<field name="id">5</field>
 		<field name="status">published</field>
 		<field name="created_by">6</field>
-		<field name="created_on">2019-03-05 22:44:42</field>
-		<field name="modified_by">1</field>
-		<field name="modified_on">2019-03-05 22:44:42</field>
+		<field name="created_on">2019-03-06 02:29:00</field>
+		<field name="modified_by" xsi:nil="true" />
+		<field name="modified_on" xsi:nil="true" />
 		<field name="passport">68253962</field>
 		<field name="phone_1" xsi:nil="true" />
 		<field name="phone_2" xsi:nil="true" />
@@ -891,9 +891,9 @@
 		<field name="id">6</field>
 		<field name="status">published</field>
 		<field name="created_by">7</field>
-		<field name="created_on">2019-03-05 22:45:13</field>
-		<field name="modified_by">1</field>
-		<field name="modified_on">2019-03-05 22:45:13</field>
+		<field name="created_on">2019-03-06 02:29:01</field>
+		<field name="modified_by" xsi:nil="true" />
+		<field name="modified_on" xsi:nil="true" />
 		<field name="passport">31174550</field>
 		<field name="phone_1" xsi:nil="true" />
 		<field name="phone_2">972548438919</field>
@@ -904,9 +904,9 @@
 		<field name="id">7</field>
 		<field name="status">published</field>
 		<field name="created_by">8</field>
-		<field name="created_on">2019-03-05 22:45:30</field>
-		<field name="modified_by">1</field>
-		<field name="modified_on">2019-03-05 22:45:30</field>
+		<field name="created_on">2019-03-06 02:29:01</field>
+		<field name="modified_by" xsi:nil="true" />
+		<field name="modified_on" xsi:nil="true" />
 		<field name="passport">54924337</field>
 		<field name="phone_1" xsi:nil="true" />
 		<field name="phone_2" xsi:nil="true" />
@@ -917,9 +917,9 @@
 		<field name="id">8</field>
 		<field name="status">published</field>
 		<field name="created_by">9</field>
-		<field name="created_on">2019-03-05 22:46:11</field>
-		<field name="modified_by">1</field>
-		<field name="modified_on">2019-03-05 22:46:11</field>
+		<field name="created_on">2019-03-06 02:29:01</field>
+		<field name="modified_by" xsi:nil="true" />
+		<field name="modified_on" xsi:nil="true" />
 		<field name="passport">60518917</field>
 		<field name="phone_1" xsi:nil="true" />
 		<field name="phone_2">97289945076</field>
@@ -930,9 +930,9 @@
 		<field name="id">9</field>
 		<field name="status">published</field>
 		<field name="created_by">10</field>
-		<field name="created_on">2019-03-05 22:46:44</field>
-		<field name="modified_by">1</field>
-		<field name="modified_on">2019-03-05 22:46:44</field>
+		<field name="created_on">2019-03-06 02:29:01</field>
+		<field name="modified_by" xsi:nil="true" />
+		<field name="modified_on" xsi:nil="true" />
 		<field name="passport">21671615</field>
 		<field name="phone_1">972527624330</field>
 		<field name="phone_2">97229990488</field>
@@ -943,9 +943,9 @@
 		<field name="id">10</field>
 		<field name="status">published</field>
 		<field name="created_by">11</field>
-		<field name="created_on">2019-03-05 22:47:17</field>
-		<field name="modified_by">1</field>
-		<field name="modified_on">2019-03-05 22:47:17</field>
+		<field name="created_on">2019-03-06 02:29:01</field>
+		<field name="modified_by" xsi:nil="true" />
+		<field name="modified_on" xsi:nil="true" />
 		<field name="passport">37744588</field>
 		<field name="phone_1">972548433436</field>
 		<field name="phone_2">97226424349</field>
@@ -956,9 +956,9 @@
 		<field name="id">11</field>
 		<field name="status">published</field>
 		<field name="created_by">12</field>
-		<field name="created_on">2019-03-05 22:47:54</field>
-		<field name="modified_by">1</field>
-		<field name="modified_on">2019-03-05 22:47:54</field>
+		<field name="created_on">2019-03-06 02:29:01</field>
+		<field name="modified_by" xsi:nil="true" />
+		<field name="modified_on" xsi:nil="true" />
 		<field name="passport">56488455</field>
 		<field name="phone_1">97286103588</field>
 		<field name="phone_2">972504102685</field>
@@ -969,9 +969,9 @@
 		<field name="id">12</field>
 		<field name="status">published</field>
 		<field name="created_by">13</field>
-		<field name="created_on">2019-03-05 22:49:14</field>
-		<field name="modified_by">1</field>
-		<field name="modified_on">2019-03-05 22:49:14</field>
+		<field name="created_on">2019-03-06 02:29:01</field>
+		<field name="modified_by" xsi:nil="true" />
+		<field name="modified_on" xsi:nil="true" />
 		<field name="passport">50599448</field>
 		<field name="phone_1">972527120252</field>
 		<field name="phone_2">97239327659</field>
@@ -982,9 +982,9 @@
 		<field name="id">13</field>
 		<field name="status">published</field>
 		<field name="created_by">14</field>
-		<field name="created_on">2019-03-05 22:49:56</field>
-		<field name="modified_by">1</field>
-		<field name="modified_on">2019-03-05 22:49:56</field>
+		<field name="created_on">2019-03-06 02:29:01</field>
+		<field name="modified_by" xsi:nil="true" />
+		<field name="modified_on" xsi:nil="true" />
 		<field name="passport">38770160</field>
 		<field name="phone_1">972548459861</field>
 		<field name="phone_2">97226437041</field>
@@ -995,9 +995,9 @@
 		<field name="id">14</field>
 		<field name="status">published</field>
 		<field name="created_by">15</field>
-		<field name="created_on">2019-03-05 22:50:27</field>
-		<field name="modified_by">1</field>
-		<field name="modified_on">2019-03-05 22:50:27</field>
+		<field name="created_on">2019-03-06 02:29:01</field>
+		<field name="modified_by" xsi:nil="true" />
+		<field name="modified_on" xsi:nil="true" />
 		<field name="passport">27140466</field>
 		<field name="phone_1">972527114039</field>
 		<field name="phone_2">972527114038</field>
@@ -1008,9 +1008,9 @@
 		<field name="id">15</field>
 		<field name="status">published</field>
 		<field name="created_by">16</field>
-		<field name="created_on">2019-03-05 22:51:16</field>
-		<field name="modified_by">1</field>
-		<field name="modified_on">2019-03-05 22:51:16</field>
+		<field name="created_on">2019-03-06 02:29:01</field>
+		<field name="modified_by" xsi:nil="true" />
+		<field name="modified_on" xsi:nil="true" />
 		<field name="passport">50399880</field>
 		<field name="phone_1">972527644277</field>
 		<field name="phone_2">97289943646</field>
@@ -1021,9 +1021,9 @@
 		<field name="id">16</field>
 		<field name="status">published</field>
 		<field name="created_by">17</field>
-		<field name="created_on">2019-03-05 22:51:49</field>
-		<field name="modified_by">1</field>
-		<field name="modified_on">2019-03-05 22:51:49</field>
+		<field name="created_on">2019-03-06 02:29:01</field>
+		<field name="modified_by" xsi:nil="true" />
+		<field name="modified_on" xsi:nil="true" />
 		<field name="passport">203756598</field>
 		<field name="phone_1">972527149307</field>
 		<field name="phone_2" xsi:nil="true" />
@@ -1034,9 +1034,9 @@
 		<field name="id">17</field>
 		<field name="status">published</field>
 		<field name="created_by">18</field>
-		<field name="created_on">2019-03-05 22:52:28</field>
-		<field name="modified_by">1</field>
-		<field name="modified_on">2019-03-05 22:52:28</field>
+		<field name="created_on">2019-03-06 02:29:02</field>
+		<field name="modified_by" xsi:nil="true" />
+		<field name="modified_on" xsi:nil="true" />
 		<field name="passport">313455248</field>
 		<field name="phone_1">972504121262</field>
 		<field name="phone_2">97288521237</field>
@@ -1047,9 +1047,9 @@
 		<field name="id">18</field>
 		<field name="status">published</field>
 		<field name="created_by">19</field>
-		<field name="created_on">2019-03-05 22:53:12</field>
-		<field name="modified_by">1</field>
-		<field name="modified_on">2019-03-05 22:53:12</field>
+		<field name="created_on">2019-03-06 02:29:02</field>
+		<field name="modified_by" xsi:nil="true" />
+		<field name="modified_on" xsi:nil="true" />
 		<field name="passport" xsi:nil="true" />
 		<field name="phone_1">972548520550</field>
 		<field name="phone_2">97235798974</field>
@@ -1060,9 +1060,9 @@
 		<field name="id">19</field>
 		<field name="status">published</field>
 		<field name="created_by">20</field>
-		<field name="created_on">2019-03-05 22:53:40</field>
-		<field name="modified_by">1</field>
-		<field name="modified_on">2019-03-05 22:53:40</field>
+		<field name="created_on">2019-03-06 02:29:02</field>
+		<field name="modified_by" xsi:nil="true" />
+		<field name="modified_on" xsi:nil="true" />
 		<field name="passport" xsi:nil="true" />
 		<field name="phone_1">972548462721</field>
 		<field name="phone_2">972548462722</field>
@@ -1073,9 +1073,9 @@
 		<field name="id">20</field>
 		<field name="status">published</field>
 		<field name="created_by">21</field>
-		<field name="created_on">2019-03-05 22:54:00</field>
-		<field name="modified_by">1</field>
-		<field name="modified_on">2019-03-05 22:54:00</field>
+		<field name="created_on">2019-03-06 02:29:02</field>
+		<field name="modified_by" xsi:nil="true" />
+		<field name="modified_on" xsi:nil="true" />
 		<field name="passport" xsi:nil="true" />
 		<field name="phone_1" xsi:nil="true" />
 		<field name="phone_2">972527160118</field>
@@ -1086,9 +1086,9 @@
 		<field name="id">21</field>
 		<field name="status">published</field>
 		<field name="created_by">22</field>
-		<field name="created_on">2019-03-05 22:54:56</field>
-		<field name="modified_by">1</field>
-		<field name="modified_on">2019-03-05 22:54:56</field>
+		<field name="created_on">2019-03-06 02:29:02</field>
+		<field name="modified_by" xsi:nil="true" />
+		<field name="modified_on" xsi:nil="true" />
 		<field name="passport">204431043</field>
 		<field name="phone_1">972504141034</field>
 		<field name="phone_2">97235795066</field>
@@ -1099,9 +1099,9 @@
 		<field name="id">22</field>
 		<field name="status">published</field>
 		<field name="created_by">23</field>
-		<field name="created_on">2019-03-05 22:55:30</field>
-		<field name="modified_by">1</field>
-		<field name="modified_on">2019-03-05 22:55:30</field>
+		<field name="created_on">2019-03-06 02:29:02</field>
+		<field name="modified_by" xsi:nil="true" />
+		<field name="modified_on" xsi:nil="true" />
 		<field name="passport" xsi:nil="true" />
 		<field name="phone_1">972548476690</field>
 		<field name="phone_2">97226413123</field>
@@ -1112,9 +1112,9 @@
 		<field name="id">23</field>
 		<field name="status">published</field>
 		<field name="created_by">24</field>
-		<field name="created_on">2019-03-05 22:56:11</field>
-		<field name="modified_by">1</field>
-		<field name="modified_on">2019-03-05 22:56:11</field>
+		<field name="created_on">2019-03-06 02:29:02</field>
+		<field name="modified_by" xsi:nil="true" />
+		<field name="modified_on" xsi:nil="true" />
 		<field name="passport">206139636</field>
 		<field name="phone_1" xsi:nil="true" />
 		<field name="phone_2">972504125193</field>
@@ -1125,9 +1125,9 @@
 		<field name="id">24</field>
 		<field name="status">published</field>
 		<field name="created_by">25</field>
-		<field name="created_on">2019-03-05 22:56:32</field>
-		<field name="modified_by">1</field>
-		<field name="modified_on">2019-03-05 22:56:32</field>
+		<field name="created_on">2019-03-06 02:29:02</field>
+		<field name="modified_by" xsi:nil="true" />
+		<field name="modified_on" xsi:nil="true" />
 		<field name="passport" xsi:nil="true" />
 		<field name="phone_1">972527650968</field>
 		<field name="phone_2">97289932638</field>
@@ -1138,9 +1138,9 @@
 		<field name="id">25</field>
 		<field name="status">published</field>
 		<field name="created_by">26</field>
-		<field name="created_on">2019-03-05 22:57:06</field>
-		<field name="modified_by">1</field>
-		<field name="modified_on">2019-03-05 22:57:06</field>
+		<field name="created_on">2019-03-06 02:29:02</field>
+		<field name="modified_by" xsi:nil="true" />
+		<field name="modified_on" xsi:nil="true" />
 		<field name="passport">53951687</field>
 		<field name="phone_1">972527695826</field>
 		<field name="phone_2">97289944698</field>
@@ -1151,9 +1151,9 @@
 		<field name="id">26</field>
 		<field name="status">published</field>
 		<field name="created_by">27</field>
-		<field name="created_on">2019-03-05 22:57:34</field>
-		<field name="modified_by">1</field>
-		<field name="modified_on">2019-03-05 22:57:34</field>
+		<field name="created_on">2019-03-06 02:29:02</field>
+		<field name="modified_by" xsi:nil="true" />
+		<field name="modified_on" xsi:nil="true" />
 		<field name="passport" xsi:nil="true" />
 		<field name="phone_1">972504156976</field>
 		<field name="phone_2">97289945076</field>
@@ -1164,9 +1164,9 @@
 		<field name="id">27</field>
 		<field name="status">published</field>
 		<field name="created_by">28</field>
-		<field name="created_on">2019-03-05 22:58:03</field>
-		<field name="modified_by">1</field>
-		<field name="modified_on">2019-03-05 22:58:03</field>
+		<field name="created_on">2019-03-06 02:29:02</field>
+		<field name="modified_by" xsi:nil="true" />
+		<field name="modified_on" xsi:nil="true" />
 		<field name="passport" xsi:nil="true" />
 		<field name="phone_1">972527631668</field>
 		<field name="phone_2">97236742751</field>
@@ -1177,9 +1177,9 @@
 		<field name="id">28</field>
 		<field name="status">published</field>
 		<field name="created_by">29</field>
-		<field name="created_on">2019-03-05 22:58:32</field>
-		<field name="modified_by">1</field>
-		<field name="modified_on">2019-03-05 22:58:32</field>
+		<field name="created_on">2019-03-06 02:29:03</field>
+		<field name="modified_by" xsi:nil="true" />
+		<field name="modified_on" xsi:nil="true" />
 		<field name="passport" xsi:nil="true" />
 		<field name="phone_1">972549900770</field>
 		<field name="phone_2">97236197591</field>
@@ -1190,9 +1190,9 @@
 		<field name="id">29</field>
 		<field name="status">published</field>
 		<field name="created_by">30</field>
-		<field name="created_on">2019-03-05 22:59:12</field>
-		<field name="modified_by">1</field>
-		<field name="modified_on">2019-03-05 22:59:12</field>
+		<field name="created_on">2019-03-06 02:29:03</field>
+		<field name="modified_by" xsi:nil="true" />
+		<field name="modified_on" xsi:nil="true" />
 		<field name="passport">36575611</field>
 		<field name="phone_1">972504129868</field>
 		<field name="phone_2">97235799868</field>
@@ -1203,9 +1203,9 @@
 		<field name="id">30</field>
 		<field name="status">published</field>
 		<field name="created_by">31</field>
-		<field name="created_on">2019-03-05 22:59:48</field>
-		<field name="modified_by">1</field>
-		<field name="modified_on">2019-03-05 22:59:48</field>
+		<field name="created_on">2019-03-06 02:29:03</field>
+		<field name="modified_by" xsi:nil="true" />
+		<field name="modified_on" xsi:nil="true" />
 		<field name="passport" xsi:nil="true" />
 		<field name="phone_1" xsi:nil="true" />
 		<field name="phone_2">972548463693</field>
@@ -1216,9 +1216,9 @@
 		<field name="id">31</field>
 		<field name="status">published</field>
 		<field name="created_by">32</field>
-		<field name="created_on">2019-03-05 23:00:18</field>
-		<field name="modified_by">1</field>
-		<field name="modified_on">2019-03-05 23:00:18</field>
+		<field name="created_on">2019-03-06 02:29:03</field>
+		<field name="modified_by" xsi:nil="true" />
+		<field name="modified_on" xsi:nil="true" />
 		<field name="passport" xsi:nil="true" />
 		<field name="phone_1">972548450737</field>
 		<field name="phone_2">97236196480</field>
@@ -1229,9 +1229,9 @@
 		<field name="id">32</field>
 		<field name="status">published</field>
 		<field name="created_by">33</field>
-		<field name="created_on">2019-03-05 23:00:52</field>
-		<field name="modified_by">1</field>
-		<field name="modified_on">2019-03-05 23:00:52</field>
+		<field name="created_on">2019-03-06 02:29:03</field>
+		<field name="modified_by" xsi:nil="true" />
+		<field name="modified_on" xsi:nil="true" />
 		<field name="passport">43235688</field>
 		<field name="phone_1">972533172895</field>
 		<field name="phone_2">972533107908</field>
@@ -1242,9 +1242,9 @@
 		<field name="id">33</field>
 		<field name="status">published</field>
 		<field name="created_by">34</field>
-		<field name="created_on">2019-03-05 23:01:28</field>
-		<field name="modified_by">1</field>
-		<field name="modified_on">2019-03-05 23:01:28</field>
+		<field name="created_on">2019-03-06 02:29:03</field>
+		<field name="modified_by" xsi:nil="true" />
+		<field name="modified_on" xsi:nil="true" />
 		<field name="passport">301339651</field>
 		<field name="phone_1">972548443412</field>
 		<field name="phone_2" xsi:nil="true" />
@@ -1272,9 +1272,9 @@
 		<field name="id">2</field>
 		<field name="status">published</field>
 		<field name="created_by">1</field>
-		<field name="created_on">2019-03-06 01:28:17</field>
-		<field name="modified_by">1</field>
-		<field name="modified_on">2019-03-06 01:28:17</field>
+		<field name="created_on">2019-03-06 02:29:00</field>
+		<field name="modified_by" xsi:nil="true" />
+		<field name="modified_on" xsi:nil="true" />
 		<field name="phone" xsi:nil="true" />
 		<field name="email" xsi:nil="true" />
 		<field name="photo_1" xsi:nil="true" />
@@ -1282,6 +1282,398 @@
 		<field name="photo_3" xsi:nil="true" />
 		<field name="photo_4" xsi:nil="true" />
 		<field name="group_name">נתיבות</field>
+	</row>
+	</table_data>
+	<table_data name="contracts">
+	<row>
+		<field name="status">published</field>
+		<field name="created_by">8</field>
+		<field name="created_on">2019-03-06 03:05:48</field>
+		<field name="customer">8</field>
+		<field name="building_plot">803</field>
+		<field name="building_number">D13</field>
+		<field name="floor">3</field>
+		<field name="apartment">10</field>
+		<field name="rooms">3 חד'</field>
+		<field name="contract_number">75006</field>
+		<field name="group">2</field>
+	</row>
+	<row>
+		<field name="status">published</field>
+		<field name="created_by">12</field>
+		<field name="created_on">2019-03-06 03:09:45</field>
+		<field name="customer">12</field>
+		<field name="building_plot">803</field>
+		<field name="building_number">E14</field>
+		<field name="floor">קרקע</field>
+		<field name="apartment">1</field>
+		<field name="rooms">גן 4 חד'</field>
+		<field name="contract_number">702002</field>
+		<field name="group">2</field>
+	</row>
+	<row>
+		<field name="status">published</field>
+		<field name="created_by">5</field>
+		<field name="created_on">2019-03-06 03:02:43</field>
+		<field name="customer">5</field>
+		<field name="building_plot">803</field>
+		<field name="building_number">D13</field>
+		<field name="floor">1</field>
+		<field name="apartment">2</field>
+		<field name="rooms">4 חד'</field>
+		<field name="contract_number">703001</field>
+		<field name="group">2</field>
+	</row>
+	<row>
+		<field name="status">published</field>
+		<field name="created_by">14</field>
+		<field name="created_on">2019-03-06 03:13:20</field>
+		<field name="customer">14</field>
+		<field name="building_plot">803</field>
+		<field name="building_number">E14</field>
+		<field name="floor">2</field>
+		<field name="apartment">6</field>
+		<field name="rooms">4 חד'</field>
+		<field name="contract_number">703005</field>
+		<field name="group">2</field>
+	</row>
+	<row>
+		<field name="status">deleted</field>
+		<field name="created_by">2</field>
+		<field name="created_on">2019-03-06 03:01:36</field>
+		<field name="customer">2</field>
+		<field name="building_plot">803</field>
+		<field name="building_number">D13</field>
+		<field name="floor">קרקע</field>
+		<field name="apartment">1</field>
+		<field name="rooms">גן 4 חד'</field>
+		<field name="contract_number">704001</field>
+		<field name="group">1</field>
+	</row>
+	<row>
+		<field name="status">published</field>
+		<field name="created_by">3</field>
+		<field name="created_on">2019-01-24 00:27:53</field>
+		<field name="customer">3</field>
+		<field name="building_plot">803</field>
+		<field name="building_number">E14</field>
+		<field name="floor">1</field>
+		<field name="apartment">3</field>
+		<field name="rooms">4 חד'</field>
+		<field name="contract_number">711006</field>
+		<field name="group">1</field>
+	</row>
+	<row>
+		<field name="status">published</field>
+		<field name="created_by">6</field>
+		<field name="created_on">2019-03-06 03:03:53</field>
+		<field name="customer">6</field>
+		<field name="building_plot">803</field>
+		<field name="building_number">D13</field>
+		<field name="floor">2</field>
+		<field name="apartment">5</field>
+		<field name="rooms">4 חד'</field>
+		<field name="contract_number">711011</field>
+		<field name="group">2</field>
+	</row>
+	<row>
+		<field name="status">published</field>
+		<field name="created_by">30</field>
+		<field name="created_on">2019-03-06 03:27:17</field>
+		<field name="customer">30</field>
+		<field name="building_plot">804</field>
+		<field name="building_number">C12</field>
+		<field name="floor">1</field>
+		<field name="apartment">5</field>
+		<field name="rooms">3 חד'</field>
+		<field name="contract_number">720018</field>
+		<field name="group">2</field>
+	</row>
+	<row>
+		<field name="status">published</field>
+		<field name="created_by">9</field>
+		<field name="created_on">2019-03-06 03:06:44</field>
+		<field name="customer">9</field>
+		<field name="building_plot">803</field>
+		<field name="building_number">D13</field>
+		<field name="floor">4</field>
+		<field name="apartment">11</field>
+		<field name="rooms">4 חד'</field>
+		<field name="contract_number">720037</field>
+		<field name="group">2</field>
+	</row>
+	<row>
+		<field name="status">published</field>
+		<field name="created_by">17</field>
+		<field name="created_on">2019-03-06 03:16:20</field>
+		<field name="customer">17</field>
+		<field name="building_plot">803</field>
+		<field name="building_number">E14</field>
+		<field name="floor">4</field>
+		<field name="apartment">12</field>
+		<field name="rooms">4 חד'</field>
+		<field name="contract_number">721001</field>
+		<field name="group">2</field>
+	</row>
+	<row>
+		<field name="status">published</field>
+		<field name="created_by">15</field>
+		<field name="created_on">2019-03-06 03:14:19</field>
+		<field name="customer">15</field>
+		<field name="building_plot">803</field>
+		<field name="building_number">E14</field>
+		<field name="floor">2</field>
+		<field name="apartment">8</field>
+		<field name="rooms">3 חד'</field>
+		<field name="contract_number">721004</field>
+		<field name="group">2</field>
+	</row>
+	<row>
+		<field name="status">published</field>
+		<field name="created_by">11</field>
+		<field name="created_on">2019-03-06 03:08:38</field>
+		<field name="customer">11</field>
+		<field name="building_plot">803</field>
+		<field name="building_number">D13</field>
+		<field name="floor">5</field>
+		<field name="apartment">14</field>
+		<field name="rooms">דירת גג 5 חד'</field>
+		<field name="contract_number">731007</field>
+		<field name="group">2</field>
+	</row>
+	<row>
+		<field name="status">published</field>
+		<field name="created_by">10</field>
+		<field name="created_on">2019-03-06 03:07:40</field>
+		<field name="customer">10</field>
+		<field name="building_plot">803</field>
+		<field name="building_number">D13</field>
+		<field name="floor">4</field>
+		<field name="apartment">12</field>
+		<field name="rooms">3 חד'</field>
+		<field name="contract_number">731009</field>
+		<field name="group">2</field>
+	</row>
+	<row>
+		<field name="status">published</field>
+		<field name="created_by">16</field>
+		<field name="created_on">2019-03-06 03:15:13</field>
+		<field name="customer">16</field>
+		<field name="building_plot">803</field>
+		<field name="building_number">E14</field>
+		<field name="floor">3</field>
+		<field name="apartment">11</field>
+		<field name="rooms">3 חד'</field>
+		<field name="contract_number">750003</field>
+		<field name="group">2</field>
+	</row>
+	<row>
+		<field name="status">published</field>
+		<field name="created_by">7</field>
+		<field name="created_on">2019-03-06 03:04:49</field>
+		<field name="customer">7</field>
+		<field name="building_plot">803</field>
+		<field name="building_number">D13</field>
+		<field name="floor">2</field>
+		<field name="apartment">7</field>
+		<field name="rooms">3 חד'</field>
+		<field name="contract_number">750005</field>
+		<field name="group">2</field>
+	</row>
+	<row>
+		<field name="status">published</field>
+		<field name="created_by">26</field>
+		<field name="created_on">2019-03-06 03:24:05</field>
+		<field name="customer">26</field>
+		<field name="building_plot">804</field>
+		<field name="building_number">C11</field>
+		<field name="floor">3</field>
+		<field name="apartment">11</field>
+		<field name="rooms">3 חד'</field>
+		<field name="contract_number">780007</field>
+		<field name="group">2</field>
+	</row>
+	<row>
+		<field name="status">published</field>
+		<field name="created_by">18</field>
+		<field name="created_on">2019-03-06 03:17:23</field>
+		<field name="customer">18</field>
+		<field name="building_plot">803</field>
+		<field name="building_number">E14</field>
+		<field name="floor">4</field>
+		<field name="apartment">14</field>
+		<field name="rooms">3 חד'</field>
+		<field name="contract_number">781040</field>
+		<field name="group">2</field>
+	</row>
+	<row>
+		<field name="status">published</field>
+		<field name="created_by">34</field>
+		<field name="created_on">2019-03-06 03:30:36</field>
+		<field name="customer">34</field>
+		<field name="building_plot">804</field>
+		<field name="building_number">C12</field>
+		<field name="floor">3</field>
+		<field name="apartment">11</field>
+		<field name="rooms">3 חד'</field>
+		<field name="contract_number">804000</field>
+		<field name="group">2</field>
+	</row>
+	<row>
+		<field name="status">published</field>
+		<field name="created_by">24</field>
+		<field name="created_on">2019-03-06 03:22:13</field>
+		<field name="customer">24</field>
+		<field name="building_plot">804</field>
+		<field name="building_number">C11</field>
+		<field name="floor">2</field>
+		<field name="apartment">7</field>
+		<field name="rooms">4 חד'</field>
+		<field name="contract_number">804001</field>
+		<field name="group">2</field>
+	</row>
+	<row>
+		<field name="status">published</field>
+		<field name="created_by">22</field>
+		<field name="created_on">2019-03-06 03:20:35</field>
+		<field name="customer">22</field>
+		<field name="building_plot">804</field>
+		<field name="building_number">C11</field>
+		<field name="floor">1</field>
+		<field name="apartment">5</field>
+		<field name="rooms">3 חד'</field>
+		<field name="contract_number">804002</field>
+		<field name="group">2</field>
+	</row>
+	<row>
+		<field name="status">published</field>
+		<field name="created_by">19</field>
+		<field name="created_on">2019-03-06 03:18:21</field>
+		<field name="customer">19</field>
+		<field name="building_plot">804</field>
+		<field name="building_number">C11</field>
+		<field name="floor">קרקע</field>
+		<field name="apartment">2</field>
+		<field name="rooms">גן 4 חד'</field>
+		<field name="contract_number">804005</field>
+		<field name="group">2</field>
+	</row>
+	<row>
+		<field name="status">published</field>
+		<field name="created_by">20</field>
+		<field name="created_on">2019-03-06 03:19:10</field>
+		<field name="customer">20</field>
+		<field name="building_plot">804</field>
+		<field name="building_number">C11</field>
+		<field name="floor">1</field>
+		<field name="apartment">3</field>
+		<field name="rooms">4 חד'</field>
+		<field name="contract_number">804006</field>
+		<field name="group">2</field>
+	</row>
+	<row>
+		<field name="status">published</field>
+		<field name="created_by">21</field>
+		<field name="created_on">2019-03-06 03:19:49</field>
+		<field name="customer">21</field>
+		<field name="building_plot">804</field>
+		<field name="building_number">C11</field>
+		<field name="floor">1</field>
+		<field name="apartment">4</field>
+		<field name="rooms">4 חד'</field>
+		<field name="contract_number">804007</field>
+		<field name="group">2</field>
+	</row>
+	<row>
+		<field name="status">published</field>
+		<field name="created_by">23</field>
+		<field name="created_on">2019-03-06 03:21:23</field>
+		<field name="customer">23</field>
+		<field name="building_plot">804</field>
+		<field name="building_number">C11</field>
+		<field name="floor">2</field>
+		<field name="apartment">6</field>
+		<field name="rooms">4 חד'</field>
+		<field name="contract_number">804008</field>
+		<field name="group">2</field>
+	</row>
+	<row>
+		<field name="status">published</field>
+		<field name="created_by">25</field>
+		<field name="created_on">2019-03-06 03:22:57</field>
+		<field name="customer">25</field>
+		<field name="building_plot">804</field>
+		<field name="building_number">C11</field>
+		<field name="floor">3</field>
+		<field name="apartment">9</field>
+		<field name="rooms">4 חד'</field>
+		<field name="contract_number">804009</field>
+		<field name="group">2</field>
+	</row>
+	<row>
+		<field name="status">published</field>
+		<field name="created_by">27</field>
+		<field name="created_on">2019-03-06 03:24:52</field>
+		<field name="customer">27</field>
+		<field name="building_plot">804</field>
+		<field name="building_number">C11</field>
+		<field name="floor">4</field>
+		<field name="apartment">12</field>
+		<field name="rooms">דירת גג 5 חד'</field>
+		<field name="contract_number">804010</field>
+		<field name="group">2</field>
+	</row>
+	<row>
+		<field name="status">published</field>
+		<field name="created_by">28</field>
+		<field name="created_on">2019-03-06 03:25:45</field>
+		<field name="customer">28</field>
+		<field name="building_plot">804</field>
+		<field name="building_number">C12</field>
+		<field name="floor">קרקע</field>
+		<field name="apartment">1</field>
+		<field name="rooms">גן 4 חד'</field>
+		<field name="contract_number">804011</field>
+		<field name="group">2</field>
+	</row>
+	<row>
+		<field name="status">published</field>
+		<field name="created_by">29</field>
+		<field name="created_on">2019-03-06 03:26:30</field>
+		<field name="customer">29</field>
+		<field name="building_plot">804</field>
+		<field name="building_number">C12</field>
+		<field name="floor">1</field>
+		<field name="apartment">4</field>
+		<field name="rooms">4 חד'</field>
+		<field name="contract_number">804014</field>
+		<field name="group">2</field>
+	</row>
+	<row>
+		<field name="status">published</field>
+		<field name="created_by">31</field>
+		<field name="created_on">2019-03-06 03:27:56</field>
+		<field name="customer">31</field>
+		<field name="building_plot">804</field>
+		<field name="building_number">C12</field>
+		<field name="floor">2</field>
+		<field name="apartment">6</field>
+		<field name="rooms">4 חד'</field>
+		<field name="contract_number">804015</field>
+		<field name="group">2</field>
+	</row>
+	<row>
+		<field name="status">published</field>
+		<field name="created_by">33</field>
+		<field name="created_on">2019-03-06 03:29:53</field>
+		<field name="customer">33</field>
+		<field name="building_plot">804</field>
+		<field name="building_number">C12</field>
+		<field name="floor">3</field>
+		<field name="apartment">10</field>
+		<field name="rooms">3 חד'</field>
+		<field name="contract_number">804019</field>
+		<field name="group">2</field>
 	</row>
 	</table_data>
 </database>

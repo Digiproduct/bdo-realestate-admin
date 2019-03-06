@@ -24,6 +24,9 @@ class ProfilesImport
     /* @var string Group info collection name */
     const COLLECTION_GROUP_INFO = 'group_info';
 
+    /* @var string Contracts collection name */
+    const COLLECTION_CONTRACTS = 'contracts';
+
     /* @var Container App container */
     protected $container;
 
@@ -84,19 +87,54 @@ class ProfilesImport
                     'email_notifications' => 0,
                 ]);
 
-                $item['id'] = $user['data']['id'];
+                $item['id'] = $user['id'];
                 $this->attachCustomerRole([
-                    'user' => $user['data']['id'],
+                    'user' => $user['id'],
                     'role' => $customersRoleId,
                 ]);
 
                 $this->createProfile($item);
+                $item['group_id'] = $groups[$item['group_name']]['id'];
+                $this->createContract($item);
             } catch (InvalidRequestException $ex) {
                 $rejected++;
             } catch (DuplicateItemException $ex) {
                 $rejected++;
             }
         }
+    }
+
+    protected function createContract($payload)
+    {
+        $itemsService = new ItemsService($this->container);
+        $buildingPlot = (!empty($payload['building_plot'])) ? $payload['building_plot'] : null;
+        $buildingNumber = (!empty($payload['building_number'])) ? $payload['building_number'] : null;
+        $floor = (!empty($payload['floor'])) ? $payload['floor'] : null;
+        $apartment = (!empty($payload['apartment'])) ? $payload['apartment'] : null;
+        $rooms = (!empty($payload['rooms'])) ? $payload['rooms'] : null;
+        $createdOn = new DateTime();
+        $contract = null;
+
+        try {
+            $contract = $itemsService->createItem(self::COLLECTION_CONTRACTS, [
+                'status' => 'published',
+                'contract_number' => $payload['contract_number'],
+                'group' => $payload['group_id'],
+                'customer' => $payload['id'],
+                'building_plot' => $buildingPlot,
+                'building_number' => $buildingNumber,
+                'floor' => $floor,
+                'apartment' => $apartment,
+                'rooms' => $rooms,
+                'created_by' => $payload['id'],
+                'created_on' => $createdOn->format('Y-m-d H:i:s'),
+            ]);
+        } catch (InvalidRequestException $ex) {
+            throw $ex;
+        } catch (DuplicateItemException $ex) {
+            return null;
+        }
+        return $contract['data'];
     }
 
     protected function createGroupInfo($groupName)
@@ -124,7 +162,6 @@ class ProfilesImport
         } catch (InvalidRequestException $ex) {
             throw $ex;
         } catch (DuplicateItemException $ex) {
-            // it's fine
             throw $ex;
         }
         return $group['data'];
@@ -140,7 +177,7 @@ class ProfilesImport
         } catch (DuplicateItemException $ex) {
             throw $ex;
         }
-        return $user;
+        return $user['data'];
     }
 
     protected function attachCustomerRole($payload)
@@ -175,9 +212,10 @@ class ProfilesImport
         $phone2 = $this->parsePhone($payload['phone_2'], 'IL');
         $homeAddress = (!empty($payload['home_address'])) ? $payload['home_address'] : null;
         $createdOn = new DateTime();
+        $profile = null;
 
         try {
-            $itemsService->createItem(self::COLLECTION_PROFILES, [
+            $profile = $itemsService->createItem(self::COLLECTION_PROFILES, [
                 'passport' => $payload['passport'],
                 'customer' => $payload['id'],
                 'phone_1' => $phone1,
@@ -190,8 +228,10 @@ class ProfilesImport
         } catch (InvalidRequestException $ex) {
             throw $ex;
         } catch (DuplicateItemException $ex) {
-            throw $ex;
+            return null;
         }
+
+        return $profile['data'];
     }
 
     protected function parsePhone($phoneStr, $defaultLocale = 'IL')
