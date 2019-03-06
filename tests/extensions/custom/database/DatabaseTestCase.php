@@ -45,7 +45,6 @@ abstract class DatabaseTestCase extends TestCase
             SchemaService::setAclInstance($acl);
             SchemaService::setConnectionInstance($container->get('database'));
             SchemaService::setConfig($container->get('config'));
-            BaseTableGateway::setHookEmitter($container->get('hook_emitter'));
             BaseTableGateway::setContainer($container);
             TableGatewayFactory::setContainer($container);
         }
@@ -114,8 +113,10 @@ abstract class DatabaseTestCase extends TestCase
 
             'mail' => [
                 'default' => [
-                    'transport' => 'sendmail',
-                    'from' => 'admin@example.com'
+                    'transport' => 'smtp',
+                    'from' => 'admin@example.com',
+                    'host' => '0.0.0.0',
+                    'port' => 1025,
                 ],
             ],
         ];

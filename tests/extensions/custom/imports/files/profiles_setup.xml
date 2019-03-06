@@ -17,8 +17,8 @@
 		<field name="company" xsi:nil="true" />
 		<field name="title" xsi:nil="true" />
 		<field name="email_notifications">0</field>
-		<field name="last_access_on">2019-03-05 00:42:17</field>
-		<field name="last_page">/settings/collections/profiles</field>
+		<field name="last_access_on">2019-03-05 23:11:04</field>
+		<field name="last_page">/collections/profiles</field>
 		<field name="external_id" xsi:nil="true" />
 	</row>
 	<row>
@@ -103,34 +103,6 @@
 		<field name="phone_2" xsi:nil="true" />
 		<field name="customer">1</field>
 		<field name="home_address" xsi:nil="true" />
-	</row>
-	</table_data>
-	<table_data name="contracts">
-	<row>
-		<field name="status">deleted</field>
-		<field name="created_by">2</field>
-		<field name="created_on">2019-01-23 10:55:34</field>
-		<field name="customer">2</field>
-		<field name="building_plot">803</field>
-		<field name="building_number">D13</field>
-		<field name="floor">קרקע</field>
-		<field name="apartment">1</field>
-		<field name="rooms">גן 4 חד'</field>
-		<field name="contract_number">704001</field>
-		<field name="group">1</field>
-	</row>
-	<row>
-		<field name="status">published</field>
-		<field name="created_by">3</field>
-		<field name="created_on">2019-01-24 00:27:53</field>
-		<field name="customer">3</field>
-		<field name="building_plot">803</field>
-		<field name="building_number">E14</field>
-		<field name="floor">1</field>
-		<field name="apartment">3</field>
-		<field name="rooms">4 חד'</field>
-		<field name="contract_number">711006</field>
-		<field name="group">1</field>
 	</row>
 	</table_data>
 </database>

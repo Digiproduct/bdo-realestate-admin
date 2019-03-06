@@ -9,10 +9,16 @@ use Directus\Validator\Exception\InvalidRequestException;
 use Directus\Database\Schema\SchemaManager;
 use Directus\Util\StringUtils;
 use Directus\Database\Exception\DuplicateItemException;
+use libphonenumber\PhoneNumberUtil;
+use libphonenumber\NumberParseException;
+use libphonenumber\PhoneNumberFormat;
+use DateTime;
 use PASSWORD_BCRYPT;
 
 class ProfilesImport
 {
+    /* @var string Profiles collection name */
+    const COLLECTION_PROFILES = 'profiles';
 
     /* @var Container App container */
     protected $container;
@@ -25,47 +31,126 @@ class ProfilesImport
         $this->container = $container;
     }
 
+    /**
+     * Executes the import process
+     *
+     * @param array $data Import data
+     */
     public function execute(array $data)
     {
-        $userService = new UsersService($this->container);
-        $itemsService = new ItemsService($this->container);
         $rejected = 0;
-
-        $customersRole = $itemsService->findOne(SchemaManager::COLLECTION_ROLES, [
-            'filter' => [
-                'name' => 'Customers',
-            ],
-        ]);
+        $customersRoleId = $this->findCustomerRoleId('Customers')['data']['id'];
 
         foreach ($data as $item) {
             $item = $this->stripPayloadStrings($item);
+
+            // as soon as user will not use password right away we can reduce crypto cost
             $password = StringUtils::random();
             $hashed = password_hash($password, PASSWORD_BCRYPT, ['cost' => 4]);
 
-            $payload = [
-                'status' => 'invited',
-                'first_name' => $item['fullname'],
-                'last_name' => $item['fullname'],
-                'email' => $item['email'],
-                'password' => $hashed,
-                'timezone' => 'Asia/Jerusalem',
-                'email_notifications' => 0,
-            ];
             try {
-                $user = $userService->create($payload);
+                $user = $this->createUser([
+                    'status' => 'invited',
+                    'first_name' => $item['fullname'],
+                    'last_name' => $item['fullname'],
+                    'email' => $item['email'],
+                    'password' => $hashed,
+                    'timezone' => 'Asia/Jerusalem',
+                    'email_notifications' => 0,
+                ]);
 
-                $payload = [
+                $item['id'] = $user['data']['id'];
+                $this->attachCustomerRole([
                     'user' => $user['data']['id'],
-                    'role' => $customersRole['data']['id'],
-                ];
+                    'role' => $customersRoleId,
+                ]);
 
-                $itemsService->createItem(SchemaManager::COLLECTION_USER_ROLES, $payload);
+                $this->createProfile($item);
             } catch (InvalidRequestException $ex) {
                 $rejected++;
             } catch (DuplicateItemException $ex) {
                 $rejected++;
             }
         }
+    }
+
+    protected function createUser($payload)
+    {
+        $userService = new UsersService($this->container);
+        try {
+            $user = $userService->create($payload);
+        } catch (InvalidRequestException $ex) {
+            throw $ex;
+        } catch (DuplicateItemException $ex) {
+            throw $ex;
+        }
+        return $user;
+    }
+
+    protected function attachCustomerRole($payload)
+    {
+        $itemsService = new ItemsService($this->container);
+        try {
+            $itemsService->createItem(SchemaManager::COLLECTION_USER_ROLES, $payload);
+        } catch (InvalidRequestException $ex) {
+            throw $ex;
+        } catch (DuplicateItemException $ex) {
+            throw $ex;
+        }
+    }
+
+    protected function findCustomerRoleId($roleName)
+    {
+        $itemsService = new ItemsService($this->container);
+        $customersRole = $itemsService->findOne(SchemaManager::COLLECTION_ROLES, [
+            'filter' => [
+                'name' => $roleName,
+            ],
+        ]);
+
+        return $customersRole;
+    }
+
+    protected function createProfile($payload)
+    {
+        $itemsService = new ItemsService($this->container);
+        $passport = (!empty($payload['passport'])) ? $payload['passport'] : null;
+        $phone1 = $this->parsePhone($payload['phone_1'], 'IL');
+        $phone2 = $this->parsePhone($payload['phone_2'], 'IL');
+        $homeAddress = (!empty($payload['home_address'])) ? $payload['home_address'] : null;
+        $createdOn = new DateTime();
+
+        try {
+            $itemsService->createItem(self::COLLECTION_PROFILES, [
+                'passport' => $payload['passport'],
+                'customer' => $payload['id'],
+                'phone_1' => $phone1,
+                'phone_2' => $phone2,
+                'home_address' => $homeAddress,
+                'status' => 'published',
+                'created_by' => $payload['id'],
+                'created_on' => $createdOn->format('Y-m-d H:i:s'),
+            ]);
+        } catch (InvalidRequestException $ex) {
+            throw $ex;
+        } catch (DuplicateItemException $ex) {
+            throw $ex;
+        }
+    }
+
+    protected function parsePhone($phoneStr, $defaultLocale = 'IL')
+    {
+        try {
+            $phoneUtil = PhoneNumberUtil::getInstance();
+            $numberProto = $phoneUtil->parse($phoneStr, $defaultLocale);
+            if ($phoneUtil->isValidNumber($numberProto)) {
+                return $phoneUtil->format($numberProto, PhoneNumberFormat::E164);
+            }
+        } catch (NumberParseException $e) {
+            return null;
+        }
+
+        return null;
     }
 
     protected function stripPayloadStrings(array $payload)

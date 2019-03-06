@@ -22,7 +22,7 @@ class ProfilesImportTest extends DatabaseTestCase
      */
     public function getDataSet()
     {
-        return $this->createMySQLXMLDataSet(__DIR__ . '/files/profiles_import_setup.xml');
+        return $this->createMySQLXMLDataSet(__DIR__ . '/files/profiles_setup.xml');
     }
 
     /**
@@ -31,7 +31,7 @@ class ProfilesImportTest extends DatabaseTestCase
      */
     public function testExecute($profiles)
     {
-        $expectedFixture = $this->createMySQLXMLDataSet(__DIR__ . '/files/profiles_import_expected.xml');
+        $expectedFixture = $this->createMySQLXMLDataSet(__DIR__ . '/files/profiles_expected.xml');
 
         $import = new ProfilesImport(self::$container);
         $import->execute($profiles);
@@ -64,6 +64,25 @@ class ProfilesImportTest extends DatabaseTestCase
         $expectedRoles->addIncludeTables(['directus_user_roles']);
 
         $this->assertTablesEqual($expectedRoles->getTable('directus_user_roles'), $roleTable);
+
+        // assert profiles table
+        $profilesTable = $this->getConnection()->createQueryTable(
+            'profiles', 'SELECT `status`, `created_by`, `passport`, `phone_1`, `phone_2`, `customer`, `home_address` FROM `profiles`'
+        );
+
+        $expectedProfiles = new Filter($expectedFixture);
+        $expectedProfiles->addIncludeTables(['profiles']);
+        $expectedProfiles->setIncludeColumnsForTable('profiles', [
+            'status',
+            'created_by',
+            'passport',
+            'phone_1',
+            'phone_2',
+            'customer',
+            'home_address',
+        ]);
+
+        $this->assertTablesEqual($expectedProfiles->getTable('profiles'), $profilesTable);
     }
 
     public function provideProfilesData()
