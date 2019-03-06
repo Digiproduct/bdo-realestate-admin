@@ -1,0 +1,416 @@
+<?xml version="1.0"?>
+<mysqldump xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<database name="bdo_realestate">
+	<table_data name="contracts">
+	<row>
+		<field name="status">published</field>
+		<field name="created_by">8</field>
+		<field name="created_on">2019-03-06 03:05:48</field>
+		<field name="customer">8</field>
+		<field name="building_plot">803</field>
+		<field name="building_number">D13</field>
+		<field name="floor">3</field>
+		<field name="apartment">10</field>
+		<field name="rooms">3 חד'</field>
+		<field name="contract_number">75006</field>
+		<field name="group">2</field>
+	</row>
+	<row>
+		<field name="status">published</field>
+		<field name="created_by">12</field>
+		<field name="created_on">2019-03-06 03:09:45</field>
+		<field name="customer">12</field>
+		<field name="building_plot">803</field>
+		<field name="building_number">E14</field>
+		<field name="floor">קרקע</field>
+		<field name="apartment">1</field>
+		<field name="rooms">גן 4 חד'</field>
+		<field name="contract_number">702002</field>
+		<field name="group">2</field>
+	</row>
+	<row>
+		<field name="status">published</field>
+		<field name="created_by">5</field>
+		<field name="created_on">2019-03-06 03:02:43</field>
+		<field name="customer">5</field>
+		<field name="building_plot">803</field>
+		<field name="building_number">D13</field>
+		<field name="floor">1</field>
+		<field name="apartment">2</field>
+		<field name="rooms">4 חד'</field>
+		<field name="contract_number">703001</field>
+		<field name="group">2</field>
+	</row>
+	<row>
+		<field name="status">published</field>
+		<field name="created_by">14</field>
+		<field name="created_on">2019-03-06 03:13:20</field>
+		<field name="customer">14</field>
+		<field name="building_plot">803</field>
+		<field name="building_number">E14</field>
+		<field name="floor">2</field>
+		<field name="apartment">6</field>
+		<field name="rooms">4 חד'</field>
+		<field name="contract_number">703005</field>
+		<field name="group">2</field>
+	</row>
+	<row>
+		<field name="status">published</field>
+		<field name="created_by">4</field>
+		<field name="created_on">2019-03-06 03:01:36</field>
+		<field name="customer">4</field>
+		<field name="building_plot">803</field>
+		<field name="building_number">D13</field>
+		<field name="floor">קרקע</field>
+		<field name="apartment">1</field>
+		<field name="rooms">גן 4 חד'</field>
+		<field name="contract_number">704001</field>
+		<field name="group">2</field>
+	</row>
+	<row>
+		<field name="status">published</field>
+		<field name="created_by">3</field>
+		<field name="created_on">2019-01-24 00:27:53</field>
+		<field name="customer">3</field>
+		<field name="building_plot">803</field>
+		<field name="building_number">E14</field>
+		<field name="floor">1</field>
+		<field name="apartment">3</field>
+		<field name="rooms">4 חד'</field>
+		<field name="contract_number">711006</field>
+		<field name="group">1</field>
+	</row>
+	<row>
+		<field name="status">published</field>
+		<field name="created_by">6</field>
+		<field name="created_on">2019-03-06 03:03:53</field>
+		<field name="customer">6</field>
+		<field name="building_plot">803</field>
+		<field name="building_number">D13</field>
+		<field name="floor">2</field>
+		<field name="apartment">5</field>
+		<field name="rooms">4 חד'</field>
+		<field name="contract_number">711011</field>
+		<field name="group">2</field>
+	</row>
+	<row>
+		<field name="status">published</field>
+		<field name="created_by">30</field>
+		<field name="created_on">2019-03-06 03:27:17</field>
+		<field name="customer">30</field>
+		<field name="building_plot">804</field>
+		<field name="building_number">C12</field>
+		<field name="floor">1</field>
+		<field name="apartment">5</field>
+		<field name="rooms">3 חד'</field>
+		<field name="contract_number">720018</field>
+		<field name="group">2</field>
+	</row>
+	<row>
+		<field name="status">published</field>
+		<field name="created_by">9</field>
+		<field name="created_on">2019-03-06 03:06:44</field>
+		<field name="customer">9</field>
+		<field name="building_plot">803</field>
+		<field name="building_number">D13</field>
+		<field name="floor">4</field>
+		<field name="apartment">11</field>
+		<field name="rooms">4 חד'</field>
+		<field name="contract_number">720037</field>
+		<field name="group">2</field>
+	</row>
+	<row>
+		<field name="status">published</field>
+		<field name="created_by">17</field>
+		<field name="created_on">2019-03-06 03:16:20</field>
+		<field name="customer">17</field>
+		<field name="building_plot">803</field>
+		<field name="building_number">E14</field>
+		<field name="floor">4</field>
+		<field name="apartment">12</field>
+		<field name="rooms">4 חד'</field>
+		<field name="contract_number">721001</field>
+		<field name="group">2</field>
+	</row>
+	<row>
+		<field name="status">published</field>
+		<field name="created_by">15</field>
+		<field name="created_on">2019-03-06 03:14:19</field>
+		<field name="customer">15</field>
+		<field name="building_plot">803</field>
+		<field name="building_number">E14</field>
+		<field name="floor">2</field>
+		<field name="apartment">8</field>
+		<field name="rooms">3 חד'</field>
+		<field name="contract_number">721004</field>
+		<field name="group">2</field>
+	</row>
+	<row>
+		<field name="status">published</field>
+		<field name="created_by">11</field>
+		<field name="created_on">2019-03-06 03:08:38</field>
+		<field name="customer">11</field>
+		<field name="building_plot">803</field>
+		<field name="building_number">D13</field>
+		<field name="floor">5</field>
+		<field name="apartment">14</field>
+		<field name="rooms">דירת גג 5 חד'</field>
+		<field name="contract_number">731007</field>
+		<field name="group">2</field>
+	</row>
+	<row>
+		<field name="status">published</field>
+		<field name="created_by">10</field>
+		<field name="created_on">2019-03-06 03:07:40</field>
+		<field name="customer">10</field>
+		<field name="building_plot">803</field>
+		<field name="building_number">D13</field>
+		<field name="floor">4</field>
+		<field name="apartment">12</field>
+		<field name="rooms">3 חד'</field>
+		<field name="contract_number">731009</field>
+		<field name="group">2</field>
+	</row>
+	<row>
+		<field name="status">published</field>
+		<field name="created_by">16</field>
+		<field name="created_on">2019-03-06 03:15:13</field>
+		<field name="customer">16</field>
+		<field name="building_plot">803</field>
+		<field name="building_number">E14</field>
+		<field name="floor">3</field>
+		<field name="apartment">11</field>
+		<field name="rooms">3 חד'</field>
+		<field name="contract_number">750003</field>
+		<field name="group">2</field>
+	</row>
+	<row>
+		<field name="status">published</field>
+		<field name="created_by">7</field>
+		<field name="created_on">2019-03-06 03:04:49</field>
+		<field name="customer">7</field>
+		<field name="building_plot">803</field>
+		<field name="building_number">D13</field>
+		<field name="floor">2</field>
+		<field name="apartment">7</field>
+		<field name="rooms">3 חד'</field>
+		<field name="contract_number">750005</field>
+		<field name="group">2</field>
+	</row>
+	<row>
+		<field name="status">published</field>
+		<field name="created_by">26</field>
+		<field name="created_on">2019-03-06 03:24:05</field>
+		<field name="customer">26</field>
+		<field name="building_plot">804</field>
+		<field name="building_number">C11</field>
+		<field name="floor">3</field>
+		<field name="apartment">11</field>
+		<field name="rooms">3 חד'</field>
+		<field name="contract_number">780007</field>
+		<field name="group">2</field>
+	</row>
+	<row>
+		<field name="status">published</field>
+		<field name="created_by">18</field>
+		<field name="created_on">2019-03-06 03:17:23</field>
+		<field name="customer">18</field>
+		<field name="building_plot">803</field>
+		<field name="building_number">E14</field>
+		<field name="floor">4</field>
+		<field name="apartment">14</field>
+		<field name="rooms">3 חד'</field>
+		<field name="contract_number">781040</field>
+		<field name="group">2</field>
+	</row>
+	<row>
+		<field name="status">published</field>
+		<field name="created_by">34</field>
+		<field name="created_on">2019-03-06 03:30:36</field>
+		<field name="customer">34</field>
+		<field name="building_plot">804</field>
+		<field name="building_number">C12</field>
+		<field name="floor">3</field>
+		<field name="apartment">11</field>
+		<field name="rooms">3 חד'</field>
+		<field name="contract_number">804000</field>
+		<field name="group">2</field>
+	</row>
+	<row>
+		<field name="status">published</field>
+		<field name="created_by">24</field>
+		<field name="created_on">2019-03-06 03:22:13</field>
+		<field name="customer">24</field>
+		<field name="building_plot">804</field>
+		<field name="building_number">C11</field>
+		<field name="floor">2</field>
+		<field name="apartment">7</field>
+		<field name="rooms">4 חד'</field>
+		<field name="contract_number">804001</field>
+		<field name="group">2</field>
+	</row>
+	<row>
+		<field name="status">published</field>
+		<field name="created_by">22</field>
+		<field name="created_on">2019-03-06 03:20:35</field>
+		<field name="customer">22</field>
+		<field name="building_plot">804</field>
+		<field name="building_number">C11</field>
+		<field name="floor">1</field>
+		<field name="apartment">5</field>
+		<field name="rooms">3 חד'</field>
+		<field name="contract_number">804002</field>
+		<field name="group">2</field>
+	</row>
+	<row>
+		<field name="status">published</field>
+		<field name="created_by">19</field>
+		<field name="created_on">2019-03-06 03:18:21</field>
+		<field name="customer">19</field>
+		<field name="building_plot">804</field>
+		<field name="building_number">C11</field>
+		<field name="floor">קרקע</field>
+		<field name="apartment">2</field>
+		<field name="rooms">גן 4 חד'</field>
+		<field name="contract_number">804005</field>
+		<field name="group">2</field>
+	</row>
+	<row>
+		<field name="status">published</field>
+		<field name="created_by">20</field>
+		<field name="created_on">2019-03-06 03:19:10</field>
+		<field name="customer">20</field>
+		<field name="building_plot">804</field>
+		<field name="building_number">C11</field>
+		<field name="floor">1</field>
+		<field name="apartment">3</field>
+		<field name="rooms">4 חד'</field>
+		<field name="contract_number">804006</field>
+		<field name="group">2</field>
+	</row>
+	<row>
+		<field name="status">published</field>
+		<field name="created_by">21</field>
+		<field name="created_on">2019-03-06 03:19:49</field>
+		<field name="customer">21</field>
+		<field name="building_plot">804</field>
+		<field name="building_number">C11</field>
+		<field name="floor">1</field>
+		<field name="apartment">4</field>
+		<field name="rooms">4 חד'</field>
+		<field name="contract_number">804007</field>
+		<field name="group">2</field>
+	</row>
+	<row>
+		<field name="status">published</field>
+		<field name="created_by">23</field>
+		<field name="created_on">2019-03-06 03:21:23</field>
+		<field name="customer">23</field>
+		<field name="building_plot">804</field>
+		<field name="building_number">C11</field>
+		<field name="floor">2</field>
+		<field name="apartment">6</field>
+		<field name="rooms">4 חד'</field>
+		<field name="contract_number">804008</field>
+		<field name="group">2</field>
+	</row>
+	<row>
+		<field name="status">published</field>
+		<field name="created_by">25</field>
+		<field name="created_on">2019-03-06 03:22:57</field>
+		<field name="customer">25</field>
+		<field name="building_plot">804</field>
+		<field name="building_number">C11</field>
+		<field name="floor">3</field>
+		<field name="apartment">9</field>
+		<field name="rooms">4 חד'</field>
+		<field name="contract_number">804009</field>
+		<field name="group">2</field>
+	</row>
+	<row>
+		<field name="status">published</field>
+		<field name="created_by">27</field>
+		<field name="created_on">2019-03-06 03:24:52</field>
+		<field name="customer">27</field>
+		<field name="building_plot">804</field>
+		<field name="building_number">C11</field>
+		<field name="floor">4</field>
+		<field name="apartment">12</field>
+		<field name="rooms">דירת גג 5 חד'</field>
+		<field name="contract_number">804010</field>
+		<field name="group">2</field>
+	</row>
+	<row>
+		<field name="status">published</field>
+		<field name="created_by">28</field>
+		<field name="created_on">2019-03-06 03:25:45</field>
+		<field name="customer">28</field>
+		<field name="building_plot">804</field>
+		<field name="building_number">C12</field>
+		<field name="floor">קרקע</field>
+		<field name="apartment">1</field>
+		<field name="rooms">גן 4 חד'</field>
+		<field name="contract_number">804011</field>
+		<field name="group">2</field>
+	</row>
+	<row>
+		<field name="status">published</field>
+		<field name="created_by">29</field>
+		<field name="created_on">2019-03-06 03:26:30</field>
+		<field name="customer">29</field>
+		<field name="building_plot">804</field>
+		<field name="building_number">C12</field>
+		<field name="floor">1</field>
+		<field name="apartment">4</field>
+		<field name="rooms">4 חד'</field>
+		<field name="contract_number">804014</field>
+		<field name="group">2</field>
+	</row>
+	<row>
+		<field name="status">published</field>
+		<field name="created_by">31</field>
+		<field name="created_on">2019-03-06 03:27:56</field>
+		<field name="customer">31</field>
+		<field name="building_plot">804</field>
+		<field name="building_number">C12</field>
+		<field name="floor">2</field>
+		<field name="apartment">6</field>
+		<field name="rooms">4 חד'</field>
+		<field name="contract_number">804015</field>
+		<field name="group">2</field>
+	</row>
+	<row>
+		<field name="status">published</field>
+		<field name="created_by">33</field>
+		<field name="created_on">2019-03-06 03:29:53</field>
+		<field name="customer">33</field>
+		<field name="building_plot">804</field>
+		<field name="building_number">C12</field>
+		<field name="floor">3</field>
+		<field name="apartment">19</field>
+		<field name="rooms">3 חד'</field>
+		<field name="contract_number">804019</field>
+		<field name="group">2</field>
+	</row>
+	</table_data>
+	<table_data name="balance_data">
+	<row>
+		<field name="id">1</field>
+		<field name="status">published</field>
+		<field name="created_by">3</field>
+		<field name="created_on">2019-02-24 05:40:00</field>
+		<field name="contract_number">711006</field>
+		<field name="unit_cost">1950000</field>
+		<field name="funds">1100000</field>
+		<field name="land_amount">1000000</field>
+		<field name="land_completeness">100</field>
+		<field name="construction_amount">186830</field>
+		<field name="construction_completeness">21</field>
+		<field name="management_amount">12128</field>
+		<field name="management_completeness">25</field>
+		<field name="balance">-98959</field>
+		<field name="updated_date">2017-01-01</field>
+	</row>
+	</table_data>
+</database>
+</mysqldump>
