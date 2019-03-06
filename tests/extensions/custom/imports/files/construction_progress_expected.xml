@@ -1,0 +1,154 @@
+<?xml version="1.0"?>
+<mysqldump xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<database name="bdo_realestate">
+	<table_data name="group_info">
+	<row>
+		<field name="id">1</field>
+		<field name="status">published</field>
+		<field name="created_by">1</field>
+		<field name="created_on">2019-01-24 00:33:09</field>
+		<field name="modified_by">1</field>
+		<field name="modified_on">2019-01-24 00:43:35</field>
+		<field name="phone">972737145300</field>
+		<field name="email">bdo@bdo.co.il</field>
+		<field name="photo_1">6</field>
+		<field name="photo_2">9</field>
+		<field name="photo_3">8</field>
+		<field name="photo_4">10</field>
+		<field name="group_name">אחיסמך</field>
+	</row>
+	<row>
+		<field name="id">2</field>
+		<field name="status">published</field>
+		<field name="created_by">1</field>
+		<field name="created_on">2019-03-06 20:44:43</field>
+		<field name="modified_by" xsi:nil="true" />
+		<field name="modified_on" xsi:nil="true" />
+		<field name="phone" xsi:nil="true" />
+		<field name="email" xsi:nil="true" />
+		<field name="photo_1" xsi:nil="true" />
+		<field name="photo_2" xsi:nil="true" />
+		<field name="photo_3" xsi:nil="true" />
+		<field name="photo_4" xsi:nil="true" />
+		<field name="group_name">נתיבות</field>
+	</row>
+	<row>
+		<field name="id">3</field>
+		<field name="status">published</field>
+		<field name="created_by">1</field>
+		<field name="created_on">2019-03-07 01:47:32</field>
+		<field name="modified_by" xsi:nil="true" />
+		<field name="modified_on" xsi:nil="true" />
+		<field name="phone" xsi:nil="true" />
+		<field name="email" xsi:nil="true" />
+		<field name="photo_1" xsi:nil="true" />
+		<field name="photo_2" xsi:nil="true" />
+		<field name="photo_3" xsi:nil="true" />
+		<field name="photo_4" xsi:nil="true" />
+		<field name="group_name">קבוצת אחיסמך</field>
+	</row>
+	</table_data>
+	<table_data name="construction_progress">
+	<row>
+		<field name="id">1</field>
+		<field name="status">published</field>
+		<field name="created_by">1</field>
+		<field name="created_on">2019-03-06 20:44:43</field>
+		<field name="group">3</field>
+		<field name="milestone_name">נובמבר 2013 - זכיה במכרז</field>
+		<field name="is_complete">1</field>
+		<field name="updated_date">2019-01-08</field>
+	</row>
+	<row>
+		<field name="id">2</field>
+		<field name="status">published</field>
+		<field name="created_by">1</field>
+		<field name="created_on">2019-03-06 20:44:43</field>
+		<field name="group">3</field>
+		<field name="milestone_name">ינואר 2014- הסכם שיתוף</field>
+		<field name="is_complete">1</field>
+		<field name="updated_date">2019-01-08</field>
+	</row>
+	<row>
+		<field name="id">3</field>
+		<field name="status">published</field>
+		<field name="created_by">1</field>
+		<field name="created_on">2019-03-06 20:44:43</field>
+		<field name="group">3</field>
+		<field name="milestone_name">אוקטובר 2014- תכנון ובקשת היתר</field>
+		<field name="is_complete">1</field>
+		<field name="updated_date">2019-01-08</field>
+	</row>
+	<row>
+		<field name="id">4</field>
+		<field name="status">published</field>
+		<field name="created_by">1</field>
+		<field name="created_on">2019-03-06 20:44:43</field>
+		<field name="group">3</field>
+		<field name="milestone_name">ינואר 2015- הכנת דוח אפס</field>
+		<field name="is_complete">1</field>
+		<field name="updated_date">2019-01-08</field>
+	</row>
+	<row>
+		<field name="id">5</field>
+		<field name="status">published</field>
+		<field name="created_by">1</field>
+		<field name="created_on">2019-03-06 20:44:43</field>
+		<field name="group">3</field>
+		<field name="milestone_name">אוקטובר 2015 - ליווי בנקאי</field>
+		<field name="is_complete">1</field>
+		<field name="updated_date">2019-01-08</field>
+	</row>
+	<row>
+		<field name="id">6</field>
+		<field name="status">published</field>
+		<field name="created_by">1</field>
+		<field name="created_on">2019-03-06 20:44:43</field>
+		<field name="group">3</field>
+		<field name="milestone_name">ינואר 2016- התחלת בניה</field>
+		<field name="is_complete">1</field>
+		<field name="updated_date">2019-01-08</field>
+	</row>
+	<row>
+		<field name="id">7</field>
+		<field name="status">published</field>
+		<field name="created_by">1</field>
+		<field name="created_on">2019-03-06 20:44:43</field>
+		<field name="group">3</field>
+		<field name="milestone_name">דצמבר 2016- סיום שלד</field>
+		<field name="is_complete">0</field>
+		<field name="updated_date">2019-01-08</field>
+	</row>
+	<row>
+		<field name="id">8</field>
+		<field name="status">published</field>
+		<field name="created_by">1</field>
+		<field name="created_on">2019-03-06 20:44:43</field>
+		<field name="group">3</field>
+		<field name="milestone_name">יולי 2017- סיום מערכות בניין</field>
+		<field name="is_complete">0</field>
+		<field name="updated_date">2019-01-08</field>
+	</row>
+	<row>
+		<field name="id">9</field>
+		<field name="status">published</field>
+		<field name="created_by">1</field>
+		<field name="created_on">2019-03-06 20:44:43</field>
+		<field name="group">3</field>
+		<field name="milestone_name">דצמבר 2017- גימורים ופיתוח</field>
+		<field name="is_complete">0</field>
+		<field name="updated_date">2019-01-08</field>
+	</row>
+	<row>
+		<field name="id">10</field>
+		<field name="status">published</field>
+		<field name="created_by">1</field>
+		<field name="created_on">2019-03-06 20:44:43</field>
+		<field name="group">3</field>
+		<field name="milestone_name">פברואר 2018- קבלת מפתחות</field>
+		<field name="is_complete">0</field>
+		<field name="updated_date">2019-01-08</field>
+	</row>
+	</table_data>
+</database>
+</mysqldump>

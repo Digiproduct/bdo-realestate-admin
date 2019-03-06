@@ -2,6 +2,7 @@
 
 namespace Directus\Custom\Imports;
 
+use Directus\Custom\Imports\AbstractImport;
 use Directus\Services\UsersService;
 use Directus\Services\ItemsService;
 use Directus\Application\Container;
@@ -10,13 +11,10 @@ use Directus\Database\Exception\DuplicateItemException;
 use Directus\Database\Exception\ItemNotFoundException;
 use Directus\Database\Schema\SchemaManager;
 use Directus\Util\StringUtils;
-use libphonenumber\PhoneNumberUtil;
-use libphonenumber\NumberParseException;
-use libphonenumber\PhoneNumberFormat;
 use DateTime;
 use PASSWORD_BCRYPT;
 
-class ProfilesImport
+final class ProfilesImport extends AbstractImport
 {
     /* @var string Profiles collection name */
     const COLLECTION_PROFILES = 'profiles';
@@ -27,19 +25,8 @@ class ProfilesImport
     /* @var string Contracts collection name */
     const COLLECTION_CONTRACTS = 'contracts';
 
-    /* @var Container App container */
-    protected $container;
-
     /**
-     * @param Container $container
-     */
-    public function __construct($container)
-    {
-        $this->container = $container;
-    }
-
-    /**
-     * Executes the import process
+     * Executes the import process.
      *
      * @param array $data Import data
      */
@@ -104,7 +91,7 @@ class ProfilesImport
         }
     }
 
-    protected function createContract($payload)
+    private function createContract($payload)
     {
         $itemsService = new ItemsService($this->container);
         $buildingPlot = (!empty($payload['building_plot'])) ? $payload['building_plot'] : null;
@@ -137,7 +124,7 @@ class ProfilesImport
         return $contract['data'];
     }
 
-    protected function createGroupInfo($groupName)
+    private function createGroupInfo($groupName)
     {
         $itemsService = new ItemsService($this->container);
         $createdOn = new DateTime();
@@ -167,7 +154,7 @@ class ProfilesImport
         return $group['data'];
     }
 
-    protected function createUser($payload)
+    private function createUser($payload)
     {
         $userService = new UsersService($this->container);
         try {
@@ -180,7 +167,7 @@ class ProfilesImport
         return $user['data'];
     }
 
-    protected function attachCustomerRole($payload)
+    private function attachCustomerRole($payload)
     {
         $itemsService = new ItemsService($this->container);
         try {
@@ -192,7 +179,7 @@ class ProfilesImport
         }
     }
 
-    protected function findCustomerRoleId($roleName)
+    private function findCustomerRoleId($roleName)
     {
         $itemsService = new ItemsService($this->container);
         $customersRole = $itemsService->findOne(SchemaManager::COLLECTION_ROLES, [
@@ -204,7 +191,7 @@ class ProfilesImport
         return $customersRole['data'];
     }
 
-    protected function createProfile($payload)
+    private function createProfile($payload)
     {
         $itemsService = new ItemsService($this->container);
         $passport = (!empty($payload['passport'])) ? $payload['passport'] : null;
@@ -232,43 +219,5 @@ class ProfilesImport
         }
 
         return $profile['data'];
-    }
-
-    protected function parsePhone($phoneStr, $defaultLocale = 'IL')
-    {
-        try {
-            $phoneUtil = PhoneNumberUtil::getInstance();
-            $numberProto = $phoneUtil->parse($phoneStr, $defaultLocale);
-            if ($phoneUtil->isValidNumber($numberProto)) {
-                return $phoneUtil->format($numberProto, PhoneNumberFormat::E164);
-            }
-        } catch (NumberParseException $e) {
-            return null;
-        }
-
-        return null;
-    }
-
-    protected function stripPayloadStrings(array $payload)
-    {
-        if (!is_array($payload)) return $payload;
-
-        foreach ($payload as $key => $value) {
-            $payload[$key] = $this->stripString($value);
-        }
-        return $payload;
-    }
-
-    protected function stripString($value)
-    {
-        if(!is_string($value)) return $value;
-
-        // remove invisible chars
-        $value = preg_replace('/[\x00-\x1F\x7F\xA0]/u', '', $value);
-
-        // remove rtl and other special chars
-        $value = preg_replace('/(\x{200e}|\x{200f})/u', '', $value);
-
-        return trim($value);
     }
 }
