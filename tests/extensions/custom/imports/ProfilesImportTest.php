@@ -83,6 +83,28 @@ class ProfilesImportTest extends DatabaseTestCase
         ]);
 
         $this->assertTablesEqual($expectedProfiles->getTable('profiles'), $profilesTable);
+
+        // assert group infos
+        $groupsTable = $this->getConnection()->createQueryTable(
+            'group_info',
+            'SELECT `status`, `created_by`, `phone`, `email`, `photo_1`, `photo_2`, `photo_3`, `photo_4`, `group_name` FROM `group_info`'
+        );
+
+        $expectedGroups = new Filter($expectedFixture);
+        $expectedGroups->addIncludeTables(['group_info']);
+        $expectedGroups->setIncludeColumnsForTable('group_info', [
+            'status',
+            'created_by',
+            'phone',
+            'email',
+            'photo_1',
+            'photo_2',
+            'photo_3',
+            'photo_4',
+            'group_name',
+        ]);
+
+        $this->assertTablesEqual($expectedGroups->getTable('group_info'), $groupsTable);
     }
 
     public function provideProfilesData()

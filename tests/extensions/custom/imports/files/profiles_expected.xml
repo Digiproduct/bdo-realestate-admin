@@ -17,8 +17,8 @@
 		<field name="company" xsi:nil="true" />
 		<field name="title" xsi:nil="true" />
 		<field name="email_notifications">0</field>
-		<field name="last_access_on">2019-03-06 00:14:24</field>
-		<field name="last_page">/collections/profiles/14</field>
+		<field name="last_access_on">2019-03-06 01:37:16</field>
+		<field name="last_page">/collections/group_info/2</field>
 		<field name="external_id" xsi:nil="true" />
 	</row>
 	<row>
@@ -1250,6 +1250,38 @@
 		<field name="phone_2" xsi:nil="true" />
 		<field name="customer">34</field>
 		<field name="home_address">חזני 1139/11 נתיבות</field>
+	</row>
+	</table_data>
+	<table_data name="group_info">
+	<row>
+		<field name="id">1</field>
+		<field name="status">published</field>
+		<field name="created_by">1</field>
+		<field name="created_on">2019-01-24 00:33:09</field>
+		<field name="modified_by">1</field>
+		<field name="modified_on">2019-01-24 00:43:35</field>
+		<field name="phone">972737145300</field>
+		<field name="email">bdo@bdo.co.il</field>
+		<field name="photo_1">6</field>
+		<field name="photo_2">9</field>
+		<field name="photo_3">8</field>
+		<field name="photo_4">10</field>
+		<field name="group_name">אחיסמך</field>
+	</row>
+	<row>
+		<field name="id">2</field>
+		<field name="status">published</field>
+		<field name="created_by">1</field>
+		<field name="created_on">2019-03-06 01:28:17</field>
+		<field name="modified_by">1</field>
+		<field name="modified_on">2019-03-06 01:28:17</field>
+		<field name="phone" xsi:nil="true" />
+		<field name="email" xsi:nil="true" />
+		<field name="photo_1" xsi:nil="true" />
+		<field name="photo_2" xsi:nil="true" />
+		<field name="photo_3" xsi:nil="true" />
+		<field name="photo_4" xsi:nil="true" />
+		<field name="group_name">נתיבות</field>
 	</row>
 	</table_data>
 </database>

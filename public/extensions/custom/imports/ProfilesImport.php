@@ -6,9 +6,10 @@ use Directus\Services\UsersService;
 use Directus\Services\ItemsService;
 use Directus\Application\Container;
 use Directus\Validator\Exception\InvalidRequestException;
+use Directus\Database\Exception\DuplicateItemException;
+use Directus\Database\Exception\ItemNotFoundException;
 use Directus\Database\Schema\SchemaManager;
 use Directus\Util\StringUtils;
-use Directus\Database\Exception\DuplicateItemException;
 use libphonenumber\PhoneNumberUtil;
 use libphonenumber\NumberParseException;
 use libphonenumber\PhoneNumberFormat;
@@ -19,6 +20,9 @@ class ProfilesImport
 {
     /* @var string Profiles collection name */
     const COLLECTION_PROFILES = 'profiles';
+
+    /* @var string Group info collection name */
+    const COLLECTION_GROUP_INFO = 'group_info';
 
     /* @var Container App container */
     protected $container;
@@ -39,7 +43,28 @@ class ProfilesImport
     public function execute(array $data)
     {
         $rejected = 0;
-        $customersRoleId = $this->findCustomerRoleId('Customers')['data']['id'];
+
+        $groups = array_reduce($data, function($carry, $item) {
+            if (!empty($item['group_name']) && !array_key_exists($item['group_name'], $carry)) {
+                $carry[$item['group_name']] = null;
+            }
+            return $carry;
+        }, []);
+
+        // create groups first
+        foreach ($groups as $groupName => $value) {
+            try {
+                $group = $this->createGroupInfo($groupName);
+                $groups[$groupName] = $group;
+            }  catch (InvalidRequestException $ex) {
+                throw $ex;
+            } catch (DuplicateItemException $ex) {
+                throw $ex;
+            }
+        }
+
+        // find customer role to apply every profile
+        $customersRoleId = $this->findCustomerRoleId('Customers')['id'];
 
         foreach ($data as $item) {
             $item = $this->stripPayloadStrings($item);
@@ -72,6 +97,37 @@ class ProfilesImport
                 $rejected++;
             }
         }
+    }
+
+    protected function createGroupInfo($groupName)
+    {
+        $itemsService = new ItemsService($this->container);
+        $createdOn = new DateTime();
+        try {
+            $group = $itemsService->findOne(self::COLLECTION_GROUP_INFO, [
+                'filter' => [
+                    'group_name' => $groupName,
+                ],
+            ]);
+            return $group['data'];
+        } catch (ItemNotFoundException $ex) {
+            // that's predictable
+        }
+
+        try {
+            $group = $itemsService->createItem(self::COLLECTION_GROUP_INFO, [
+                'group_name' => $groupName,
+                'status' => 'published',
+                'created_by' => 1,
+                'created_on' => $createdOn->format('Y-m-d H:i:s'),
+            ]);
+        } catch (InvalidRequestException $ex) {
+            throw $ex;
+        } catch (DuplicateItemException $ex) {
+            // it's fine
+            throw $ex;
+        }
+        return $group['data'];
     }
 
     protected function createUser($payload)
@@ -108,7 +164,7 @@ class ProfilesImport
             ],
         ]);
 
-        return $customersRole;
+        return $customersRole['data'];
     }
 
     protected function createProfile($payload)
