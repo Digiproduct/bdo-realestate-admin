@@ -8,12 +8,16 @@ use Directus\Application\Container;
 use Directus\Validator\Exception\InvalidRequestException;
 use Directus\Database\Exception\DuplicateItemException;
 use Directus\Database\Exception\ItemNotFoundException;
+use Directus\Exception\UnprocessableEntityException;
 use DateTime;
 
-class ReceiptsImport extends AbstractImport
+class FundingReportsImport extends AbstractImport
 {
-    /* @var string Receipts collection name */
-    const COLLECTION_RECEIPTS = 'receipts';
+    /* @var string Funding reports collection name */
+    const COLLECTION_FUNDING_REPORTS = 'funding_reports';
+
+    /* @var string Transactions collection name */
+    const COLLECTION_TRANSACTIONS = 'transactions';
 
     /* @var string Contracts collection name */
     const COLLECTION_CONTRACTS = 'contracts';
@@ -47,17 +51,30 @@ class ReceiptsImport extends AbstractImport
             return;
         }
 
-        $truncatedTable = self::COLLECTION_RECEIPTS;
+        $truncatedTable = self::COLLECTION_FUNDING_REPORTS;
         $conn = $this->container->get('database')->connect();
         $stmt = $conn->prepare("TRUNCATE `{$truncatedTable}`");
         $stmt->execute();
 
-        foreach ($filtered as $receipt) {
+        $truncatedTable = self::COLLECTION_TRANSACTIONS;
+        $stmt = $conn->prepare("TRUNCATE `{$truncatedTable}`");
+        $stmt->execute();
+
+        foreach ($filtered as $reportData) {
             try {
-                $this->createReceipt($receipt);
-            }  catch (InvalidRequestException $ex) {
+                $transactions = $reportData['transactions'];
+                unset($reportData['transactions']);
+                $report = $this->createFundingReport($reportData);
+                foreach ($transactions as $transactionData) {
+                    $transactionData['funding_report'] = $report['id'];
+                    $transactionData['created_by'] = $reportData['created_by'];
+                    $this->createTransaction($transactionData);
+                }
+            } catch (InvalidRequestException $ex) {
                 $rejected++;
             } catch (DuplicateItemException $ex) {
+                $rejected++;
+            } catch (UnprocessableEntityException $ex) {
                 $rejected++;
             }
         }
@@ -81,19 +98,42 @@ class ReceiptsImport extends AbstractImport
     /**
      * @codeCoverageIgnore
      */
-    private function createReceipt($payload)
+    private function createFundingReport($payload)
     {
         $itemsService = new ItemsService($this->container);
         $createdOn = new DateTime();
         $payload['status'] = 'published';
         $payload['created_on'] = $createdOn->format('Y-m-d H:i:s');
         try {
-            $receipt = $itemsService->createItem(self::COLLECTION_RECEIPTS, $payload);
+            $report = $itemsService->createItem(self::COLLECTION_FUNDING_REPORTS, $payload);
         } catch (InvalidRequestException $ex) {
             throw $ex;
         } catch (DuplicateItemException $ex) {
             throw $ex;
+        } catch (UnprocessableEntityException $ex) {
+            throw $ex;
         }
-        return $receipt['data'];
+        return $report['data'];
+    }
+
+    /**
+     * @codeCoverageIgnore
+     */
+    private function createTransaction($payload)
+    {
+        $itemsService = new ItemsService($this->container);
+        $createdOn = new DateTime();
+        $payload['status'] = 'published';
+        $payload['created_on'] = $createdOn->format('Y-m-d H:i:s');
+        try {
+            $transaction = $itemsService->createItem(self::COLLECTION_TRANSACTIONS, $payload);
+        } catch (InvalidRequestException $ex) {
+            throw $ex;
+        } catch (DuplicateItemException $ex) {
+            throw $ex;
+        } catch (UnprocessableEntityException $ex) {
+            throw $ex;
+        }
+        return $transaction['data'];
     }
 }

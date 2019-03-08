@@ -1,0 +1,815 @@
+<?xml version="1.0"?>
+<mysqldump xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<database name="bdo_realestate">
+	<table_data name="contracts">
+	<row>
+		<field name="status">published</field>
+		<field name="created_by">8</field>
+		<field name="created_on">2019-03-06 03:05:48</field>
+		<field name="customer">8</field>
+		<field name="building_plot">803</field>
+		<field name="building_number">D13</field>
+		<field name="floor">3</field>
+		<field name="apartment">10</field>
+		<field name="rooms">3 חד'</field>
+		<field name="contract_number">75006</field>
+		<field name="group">2</field>
+	</row>
+	<row>
+		<field name="status">published</field>
+		<field name="created_by">12</field>
+		<field name="created_on">2019-03-06 03:09:45</field>
+		<field name="customer">12</field>
+		<field name="building_plot">803</field>
+		<field name="building_number">E14</field>
+		<field name="floor">קרקע</field>
+		<field name="apartment">1</field>
+		<field name="rooms">גן 4 חד'</field>
+		<field name="contract_number">702002</field>
+		<field name="group">2</field>
+	</row>
+	<row>
+		<field name="status">published</field>
+		<field name="created_by">5</field>
+		<field name="created_on">2019-03-06 03:02:43</field>
+		<field name="customer">5</field>
+		<field name="building_plot">803</field>
+		<field name="building_number">D13</field>
+		<field name="floor">1</field>
+		<field name="apartment">2</field>
+		<field name="rooms">4 חד'</field>
+		<field name="contract_number">703001</field>
+		<field name="group">2</field>
+	</row>
+	<row>
+		<field name="status">published</field>
+		<field name="created_by">14</field>
+		<field name="created_on">2019-03-06 03:13:20</field>
+		<field name="customer">14</field>
+		<field name="building_plot">803</field>
+		<field name="building_number">E14</field>
+		<field name="floor">2</field>
+		<field name="apartment">6</field>
+		<field name="rooms">4 חד'</field>
+		<field name="contract_number">703005</field>
+		<field name="group">2</field>
+	</row>
+	<row>
+		<field name="status">published</field>
+		<field name="created_by">4</field>
+		<field name="created_on">2019-03-06 03:01:36</field>
+		<field name="customer">4</field>
+		<field name="building_plot">803</field>
+		<field name="building_number">D13</field>
+		<field name="floor">קרקע</field>
+		<field name="apartment">1</field>
+		<field name="rooms">גן 4 חד'</field>
+		<field name="contract_number">704001</field>
+		<field name="group">2</field>
+	</row>
+	<row>
+		<field name="status">published</field>
+		<field name="created_by">3</field>
+		<field name="created_on">2019-01-24 00:27:53</field>
+		<field name="customer">3</field>
+		<field name="building_plot">803</field>
+		<field name="building_number">E14</field>
+		<field name="floor">1</field>
+		<field name="apartment">3</field>
+		<field name="rooms">4 חד'</field>
+		<field name="contract_number">711006</field>
+		<field name="group">1</field>
+	</row>
+	<row>
+		<field name="status">published</field>
+		<field name="created_by">6</field>
+		<field name="created_on">2019-03-06 03:03:53</field>
+		<field name="customer">6</field>
+		<field name="building_plot">803</field>
+		<field name="building_number">D13</field>
+		<field name="floor">2</field>
+		<field name="apartment">5</field>
+		<field name="rooms">4 חד'</field>
+		<field name="contract_number">711011</field>
+		<field name="group">2</field>
+	</row>
+	<row>
+		<field name="status">published</field>
+		<field name="created_by">30</field>
+		<field name="created_on">2019-03-06 03:27:17</field>
+		<field name="customer">30</field>
+		<field name="building_plot">804</field>
+		<field name="building_number">C12</field>
+		<field name="floor">1</field>
+		<field name="apartment">5</field>
+		<field name="rooms">3 חד'</field>
+		<field name="contract_number">720018</field>
+		<field name="group">2</field>
+	</row>
+	<row>
+		<field name="status">published</field>
+		<field name="created_by">9</field>
+		<field name="created_on">2019-03-06 03:06:44</field>
+		<field name="customer">9</field>
+		<field name="building_plot">803</field>
+		<field name="building_number">D13</field>
+		<field name="floor">4</field>
+		<field name="apartment">11</field>
+		<field name="rooms">4 חד'</field>
+		<field name="contract_number">720037</field>
+		<field name="group">2</field>
+	</row>
+	<row>
+		<field name="status">published</field>
+		<field name="created_by">17</field>
+		<field name="created_on">2019-03-06 03:16:20</field>
+		<field name="customer">17</field>
+		<field name="building_plot">803</field>
+		<field name="building_number">E14</field>
+		<field name="floor">4</field>
+		<field name="apartment">12</field>
+		<field name="rooms">4 חד'</field>
+		<field name="contract_number">721001</field>
+		<field name="group">2</field>
+	</row>
+	<row>
+		<field name="status">published</field>
+		<field name="created_by">15</field>
+		<field name="created_on">2019-03-06 03:14:19</field>
+		<field name="customer">15</field>
+		<field name="building_plot">803</field>
+		<field name="building_number">E14</field>
+		<field name="floor">2</field>
+		<field name="apartment">8</field>
+		<field name="rooms">3 חד'</field>
+		<field name="contract_number">721004</field>
+		<field name="group">2</field>
+	</row>
+	<row>
+		<field name="status">published</field>
+		<field name="created_by">11</field>
+		<field name="created_on">2019-03-06 03:08:38</field>
+		<field name="customer">11</field>
+		<field name="building_plot">803</field>
+		<field name="building_number">D13</field>
+		<field name="floor">5</field>
+		<field name="apartment">14</field>
+		<field name="rooms">דירת גג 5 חד'</field>
+		<field name="contract_number">731007</field>
+		<field name="group">2</field>
+	</row>
+	<row>
+		<field name="status">published</field>
+		<field name="created_by">10</field>
+		<field name="created_on">2019-03-06 03:07:40</field>
+		<field name="customer">10</field>
+		<field name="building_plot">803</field>
+		<field name="building_number">D13</field>
+		<field name="floor">4</field>
+		<field name="apartment">12</field>
+		<field name="rooms">3 חד'</field>
+		<field name="contract_number">731009</field>
+		<field name="group">2</field>
+	</row>
+	<row>
+		<field name="status">published</field>
+		<field name="created_by">16</field>
+		<field name="created_on">2019-03-06 03:15:13</field>
+		<field name="customer">16</field>
+		<field name="building_plot">803</field>
+		<field name="building_number">E14</field>
+		<field name="floor">3</field>
+		<field name="apartment">11</field>
+		<field name="rooms">3 חד'</field>
+		<field name="contract_number">750003</field>
+		<field name="group">2</field>
+	</row>
+	<row>
+		<field name="status">published</field>
+		<field name="created_by">7</field>
+		<field name="created_on">2019-03-06 03:04:49</field>
+		<field name="customer">7</field>
+		<field name="building_plot">803</field>
+		<field name="building_number">D13</field>
+		<field name="floor">2</field>
+		<field name="apartment">7</field>
+		<field name="rooms">3 חד'</field>
+		<field name="contract_number">750005</field>
+		<field name="group">2</field>
+	</row>
+	<row>
+		<field name="status">published</field>
+		<field name="created_by">26</field>
+		<field name="created_on">2019-03-06 03:24:05</field>
+		<field name="customer">26</field>
+		<field name="building_plot">804</field>
+		<field name="building_number">C11</field>
+		<field name="floor">3</field>
+		<field name="apartment">11</field>
+		<field name="rooms">3 חד'</field>
+		<field name="contract_number">780007</field>
+		<field name="group">2</field>
+	</row>
+	<row>
+		<field name="status">published</field>
+		<field name="created_by">18</field>
+		<field name="created_on">2019-03-06 03:17:23</field>
+		<field name="customer">18</field>
+		<field name="building_plot">803</field>
+		<field name="building_number">E14</field>
+		<field name="floor">4</field>
+		<field name="apartment">14</field>
+		<field name="rooms">3 חד'</field>
+		<field name="contract_number">781040</field>
+		<field name="group">2</field>
+	</row>
+	<row>
+		<field name="status">published</field>
+		<field name="created_by">34</field>
+		<field name="created_on">2019-03-06 03:30:36</field>
+		<field name="customer">34</field>
+		<field name="building_plot">804</field>
+		<field name="building_number">C12</field>
+		<field name="floor">3</field>
+		<field name="apartment">11</field>
+		<field name="rooms">3 חד'</field>
+		<field name="contract_number">804000</field>
+		<field name="group">2</field>
+	</row>
+	<row>
+		<field name="status">published</field>
+		<field name="created_by">24</field>
+		<field name="created_on">2019-03-06 03:22:13</field>
+		<field name="customer">24</field>
+		<field name="building_plot">804</field>
+		<field name="building_number">C11</field>
+		<field name="floor">2</field>
+		<field name="apartment">7</field>
+		<field name="rooms">4 חד'</field>
+		<field name="contract_number">804001</field>
+		<field name="group">2</field>
+	</row>
+	<row>
+		<field name="status">published</field>
+		<field name="created_by">22</field>
+		<field name="created_on">2019-03-06 03:20:35</field>
+		<field name="customer">22</field>
+		<field name="building_plot">804</field>
+		<field name="building_number">C11</field>
+		<field name="floor">1</field>
+		<field name="apartment">5</field>
+		<field name="rooms">3 חד'</field>
+		<field name="contract_number">804002</field>
+		<field name="group">2</field>
+	</row>
+	<row>
+		<field name="status">published</field>
+		<field name="created_by">19</field>
+		<field name="created_on">2019-03-06 03:18:21</field>
+		<field name="customer">19</field>
+		<field name="building_plot">804</field>
+		<field name="building_number">C11</field>
+		<field name="floor">קרקע</field>
+		<field name="apartment">2</field>
+		<field name="rooms">גן 4 חד'</field>
+		<field name="contract_number">804005</field>
+		<field name="group">2</field>
+	</row>
+	<row>
+		<field name="status">published</field>
+		<field name="created_by">20</field>
+		<field name="created_on">2019-03-06 03:19:10</field>
+		<field name="customer">20</field>
+		<field name="building_plot">804</field>
+		<field name="building_number">C11</field>
+		<field name="floor">1</field>
+		<field name="apartment">3</field>
+		<field name="rooms">4 חד'</field>
+		<field name="contract_number">804006</field>
+		<field name="group">2</field>
+	</row>
+	<row>
+		<field name="status">published</field>
+		<field name="created_by">21</field>
+		<field name="created_on">2019-03-06 03:19:49</field>
+		<field name="customer">21</field>
+		<field name="building_plot">804</field>
+		<field name="building_number">C11</field>
+		<field name="floor">1</field>
+		<field name="apartment">4</field>
+		<field name="rooms">4 חד'</field>
+		<field name="contract_number">804007</field>
+		<field name="group">2</field>
+	</row>
+	<row>
+		<field name="status">published</field>
+		<field name="created_by">23</field>
+		<field name="created_on">2019-03-06 03:21:23</field>
+		<field name="customer">23</field>
+		<field name="building_plot">804</field>
+		<field name="building_number">C11</field>
+		<field name="floor">2</field>
+		<field name="apartment">6</field>
+		<field name="rooms">4 חד'</field>
+		<field name="contract_number">804008</field>
+		<field name="group">2</field>
+	</row>
+	<row>
+		<field name="status">published</field>
+		<field name="created_by">25</field>
+		<field name="created_on">2019-03-06 03:22:57</field>
+		<field name="customer">25</field>
+		<field name="building_plot">804</field>
+		<field name="building_number">C11</field>
+		<field name="floor">3</field>
+		<field name="apartment">9</field>
+		<field name="rooms">4 חד'</field>
+		<field name="contract_number">804009</field>
+		<field name="group">2</field>
+	</row>
+	<row>
+		<field name="status">published</field>
+		<field name="created_by">27</field>
+		<field name="created_on">2019-03-06 03:24:52</field>
+		<field name="customer">27</field>
+		<field name="building_plot">804</field>
+		<field name="building_number">C11</field>
+		<field name="floor">4</field>
+		<field name="apartment">12</field>
+		<field name="rooms">דירת גג 5 חד'</field>
+		<field name="contract_number">804010</field>
+		<field name="group">2</field>
+	</row>
+	<row>
+		<field name="status">published</field>
+		<field name="created_by">28</field>
+		<field name="created_on">2019-03-06 03:25:45</field>
+		<field name="customer">28</field>
+		<field name="building_plot">804</field>
+		<field name="building_number">C12</field>
+		<field name="floor">קרקע</field>
+		<field name="apartment">1</field>
+		<field name="rooms">גן 4 חד'</field>
+		<field name="contract_number">804011</field>
+		<field name="group">2</field>
+	</row>
+	<row>
+		<field name="status">published</field>
+		<field name="created_by">29</field>
+		<field name="created_on">2019-03-06 03:26:30</field>
+		<field name="customer">29</field>
+		<field name="building_plot">804</field>
+		<field name="building_number">C12</field>
+		<field name="floor">1</field>
+		<field name="apartment">4</field>
+		<field name="rooms">4 חד'</field>
+		<field name="contract_number">804014</field>
+		<field name="group">2</field>
+	</row>
+	<row>
+		<field name="status">published</field>
+		<field name="created_by">31</field>
+		<field name="created_on">2019-03-06 03:27:56</field>
+		<field name="customer">31</field>
+		<field name="building_plot">804</field>
+		<field name="building_number">C12</field>
+		<field name="floor">2</field>
+		<field name="apartment">6</field>
+		<field name="rooms">4 חד'</field>
+		<field name="contract_number">804015</field>
+		<field name="group">2</field>
+	</row>
+	<row>
+		<field name="status">published</field>
+		<field name="created_by">33</field>
+		<field name="created_on">2019-03-06 03:29:53</field>
+		<field name="customer">33</field>
+		<field name="building_plot">804</field>
+		<field name="building_number">C12</field>
+		<field name="floor">3</field>
+		<field name="apartment">19</field>
+		<field name="rooms">3 חד'</field>
+		<field name="contract_number">804019</field>
+		<field name="group">2</field>
+	</row>
+	</table_data>
+	<table_data name="funding_reports">
+	<row>
+		<field name="id">1</field>
+		<field name="status">published</field>
+		<field name="created_by">12</field>
+		<field name="created_on">2019-03-08 03:45:47</field>
+		<field name="contract_number">702002</field>
+		<field name="date_range">תאריך מ..עד ‎01/01/1980  &gt;&gt; 31/12/2029 ; תאריך ערך מ..עד ‎01/01/1980  &gt;&gt; 31/12/2029 ; תאריך 3 מ..עד ‎01/01/1980  &gt;&gt; 31/12/2029</field>
+		<field name="total_debit">0</field>
+		<field name="total_credit">432000</field>
+		<field name="total_balance">432000</field>
+		<field name="updated_date">2019-01-16</field>
+	</row>
+	<row>
+		<field name="id">2</field>
+		<field name="status">published</field>
+		<field name="created_by">8</field>
+		<field name="created_on">2019-03-08 03:47:27</field>
+		<field name="contract_number">75006</field>
+		<field name="date_range">תאריך מ..עד ‎01/01/1980  &gt;&gt; 31/12/2029 ; תאריך ערך מ..עד ‎01/01/1980  &gt;&gt; 31/12/2029 ; תאריך 3 מ..עד ‎01/01/1980  &gt;&gt; 31/12/2029</field>
+		<field name="total_debit">0</field>
+		<field name="total_credit">334921</field>
+		<field name="total_balance">334921</field>
+		<field name="updated_date">2019-01-16</field>
+	</row>
+	<row>
+		<field name="id">3</field>
+		<field name="status">published</field>
+		<field name="created_by">5</field>
+		<field name="created_on">2019-03-08 03:48:13</field>
+		<field name="contract_number">703001</field>
+		<field name="date_range">תאריך מ..עד ‎01/01/1980  &gt;&gt; 31/12/2029 ; תאריך ערך מ..עד ‎01/01/1980  &gt;&gt; 31/12/2029 ; תאריך 3 מ..עד ‎01/01/1980  &gt;&gt; 31/12/2029</field>
+		<field name="total_debit">0</field>
+		<field name="total_credit">336045</field>
+		<field name="total_balance">336045</field>
+		<field name="updated_date">2019-01-16</field>
+	</row>
+	<row>
+		<field name="id">4</field>
+		<field name="status">published</field>
+		<field name="created_by">33</field>
+		<field name="created_on">2019-03-08 03:49:05</field>
+		<field name="contract_number">804019</field>
+		<field name="date_range">תאריך מ..עד ‎01/01/1980  &gt;&gt; 31/12/2029 ; תאריך ערך מ..עד ‎01/01/1980  &gt;&gt; 31/12/2029 ; תאריך 3 מ..עד ‎01/01/1980  &gt;&gt; 31/12/2029</field>
+		<field name="total_debit">0</field>
+		<field name="total_credit">176000</field>
+		<field name="total_balance">176000</field>
+		<field name="updated_date">2019-01-16</field>
+	</row>
+	<row>
+		<field name="id">5</field>
+		<field name="status">published</field>
+		<field name="created_by">22</field>
+		<field name="created_on">2019-03-08 03:49:55</field>
+		<field name="contract_number">804002</field>
+		<field name="date_range">תאריך מ..עד ‎01/01/1980  &gt;&gt; 31/12/2029 ; תאריך ערך מ..עד ‎01/01/1980  &gt;&gt; 31/12/2029 ; תאריך 3 מ..עד ‎01/01/1980  &gt;&gt; 31/12/2029</field>
+		<field name="total_debit">0</field>
+		<field name="total_credit">380000</field>
+		<field name="total_balance">380000</field>
+		<field name="updated_date">2019-01-16</field>
+	</row>
+	<row>
+		<field name="id">6</field>
+		<field name="status">published</field>
+		<field name="created_by">27</field>
+		<field name="created_on">2019-03-08 03:52:00</field>
+		<field name="contract_number">804010</field>
+		<field name="date_range">תאריך מ..עד ‎01/01/1980  &gt;&gt; 31/12/2029 ; תאריך ערך מ..עד ‎01/01/1980  &gt;&gt; 31/12/2029 ; תאריך 3 מ..עד ‎01/01/1980  &gt;&gt; 31/12/2029</field>
+		<field name="total_debit">0</field>
+		<field name="total_credit">565934</field>
+		<field name="total_balance">565934</field>
+		<field name="updated_date">2019-01-16</field>
+	</row>
+	</table_data>
+	<table_data name="transactions">
+	<row>
+		<field name="id">1</field>
+		<field name="status">published</field>
+		<field name="created_by">12</field>
+		<field name="created_on">2019-03-08 03:54:59</field>
+		<field name="funding_report">1</field>
+		<field name="title">14</field>
+		<field name="move">28</field>
+		<field name="ration">2</field>
+		<field name="counter_account">999998</field>
+		<field name="date_1">2018-09-06</field>
+		<field name="date_2">2018-09-06</field>
+		<field name="reference_1">0</field>
+		<field name="reference_2">0</field>
+		<field name="details">יתרת פתיחה 6.9.18</field>
+		<field name="debit" xsi:nil="true" />
+		<field name="credit">432000</field>
+		<field name="balance">432000</field>
+	</row>
+	<row>
+		<field name="id">2</field>
+		<field name="status">published</field>
+		<field name="created_by">12</field>
+		<field name="created_on">2019-03-08 03:56:18</field>
+		<field name="funding_report">1</field>
+		<field name="title">180</field>
+		<field name="move">360</field>
+		<field name="ration">3</field>
+		<field name="counter_account">999998</field>
+		<field name="date_1">2018-09-06</field>
+		<field name="date_2">2018-09-06</field>
+		<field name="reference_1">0</field>
+		<field name="reference_2">0</field>
+		<field name="details">יתרת פתיחה 6.9.18</field>
+		<field name="debit" xsi:nil="true" />
+		<field name="credit">-432000</field>
+		<field name="balance">0</field>
+	</row>
+	<row>
+		<field name="id">3</field>
+		<field name="status">published</field>
+		<field name="created_by">12</field>
+		<field name="created_on">2019-03-08 03:57:30</field>
+		<field name="funding_report">1</field>
+		<field name="title">376</field>
+		<field name="move">752</field>
+		<field name="ration">5</field>
+		<field name="counter_account">999998</field>
+		<field name="date_1">2018-09-06</field>
+		<field name="date_2">2018-09-06</field>
+		<field name="reference_1">0</field>
+		<field name="reference_2">0</field>
+		<field name="details">יתרת פתיחה 6.9.18</field>
+		<field name="debit" xsi:nil="true" />
+		<field name="credit">432000</field>
+		<field name="balance">432000</field>
+	</row>
+	<row>
+		<field name="id">4</field>
+		<field name="status">published</field>
+		<field name="created_by">8</field>
+		<field name="created_on">2019-03-08 03:59:08</field>
+		<field name="funding_report">2</field>
+		<field name="title">21</field>
+		<field name="move">42</field>
+		<field name="ration">2</field>
+		<field name="counter_account">999998</field>
+		<field name="date_1">2018-09-06</field>
+		<field name="date_2">2018-09-06</field>
+		<field name="reference_1">0</field>
+		<field name="reference_2">0</field>
+		<field name="details">יתרת פתיחה 6.9.18</field>
+		<field name="debit" xsi:nil="true" />
+		<field name="credit">334921</field>
+		<field name="balance">334921</field>
+	</row>
+	<row>
+		<field name="id">5</field>
+		<field name="status">published</field>
+		<field name="created_by">8</field>
+		<field name="created_on">2019-03-08 04:00:18</field>
+		<field name="funding_report">2</field>
+		<field name="title">187</field>
+		<field name="move">374</field>
+		<field name="ration">3</field>
+		<field name="counter_account">999998</field>
+		<field name="date_1">2018-09-06</field>
+		<field name="date_2">2018-09-06</field>
+		<field name="reference_1">0</field>
+		<field name="reference_2">0</field>
+		<field name="details">יתרת פתיחה 6.9.18</field>
+		<field name="debit" xsi:nil="true" />
+		<field name="credit">-334921</field>
+		<field name="balance">0</field>
+	</row>
+	<row>
+		<field name="id">6</field>
+		<field name="status">published</field>
+		<field name="created_by">8</field>
+		<field name="created_on">2019-03-08 04:01:19</field>
+		<field name="funding_report">2</field>
+		<field name="title">383</field>
+		<field name="move">766</field>
+		<field name="ration">5</field>
+		<field name="counter_account">999998</field>
+		<field name="date_1">2018-09-06</field>
+		<field name="date_2">2018-09-06</field>
+		<field name="reference_1">0</field>
+		<field name="reference_2">0</field>
+		<field name="details">יתרת פתיחה 6.9.18</field>
+		<field name="debit" xsi:nil="true" />
+		<field name="credit">334921</field>
+		<field name="balance">334921</field>
+	</row>
+	<row>
+		<field name="id">7</field>
+		<field name="status">published</field>
+		<field name="created_by">5</field>
+		<field name="created_on">2019-03-08 04:02:37</field>
+		<field name="funding_report">3</field>
+		<field name="title">2</field>
+		<field name="move">4</field>
+		<field name="ration">2</field>
+		<field name="counter_account">999998</field>
+		<field name="date_1">2018-09-06</field>
+		<field name="date_2">2018-09-06</field>
+		<field name="reference_1">0</field>
+		<field name="reference_2">0</field>
+		<field name="details">יתרת פתיחה 6.9.18</field>
+		<field name="debit" xsi:nil="true" />
+		<field name="credit">336045</field>
+		<field name="balance">336045</field>
+	</row>
+	<row>
+		<field name="id">8</field>
+		<field name="status">published</field>
+		<field name="created_by">5</field>
+		<field name="created_on">2019-03-08 04:03:48</field>
+		<field name="funding_report">3</field>
+		<field name="title">168</field>
+		<field name="move">336</field>
+		<field name="ration">3</field>
+		<field name="counter_account">999998</field>
+		<field name="date_1">2018-09-06</field>
+		<field name="date_2">2018-09-06</field>
+		<field name="reference_1">0</field>
+		<field name="reference_2">0</field>
+		<field name="details">יתרת פתיחה 6.9.18</field>
+		<field name="debit" xsi:nil="true" />
+		<field name="credit">-336045</field>
+		<field name="balance">0</field>
+	</row>
+	<row>
+		<field name="id">9</field>
+		<field name="status">published</field>
+		<field name="created_by">5</field>
+		<field name="created_on">2019-03-08 04:05:06</field>
+		<field name="funding_report">3</field>
+		<field name="title">364</field>
+		<field name="move">728</field>
+		<field name="ration">5</field>
+		<field name="counter_account">999998</field>
+		<field name="date_1">2018-09-06</field>
+		<field name="date_2">2018-09-06</field>
+		<field name="reference_1">0</field>
+		<field name="reference_2">0</field>
+		<field name="details">יתרת פתיחה 6.9.18</field>
+		<field name="debit" xsi:nil="true" />
+		<field name="credit">336045</field>
+		<field name="balance">336045</field>
+	</row>
+	<row>
+		<field name="id">10</field>
+		<field name="status">published</field>
+		<field name="created_by">33</field>
+		<field name="created_on">2019-03-08 04:06:38</field>
+		<field name="funding_report">4</field>
+		<field name="title">411</field>
+		<field name="move">822</field>
+		<field name="ration">5</field>
+		<field name="counter_account">999998</field>
+		<field name="date_1">2018-09-06</field>
+		<field name="date_2">2018-09-06</field>
+		<field name="reference_1">0</field>
+		<field name="reference_2">0</field>
+		<field name="details">יתרת פתיחה 6.9.18</field>
+		<field name="debit" xsi:nil="true" />
+		<field name="credit">176000</field>
+		<field name="balance">176000</field>
+	</row>
+	<row>
+		<field name="id">11</field>
+		<field name="status">published</field>
+		<field name="created_by">22</field>
+		<field name="created_on">2019-03-08 04:08:25</field>
+		<field name="funding_report">5</field>
+		<field name="title">35</field>
+		<field name="move">70</field>
+		<field name="ration">2</field>
+		<field name="counter_account">999998</field>
+		<field name="date_1">2018-09-06</field>
+		<field name="date_2">2018-09-06</field>
+		<field name="reference_1">0</field>
+		<field name="reference_2">0</field>
+		<field name="details">יתרת פתיחה 6.9.18</field>
+		<field name="debit" xsi:nil="true" />
+		<field name="credit">380000</field>
+		<field name="balance">380000</field>
+	</row>
+	<row>
+		<field name="id">12</field>
+		<field name="status">published</field>
+		<field name="created_by">22</field>
+		<field name="created_on">2019-03-08 04:09:32</field>
+		<field name="funding_report">5</field>
+		<field name="title">201</field>
+		<field name="move">402</field>
+		<field name="ration">3</field>
+		<field name="counter_account">999998</field>
+		<field name="date_1">2018-09-06</field>
+		<field name="date_2">2018-09-06</field>
+		<field name="reference_1">0</field>
+		<field name="reference_2">0</field>
+		<field name="details">יתרת פתיחה 6.9.18</field>
+		<field name="debit" xsi:nil="true" />
+		<field name="credit">-380000</field>
+		<field name="balance">0</field>
+	</row>
+	<row>
+		<field name="id">13</field>
+		<field name="status">published</field>
+		<field name="created_by">22</field>
+		<field name="created_on">2019-03-08 04:10:36</field>
+		<field name="funding_report">5</field>
+		<field name="title">397</field>
+		<field name="move">794</field>
+		<field name="ration">5</field>
+		<field name="counter_account">999998</field>
+		<field name="date_1">2018-09-06</field>
+		<field name="date_2">2018-09-06</field>
+		<field name="reference_1">0</field>
+		<field name="reference_2">0</field>
+		<field name="details">יתרת פתיחה 6.9.18</field>
+		<field name="debit" xsi:nil="true" />
+		<field name="credit">380000</field>
+		<field name="balance">380000</field>
+	</row>
+	<row>
+		<field name="id">14</field>
+		<field name="status">published</field>
+		<field name="created_by">27</field>
+		<field name="created_on">2019-03-08 04:11:50</field>
+		<field name="funding_report">6</field>
+		<field name="title">28</field>
+		<field name="move">56</field>
+		<field name="ration">2</field>
+		<field name="counter_account">999998</field>
+		<field name="date_1">2018-09-06</field>
+		<field name="date_2">2018-09-06</field>
+		<field name="reference_1">0</field>
+		<field name="reference_2">0</field>
+		<field name="details">יתרת פתיחה 6.9.18</field>
+		<field name="debit" xsi:nil="true" />
+		<field name="credit">220000</field>
+		<field name="balance">220000</field>
+	</row>
+	<row>
+		<field name="id">15</field>
+		<field name="status">published</field>
+		<field name="created_by">27</field>
+		<field name="created_on">2019-03-08 04:12:48</field>
+		<field name="funding_report">6</field>
+		<field name="title">194</field>
+		<field name="move">388</field>
+		<field name="ration">3</field>
+		<field name="counter_account">999998</field>
+		<field name="date_1">2018-09-06</field>
+		<field name="date_2">2018-09-06</field>
+		<field name="reference_1">0</field>
+		<field name="reference_2">0</field>
+		<field name="details">יתרת פתיחה 6.9.18</field>
+		<field name="debit" xsi:nil="true" />
+		<field name="credit">-220000</field>
+		<field name="balance">0</field>
+	</row>
+	<row>
+		<field name="id">16</field>
+		<field name="status">published</field>
+		<field name="created_by">27</field>
+		<field name="created_on">2019-03-08 04:13:50</field>
+		<field name="funding_report">6</field>
+		<field name="title">390</field>
+		<field name="move">780</field>
+		<field name="ration">5</field>
+		<field name="counter_account">999998</field>
+		<field name="date_1">2018-09-06</field>
+		<field name="date_2">2018-09-06</field>
+		<field name="reference_1">0</field>
+		<field name="reference_2">0</field>
+		<field name="details">יתרת פתיחה 6.9.18</field>
+		<field name="debit" xsi:nil="true" />
+		<field name="credit">220000</field>
+		<field name="balance">220000</field>
+	</row>
+	<row>
+		<field name="id">17</field>
+		<field name="status">published</field>
+		<field name="created_by">27</field>
+		<field name="created_on">2019-03-08 04:14:58</field>
+		<field name="funding_report">6</field>
+		<field name="title">143</field>
+		<field name="move">286</field>
+		<field name="ration">9999</field>
+		<field name="counter_account">100001</field>
+		<field name="date_1">2018-12-09</field>
+		<field name="date_2">2018-12-09</field>
+		<field name="reference_1" xsi:nil="true" />
+		<field name="reference_2">10005</field>
+		<field name="details">אלתר חמו יפעת</field>
+		<field name="debit" xsi:nil="true" />
+		<field name="credit">172551</field>
+		<field name="balance">392551</field>
+	</row>
+	<row>
+		<field name="id">18</field>
+		<field name="status">published</field>
+		<field name="created_by">27</field>
+		<field name="created_on">2019-03-08 04:16:01</field>
+		<field name="funding_report">6</field>
+		<field name="title">166</field>
+		<field name="move">332</field>
+		<field name="ration">9999</field>
+		<field name="counter_account">100001</field>
+		<field name="date_1">2018-12-13</field>
+		<field name="date_2">2018-12-13</field>
+		<field name="reference_1" xsi:nil="true" />
+		<field name="reference_2">10011</field>
+		<field name="details">פעימה 2 - אלתר</field>
+		<field name="debit" xsi:nil="true" />
+		<field name="credit">173383</field>
+		<field name="balance">565934</field>
+	</row>
+	</table_data>
+</database>
+</mysqldump>
