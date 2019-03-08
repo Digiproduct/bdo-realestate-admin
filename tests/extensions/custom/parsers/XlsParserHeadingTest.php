@@ -14,7 +14,7 @@ class XlsParserHeadingTest extends TestCase
 {
     /**
      * @dataProvider provideConstructorGoodArguments
-     * @covers ::constructor
+     * @covers ::__construct
      */
     public function testConstructorWithGoodArguments($headingName, $headingAlias, $dataType)
     {
@@ -24,7 +24,7 @@ class XlsParserHeadingTest extends TestCase
 
     /**
      * @dataProvider provideConstructorBadArguments
-     * @covers ::constructor
+     * @covers ::__construct
      * @expectedException \InvalidArgumentException
      */
     public function testConstructorWithBadAgruments($headingName, $headingAlias, $dataType)
