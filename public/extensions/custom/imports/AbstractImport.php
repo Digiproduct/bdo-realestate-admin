@@ -10,6 +10,8 @@ use libphonenumber\PhoneNumberFormat;
 
 /**
  * Abstract import class.
+ * 
+ * @codeCoverageIgnore
  */
 abstract class AbstractImport
 {

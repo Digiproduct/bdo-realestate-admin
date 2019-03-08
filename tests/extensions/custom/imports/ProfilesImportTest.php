@@ -12,7 +12,7 @@ use Directus\Custom\Database\DatabaseTestCase;
 use Directus\Custom\Imports\ProfilesImport;
 
 /**
- * @coversDefaultClass \Directus\Custom\Import\ProfilesImport
+ * @coversDefaultClass \Directus\Custom\Imports\ProfilesImport
  */
 class ProfilesImportTest extends DatabaseTestCase
 {

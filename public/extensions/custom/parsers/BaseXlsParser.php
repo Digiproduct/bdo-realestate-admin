@@ -13,6 +13,11 @@ use PhpOffice\PhpSpreadsheet\Exception as PhpOfficeException;
 use Directus\Custom\Parsers\XlsParserHeading;
 use InvalidArgumentException;
 
+/**
+ * Base parser class.
+ *
+ * @codeCoverageIgnore
+ */
 class BaseXlsParser
 {
 
@@ -131,6 +136,7 @@ class BaseXlsParser
      * @param XlsParserHeading $xlsParserHeading Heading
      *
      * @return string|int|boolean
+     * @ignoreCodeCoverage
      */
     protected function cellValueToHeadingType($sheet, $cellCoordinate, $xlsParserHeading)
     {
@@ -145,12 +151,12 @@ class BaseXlsParser
         switch ($dataType) {
             case XlsParserHeading::TYPE_DATE:
                 if (Date::isDateTime($cell)) {
-                    $excelDateValue = ($cell->isFormula) ? trim($cell->getCalculatedValue()) : $cell->getValue();
+                    $excelDateValue = ($cell->isFormula()) ? trim($cell->getCalculatedValue()) : $cell->getValue();
                     $dateTime = Date::excelToDateTimeObject($excelDateValue);
                     $value = $dateTime->format('Y-m-d');
                     break;
                 }
-                $value = ($cell->isFormula) ? trim($cell->getCalculatedValue()) : trim($cell->getValue());
+                $value = ($cell->isFormula()) ? trim($cell->getCalculatedValue()) : trim($cell->getValue());
                 break;
             case XlsParserHeading::TYPE_BOOLEAN:
                 $value = !empty(trim($cell->getValue()));
@@ -185,6 +191,7 @@ class BaseXlsParser
      * @param Worksheet $sheet  Source spreadsheet
      *
      * @return array
+     * @ignoreCodeCoverage
      */
     protected function postProcessRecord($record, $sheet)
     {
@@ -198,6 +205,7 @@ class BaseXlsParser
      * @param int    $sheetIndex Spreadsheet index
      *
      * @return Worksheet
+     * @ignoreCodeCoverage
      */
     final protected function loadSpreadsheet($filePath, $sheetIndex = 0)
     {
@@ -210,6 +218,7 @@ class BaseXlsParser
      *
      * @param XlsParserHeading[] $xlsParserHeadings Array with targeted headings
      * @param Worksheet          $spreadsheet       Target spreadsheet
+     * @ignoreCodeCoverage
      */
     protected function findHeadingsInSpreadsheet(array $xlsParserHeadings, $spreadsheet)
     {
@@ -239,6 +248,7 @@ class BaseXlsParser
      * @param XlsParserHeading[] $xlsParserHeadings Array with targeted headings
      *
      * @return string[]
+     * @ignoreCodeCoverage
      */
     protected function getAllHeadingNames(array $xlsParserHeadings)
     {
@@ -258,6 +268,7 @@ class BaseXlsParser
      * @param XlsParserHeading[] $xlsParserHeadings Array with targeted headings
      *
      * @return string[]
+     * @ignoreCodeCoverage
      */
     protected function getAllHeadingAliases(array $xlsParserHeadings)
     {
@@ -279,6 +290,7 @@ class BaseXlsParser
      * @param XlsParserHeading[] $xlsParserHeadings Array with targeted headings
      *
      * @return int[]
+     * @ignoreCodeCoverage
      */
     protected function getHeadingRows(array $xlsParserHeadings)
     {
@@ -305,6 +317,7 @@ class BaseXlsParser
      * Clears cells in hidden columns and rows.
      *
      * @param Worksheet $spreadsheet Target spreadsheet
+     * @ignoreCodeCoverage
      */
     final protected function clearHiddenColumnsAndRows($spreadsheet)
     {
@@ -340,6 +353,7 @@ class BaseXlsParser
      * Clears cells in collapsed columns and rows.
      *
      * @param Worksheet $spreadsheet Target spreadsheet
+     * @ignoreCodeCoverage
      */
     final protected function clearCollapsedColumnsAndRows($spreadsheet)
     {
@@ -379,6 +393,7 @@ class BaseXlsParser
      * @param string|int $columnIndex Column index
      *
      * @return bool
+     * @ignoreCodeCoverage
      */
     final protected function isColumnCollapsed($sheet, $columnIndex)
     {
@@ -396,6 +411,7 @@ class BaseXlsParser
      * @param string|int $columnIndex Column index
      *
      * @return bool
+     * @ignoreCodeCoverage
      */
     final protected function isColumnVisible($sheet, $columnIndex)
     {
@@ -413,6 +429,7 @@ class BaseXlsParser
      * @param string|int $rowIndex Row index
      *
      * @return bool
+     * @ignoreCodeCoverage
      */
     final protected function isRowCollapsed($sheet, $rowIndex)
     {
@@ -426,6 +443,7 @@ class BaseXlsParser
      * @param string|int $rowIndex Row index
      *
      * @return bool
+     * @ignoreCodeCoverage
      */
     final protected function isRowVisible($sheet, $rowIndex)
     {

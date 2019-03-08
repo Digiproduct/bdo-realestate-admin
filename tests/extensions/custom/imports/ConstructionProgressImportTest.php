@@ -12,7 +12,7 @@ use Directus\Custom\Database\DatabaseTestCase;
 use Directus\Custom\Imports\ConstructionProgressImport;
 
 /**
- * @coversDefaultClass \Directus\Custom\Import\ConstructionProgressImport
+ * @coversDefaultClass \Directus\Custom\Imports\ConstructionProgressImport
  */
 class ConstructionProgressImportTest extends DatabaseTestCase
 {

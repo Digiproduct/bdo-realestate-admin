@@ -12,7 +12,7 @@ use Directus\Custom\Database\DatabaseTestCase;
 use Directus\Custom\Imports\BalanceDataImport;
 
 /**
- * @coversDefaultClass \Directus\Custom\Import\BalanceDataImport
+ * @coversDefaultClass \Directus\Custom\Imports\BalanceDataImport
  */
 class BalanceDataImportTest extends DatabaseTestCase
 {
