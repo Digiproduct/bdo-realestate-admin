@@ -135,7 +135,7 @@ class ProfilesImportTest extends DatabaseTestCase
         return [
             [
                 [
-                    0 => [
+                    [
                         'updated_date' => '2018-12-31',
                         'contract_number' => '704001',
                         'group_name' => 'נתיבות',
@@ -151,7 +151,7 @@ class ProfilesImportTest extends DatabaseTestCase
                         'floor' => 'קרקע',
                         'rooms' => 'גן 4 חד\'',
                     ],
-                    1 => [
+                    [
                         'updated_date' => '2018-12-31',
                         'contract_number' => '703001',
                         'group_name' => 'נתיבות',
@@ -167,7 +167,7 @@ class ProfilesImportTest extends DatabaseTestCase
                         'floor' => '1',
                         'rooms' => '4 חד\'',
                     ],
-                    2 => [
+                    [
                         'updated_date' => '2018-12-31',
                         'contract_number' => '760001',
                         'group_name' => 'נתיבות',
@@ -183,7 +183,7 @@ class ProfilesImportTest extends DatabaseTestCase
                         'floor' => '1',
                         'rooms' => '4 חד\'',
                     ],
-                    3 => [
+                    [
                         'updated_date' => '2018-12-31',
                         'contract_number' => '780002',
                         'group_name' => 'נתיבות',
@@ -199,7 +199,7 @@ class ProfilesImportTest extends DatabaseTestCase
                         'floor' => '1',
                         'rooms' => '3 חד\'',
                     ],
-                    4 => [
+                    [
                         'updated_date' => '2018-12-31',
                         'contract_number' => '711011',
                         'group_name' => 'נתיבות',
@@ -215,7 +215,7 @@ class ProfilesImportTest extends DatabaseTestCase
                         'floor' => '2',
                         'rooms' => '4 חד\'',
                     ],
-                    5 => [
+                    [
                         'updated_date' => '2018-12-31',
                         'contract_number' => '740006',
                         'group_name' => 'נתיבות',
@@ -231,7 +231,7 @@ class ProfilesImportTest extends DatabaseTestCase
                         'floor' => '2',
                         'rooms' => '4 חד\'',
                     ],
-                    6 => [
+                    [
                         'updated_date' => '2018-12-31',
                         'contract_number' => '750005',
                         'group_name' => 'נתיבות',
@@ -247,7 +247,7 @@ class ProfilesImportTest extends DatabaseTestCase
                         'floor' => '2',
                         'rooms' => '3 חד\'',
                     ],
-                    7 => [
+                    [
                         'updated_date' => '2018-12-31',
                         'contract_number' => '731001',
                         'group_name' => 'נתיבות',
@@ -263,7 +263,7 @@ class ProfilesImportTest extends DatabaseTestCase
                         'floor' => '3',
                         'rooms' => '4 חד\'',
                     ],
-                    8 => [
+                    [
                         'updated_date' => '2018-12-31',
                         'contract_number' => '780008',
                         'group_name' => 'נתיבות',
@@ -279,7 +279,7 @@ class ProfilesImportTest extends DatabaseTestCase
                         'floor' => '3',
                         'rooms' => '3 חד\'',
                     ],
-                    9 => [
+                    [
                         'updated_date' => '2018-12-31',
                         'contract_number' => '75006',
                         'group_name' => 'נתיבות',
@@ -295,7 +295,7 @@ class ProfilesImportTest extends DatabaseTestCase
                         'floor' => '3',
                         'rooms' => '3 חד\'',
                     ],
-                    10 => [
+                    [
                         'updated_date' => '2018-12-31',
                         'contract_number' => '720037',
                         'group_name' => 'נתיבות',
@@ -311,7 +311,7 @@ class ProfilesImportTest extends DatabaseTestCase
                         'floor' => '4',
                         'rooms' => '4 חד\'',
                     ],
-                    11 => [
+                    [
                         'updated_date' => '2018-12-31',
                         'contract_number' => '731009',
                         'group_name' => 'נתיבות',
@@ -327,7 +327,7 @@ class ProfilesImportTest extends DatabaseTestCase
                         'floor' => '4',
                         'rooms' => '3 חד\'',
                     ],
-                    12 => [
+                    [
                         'updated_date' => '2018-12-31',
                         'contract_number' => '706007',
                         'group_name' => 'נתיבות',
@@ -343,7 +343,7 @@ class ProfilesImportTest extends DatabaseTestCase
                         'floor' => '4',
                         'rooms' => '3 חד\'',
                     ],
-                    13 => [
+                    [
                         'updated_date' => '2018-12-31',
                         'contract_number' => '731007',
                         'group_name' => 'נתיבות',
@@ -359,7 +359,7 @@ class ProfilesImportTest extends DatabaseTestCase
                         'floor' => '5',
                         'rooms' => 'דירת גג 5 חד\'',
                     ],
-                    14 => [
+                    [
                         'updated_date' => '2018-12-31',
                         'contract_number' => '702002',
                         'group_name' => 'נתיבות',
@@ -375,7 +375,7 @@ class ProfilesImportTest extends DatabaseTestCase
                         'floor' => 'קרקע',
                         'rooms' => 'גן 4 חד\'',
                     ],
-                    15 => [
+                    [
                         'updated_date' => '2018-12-31',
                         'contract_number' => '760002',
                         'group_name' => 'נתיבות',
@@ -391,7 +391,7 @@ class ProfilesImportTest extends DatabaseTestCase
                         'floor' => 'קרקע',
                         'rooms' => 'גן 4 חד\'',
                     ],
-                    16 => [
+                    [
                         'updated_date' => '2018-12-31',
                         'contract_number' => '711006',
                         'group_name' => 'נתיבות',
@@ -407,7 +407,7 @@ class ProfilesImportTest extends DatabaseTestCase
                         'floor' => '1',
                         'rooms' => '4 חד\'',
                     ],
-                    17 => [
+                    [
                         'updated_date' => '2018-12-31',
                         'contract_number' => '804018',
                         'group_name' => 'נתיבות',
@@ -423,7 +423,7 @@ class ProfilesImportTest extends DatabaseTestCase
                         'floor' => '1',
                         'rooms' => '4 חד\'',
                     ],
-                    18 => [
+                    [
                         'updated_date' => '2018-12-31',
                         'contract_number' => '803001',
                         'group_name' => 'נתיבות',
@@ -439,7 +439,7 @@ class ProfilesImportTest extends DatabaseTestCase
                         'floor' => '1',
                         'rooms' => '3 חד\'',
                     ],
-                    19 => [
+                    [
                         'updated_date' => '2018-12-31',
                         'contract_number' => '703005',
                         'group_name' => 'נתיבות',
@@ -455,7 +455,7 @@ class ProfilesImportTest extends DatabaseTestCase
                         'floor' => '2',
                         'rooms' => '4 חד\'',
                     ],
-                    20 => [
+                    [
                         'updated_date' => '2018-12-31',
                         'contract_number' => '703012',
                         'group_name' => 'נתיבות',
@@ -471,7 +471,7 @@ class ProfilesImportTest extends DatabaseTestCase
                         'floor' => '2',
                         'rooms' => '4 חד\'',
                     ],
-                    21 => [
+                    [
                         'updated_date' => '2018-12-31',
                         'contract_number' => '721004',
                         'group_name' => 'נתיבות',
@@ -487,7 +487,7 @@ class ProfilesImportTest extends DatabaseTestCase
                         'floor' => '2',
                         'rooms' => '3 חד\'',
                     ],
-                    22 => [
+                    [
                         'updated_date' => '2018-12-31',
                         'contract_number' => '702009',
                         'group_name' => 'נתיבות',
@@ -503,7 +503,7 @@ class ProfilesImportTest extends DatabaseTestCase
                         'floor' => '3',
                         'rooms' => '4 חד\'',
                     ],
-                    23 => [
+                    [
                         'updated_date' => '2018-12-31',
                         'contract_number' => '740009',
                         'group_name' => 'נתיבות',
@@ -519,7 +519,7 @@ class ProfilesImportTest extends DatabaseTestCase
                         'floor' => '3',
                         'rooms' => '3 חד\'',
                     ],
-                    24 => [
+                    [
                         'updated_date' => '2018-12-31',
                         'contract_number' => '750003',
                         'group_name' => 'נתיבות',
@@ -535,7 +535,7 @@ class ProfilesImportTest extends DatabaseTestCase
                         'floor' => '3',
                         'rooms' => '3 חד\'',
                     ],
-                    25 => [
+                    [
                         'updated_date' => '2018-12-31',
                         'contract_number' => '721001',
                         'group_name' => 'נתיבות',
@@ -551,7 +551,7 @@ class ProfilesImportTest extends DatabaseTestCase
                         'floor' => '4',
                         'rooms' => '4 חד\'',
                     ],
-                    26 => [
+                    [
                         'updated_date' => '2018-12-31',
                         'contract_number' => '760011',
                         'group_name' => 'נתיבות',
@@ -567,7 +567,7 @@ class ProfilesImportTest extends DatabaseTestCase
                         'floor' => '4',
                         'rooms' => '3 חד\'',
                     ],
-                    27 => [
+                    [
                         'updated_date' => '2018-12-31',
                         'contract_number' => '781040',
                         'group_name' => 'נתיבות',
@@ -583,7 +583,7 @@ class ProfilesImportTest extends DatabaseTestCase
                         'floor' => '4',
                         'rooms' => '3 חד\'',
                     ],
-                    28 => [
+                    [
                         'updated_date' => '2018-12-31',
                         'contract_number' => '705015',
                         'group_name' => 'נתיבות',
@@ -599,7 +599,7 @@ class ProfilesImportTest extends DatabaseTestCase
                         'floor' => '5',
                         'rooms' => 'דירת גג 5 חד\'',
                     ],
-                    29 => [
+                    [
                         'updated_date' => '2018-12-31',
                         'contract_number' => '804021',
                         'group_name' => 'נתיבות',
@@ -615,7 +615,7 @@ class ProfilesImportTest extends DatabaseTestCase
                         'floor' => 'קרקע',
                         'rooms' => 'גן 4 חד\'',
                     ],
-                    30 => [
+                    [
                         'updated_date' => '2018-12-31',
                         'contract_number' => '804005',
                         'group_name' => 'נתיבות',
@@ -631,7 +631,7 @@ class ProfilesImportTest extends DatabaseTestCase
                         'floor' => 'קרקע',
                         'rooms' => 'גן 4 חד\'',
                     ],
-                    31 => [
+                    [
                         'updated_date' => '2018-12-31',
                         'contract_number' => '804006',
                         'group_name' => 'נתיבות',
@@ -647,7 +647,7 @@ class ProfilesImportTest extends DatabaseTestCase
                         'floor' => '1',
                         'rooms' => '4 חד\'',
                     ],
-                    32 => [
+                    [
                         'updated_date' => '2018-12-31',
                         'contract_number' => '804007',
                         'group_name' => 'נתיבות',
@@ -663,7 +663,7 @@ class ProfilesImportTest extends DatabaseTestCase
                         'floor' => '1',
                         'rooms' => '4 חד\'',
                     ],
-                    33 => [
+                    [
                         'updated_date' => '2018-12-31',
                         'contract_number' => '804002',
                         'group_name' => 'נתיבות',
@@ -679,7 +679,7 @@ class ProfilesImportTest extends DatabaseTestCase
                         'floor' => '1',
                         'rooms' => '3 חד\'',
                     ],
-                    34 => [
+                    [
                         'updated_date' => '2018-12-31',
                         'contract_number' => '804008',
                         'group_name' => 'נתיבות',
@@ -695,7 +695,7 @@ class ProfilesImportTest extends DatabaseTestCase
                         'floor' => '2',
                         'rooms' => '4 חד\'',
                     ],
-                    35 => [
+                    [
                         'updated_date' => '2018-12-31',
                         'contract_number' => '804001',
                         'group_name' => 'נתיבות',
@@ -711,7 +711,7 @@ class ProfilesImportTest extends DatabaseTestCase
                         'floor' => '2',
                         'rooms' => '4 חד\'',
                     ],
-                    36 => [
+                    [
                         'updated_date' => '2018-12-31',
                         'contract_number' => '804020',
                         'group_name' => 'נתיבות',
@@ -727,7 +727,7 @@ class ProfilesImportTest extends DatabaseTestCase
                         'floor' => '2',
                         'rooms' => '3 חד\'',
                     ],
-                    37 => [
+                    [
                         'updated_date' => '2018-12-31',
                         'contract_number' => '804009',
                         'group_name' => 'נתיבות',
@@ -743,7 +743,7 @@ class ProfilesImportTest extends DatabaseTestCase
                         'floor' => '3',
                         'rooms' => '4 חד\'',
                     ],
-                    38 => [
+                    [
                         'updated_date' => '2018-12-31',
                         'contract_number' => '750001',
                         'group_name' => 'נתיבות',
@@ -759,7 +759,7 @@ class ProfilesImportTest extends DatabaseTestCase
                         'floor' => '3',
                         'rooms' => '3 חד\'',
                     ],
-                    39 => [
+                    [
                         'updated_date' => '2018-12-31',
                         'contract_number' => '780007',
                         'group_name' => 'נתיבות',
@@ -775,7 +775,7 @@ class ProfilesImportTest extends DatabaseTestCase
                         'floor' => '3',
                         'rooms' => '3 חד\'',
                     ],
-                    40 => [
+                    [
                         'updated_date' => '2018-12-31',
                         'contract_number' => '804010',
                         'group_name' => 'נתיבות',
@@ -791,7 +791,7 @@ class ProfilesImportTest extends DatabaseTestCase
                         'floor' => '4',
                         'rooms' => 'דירת גג 5 חד\'',
                     ],
-                    41 => [
+                    [
                         'updated_date' => '2018-12-31',
                         'contract_number' => '804011',
                         'group_name' => 'נתיבות',
@@ -807,7 +807,7 @@ class ProfilesImportTest extends DatabaseTestCase
                         'floor' => 'קרקע',
                         'rooms' => 'גן 4 חד\'',
                     ],
-                    42 => [
+                    [
                         'updated_date' => '2018-12-31',
                         'contract_number' => '804012',
                         'group_name' => 'נתיבות',
@@ -823,7 +823,7 @@ class ProfilesImportTest extends DatabaseTestCase
                         'floor' => 'קרקע',
                         'rooms' => 'גן 4 חד\'',
                     ],
-                    43 => [
+                    [
                         'updated_date' => '2018-12-31',
                         'contract_number' => '804013',
                         'group_name' => 'נתיבות',
@@ -839,7 +839,7 @@ class ProfilesImportTest extends DatabaseTestCase
                         'floor' => '1',
                         'rooms' => '4 חד\'',
                     ],
-                    44 => [
+                    [
                         'updated_date' => '2018-12-31',
                         'contract_number' => '804014',
                         'group_name' => 'נתיבות',
@@ -855,7 +855,7 @@ class ProfilesImportTest extends DatabaseTestCase
                         'floor' => '1',
                         'rooms' => '4 חד\'',
                     ],
-                    45 => [
+                    [
                         'updated_date' => '2018-12-31',
                         'contract_number' => '720018',
                         'group_name' => 'נתיבות',
@@ -871,7 +871,7 @@ class ProfilesImportTest extends DatabaseTestCase
                         'floor' => '1',
                         'rooms' => '3 חד\'',
                     ],
-                    46 => [
+                    [
                         'updated_date' => '2018-12-31',
                         'contract_number' => '804015',
                         'group_name' => 'נתיבות',
@@ -887,7 +887,7 @@ class ProfilesImportTest extends DatabaseTestCase
                         'floor' => '2',
                         'rooms' => '4 חד\'',
                     ],
-                    47 => [
+                    [
                         'updated_date' => '2018-12-31',
                         'contract_number' => '804003',
                         'group_name' => 'נתיבות',
@@ -903,7 +903,7 @@ class ProfilesImportTest extends DatabaseTestCase
                         'floor' => '2',
                         'rooms' => '4 חד\'',
                     ],
-                    48 => [
+                    [
                         'updated_date' => '2018-12-31',
                         'contract_number' => '804016',
                         'group_name' => 'נתיבות',
@@ -919,7 +919,7 @@ class ProfilesImportTest extends DatabaseTestCase
                         'floor' => '2',
                         'rooms' => '3 חד\'',
                     ],
-                    49 => [
+                    [
                         'updated_date' => '2018-12-31',
                         'contract_number' => NULL,
                         'group_name' => 'נתיבות',
@@ -935,7 +935,7 @@ class ProfilesImportTest extends DatabaseTestCase
                         'floor' => '3',
                         'rooms' => '4 חד\'',
                     ],
-                    50 => [
+                    [
                         'updated_date' => '2018-12-31',
                         'contract_number' => '804019',
                         'group_name' => 'נתיבות',
@@ -951,7 +951,7 @@ class ProfilesImportTest extends DatabaseTestCase
                         'floor' => '3',
                         'rooms' => '3 חד\'',
                     ],
-                    51 => [
+                    [
                         'updated_date' => '2018-12-31',
                         'contract_number' => '804000',
                         'group_name' => 'נתיבות',
@@ -967,7 +967,7 @@ class ProfilesImportTest extends DatabaseTestCase
                         'floor' => '3',
                         'rooms' => '3 חד\'',
                     ],
-                    52 => [
+                    [
                         'updated_date' => '2018-12-31',
                         'contract_number' => '770002',
                         'group_name' => 'נתיבות',
@@ -984,7 +984,7 @@ class ProfilesImportTest extends DatabaseTestCase
                         'rooms' => 'דירת גג 5 חד\'',
                     ],
                     // duplicate for test purpose
-                    53 => [
+                    [
                         'updated_date' => '2018-12-31',
                         'contract_number' => '804010',
                         'group_name' => 'נתיבות',
