@@ -18,6 +18,12 @@ abstract class AbstractImport
     /* @var Container App container */
     protected $container;
 
+    /* @var array List of created items */
+    protected $createdItems = [];
+
+    /* @var array List of rejected items */
+    protected $rejectedItems = [];
+
     /**
      * Class constructor.
      *
@@ -93,5 +99,45 @@ abstract class AbstractImport
         }
 
         return null;
+    }
+
+    /**
+     * Get created entities.
+     *
+     * @return array
+     */
+    final public function getCreatedItems()
+    {
+        return $this->createdItems;
+    }
+
+    /**
+     * Get rejected entities.
+     *
+     * @return array
+     */
+    final public function getRejectedItems()
+    {
+        return $this->rejectedItems;
+    }
+
+    /**
+     * Counts created items.
+     *
+     * @return int
+     */
+    final public function getCreatedCount()
+    {
+        return count($this->createdItems);
+    }
+
+    /**
+     * Counts rejected items.
+     *
+     * @return int
+     */
+    final public function getRejectedCount()
+    {
+        return count($this->rejectedItems);
     }
 }

@@ -29,12 +29,15 @@ class ProfilesImportTest extends DatabaseTestCase
      * @covers ::execute
      * @dataProvider provideProfilesData
      */
-    public function testExecute($profiles)
+    public function testExecute($profiles, $expectedCreatedCount)
     {
         $expectedFixture = $this->createMySQLXMLDataSet(__DIR__ . '/files/profiles_expected.xml');
 
         $import = new ProfilesImport(self::$container);
         $import->execute($profiles);
+
+        $this->assertEquals($expectedCreatedCount, $import->getCreatedCount());
+        $this->assertEquals(count($profiles) - $expectedCreatedCount, $import->getRejectedCount());
 
         // assert directus_users
         $actualUsers = $this->getConnection()->createQueryTable(
@@ -119,7 +122,6 @@ class ProfilesImportTest extends DatabaseTestCase
             'created_by',
             'building_plot',
             'building_number',
-
             'floor',
             'apartment',
             'rooms',
@@ -136,6 +138,7 @@ class ProfilesImportTest extends DatabaseTestCase
         return [
             [
                 $profilesFixture,
+                30,
             ],
         ];
     }

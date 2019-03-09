@@ -29,12 +29,15 @@ class BalanceDataImportTest extends DatabaseTestCase
      * @covers ::execute
      * @dataProvider provideBalanceData
      */
-    public function testExecute($balanceData)
+    public function testExecute($balanceData, $expectedCreatedCount)
     {
         $expectedFixture = $this->createMySQLXMLDataSet(__DIR__ . '/files/balance_data_expected.xml');
 
         $import = new BalanceDataImport(self::$container);
         $import->execute($balanceData);
+
+        $this->assertEquals($expectedCreatedCount, $import->getCreatedCount());
+        $this->assertEquals(count($balanceData) - $expectedCreatedCount, $import->getRejectedCount());
 
         // assert balance data tables
         $actualTable = $this->getConnection()->createQueryTable(
@@ -68,6 +71,7 @@ class BalanceDataImportTest extends DatabaseTestCase
         return [
             [
                 $balanceDataFixture,
+                9,
             ],
         ];
     }

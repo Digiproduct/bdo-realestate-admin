@@ -29,7 +29,8 @@ class FundingReportsImport extends AbstractImport
      */
     public function execute(array $data)
     {
-        $rejected = 0;
+        $this->createdItems = [];
+        $this->rejectedItems = [];
 
         // find all contracts by primary key
         $mapped = array_map(function($item) {
@@ -39,6 +40,7 @@ class FundingReportsImport extends AbstractImport
                     'created_by' => $contract['customer'],
                 ]);
             }
+            $this->rejectedItems[] = $item;
             return null;
         }, $data);
 
@@ -47,7 +49,6 @@ class FundingReportsImport extends AbstractImport
         });
 
         if (count($filtered) === 0) {
-            $rejected = count($data);
             return;
         }
 
@@ -74,15 +75,16 @@ class FundingReportsImport extends AbstractImport
                         $transactionData['created_by'] = $reportData['created_by'];
                         $this->createTransaction($transactionData);
                     }
+                    $this->createdItems[] = $reportData;
                 } else {
-                    $rejected++;
+                    $this->rejectedItems[] = $reportData;
                 }
             } catch (InvalidRequestException $ex) {
-                $rejected++;
+                $this->rejectedItems[] = $reportData;
             } catch (DuplicateItemException $ex) {
-                $rejected++;
+                $this->rejectedItems[] = $reportData;
             } catch (UnprocessableEntityException $ex) {
-                $rejected++;
+                $this->rejectedItems[] = $reportData;
             }
         }
     }

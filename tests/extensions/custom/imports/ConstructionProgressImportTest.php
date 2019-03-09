@@ -29,12 +29,15 @@ class ConstructionProgressImportTest extends DatabaseTestCase
      * @covers ::execute
      * @dataProvider provideConstructionProgressData
      */
-    public function testExecute($constructionProgress)
+    public function testExecute($constructionProgress, $expectedCreatedCount)
     {
         $expectedFixture = $this->createMySQLXMLDataSet(__DIR__ . '/files/construction_progress_expected.xml');
 
         $import = new ConstructionProgressImport(self::$container);
         $import->execute($constructionProgress);
+
+        $this->assertEquals($expectedCreatedCount, $import->getCreatedCount());
+        $this->assertEquals(count($constructionProgress) - $expectedCreatedCount, $import->getRejectedCount());
 
         // assert group infos
         $actualGroupsTable = $this->getConnection()->createQueryTable(
@@ -80,6 +83,7 @@ class ConstructionProgressImportTest extends DatabaseTestCase
         return [
             [
                 $constructionProgressFixture,
+                10,
             ],
         ];
     }

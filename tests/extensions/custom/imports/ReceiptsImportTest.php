@@ -29,12 +29,15 @@ class ReceiptsImportTest extends DatabaseTestCase
      * @covers ::execute
      * @dataProvider provideReceiptsData
      */
-    public function testExecute($receiptsData)
+    public function testExecute($receiptsData, $expectedCreatedCount)
     {
         $expectedFixture = $this->createMySQLXMLDataSet(__DIR__ . '/files/receipts_expected.xml');
 
         $import = new ReceiptsImport(self::$container);
         $import->execute($receiptsData);
+
+        $this->assertEquals($expectedCreatedCount, $import->getCreatedCount());
+        $this->assertEquals(count($receiptsData) - $expectedCreatedCount, $import->getRejectedCount());
 
         // assert receiptps data tables
         $actualTable = $this->getConnection()->createQueryTable(
@@ -69,6 +72,7 @@ class ReceiptsImportTest extends DatabaseTestCase
         return [
             [
                 $receiptsFixture,
+                10,
             ],
         ];
     }

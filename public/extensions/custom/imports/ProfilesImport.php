@@ -33,7 +33,8 @@ final class ProfilesImport extends AbstractImport
      */
     public function execute(array $data)
     {
-        $rejected = 0;
+        $this->createdItems = [];
+        $this->rejectedItems = [];
 
         $groups = array_reduce($data, function($carry, $item) {
             if (!empty($item['group_name']) && !array_key_exists($item['group_name'], $carry)) {
@@ -67,33 +68,39 @@ final class ProfilesImport extends AbstractImport
             $hashed = password_hash($password, PASSWORD_BCRYPT, ['cost' => 4]);
             $fullname = (array_key_exists('fullname', $item)) ? $item['fullname'] : null;
             $email = (array_key_exists('email', $item)) ? $item['email'] : null;
+            $contractNumber = (array_key_exists('contract_number', $item)) ? $item['contract_number'] : null;
 
             try {
-                $user = $this->createUser([
-                    'status' => 'invited',
-                    'first_name' => $fullname,
-                    'last_name' => $fullname,
-                    'email' => $email,
-                    'password' => $hashed,
-                    'timezone' => 'Asia/Jerusalem',
-                    'email_notifications' => 0,
-                ]);
+                if (!empty($contractNumber)) {
+                    $user = $this->createUser([
+                        'status' => 'invited',
+                        'first_name' => $fullname,
+                        'last_name' => $fullname,
+                        'email' => $email,
+                        'password' => $hashed,
+                        'timezone' => 'Asia/Jerusalem',
+                        'email_notifications' => 0,
+                    ]);
 
-                $item['id'] = $user['id'];
-                $this->attachCustomerRole([
-                    'user' => $user['id'],
-                    'role' => $customersRoleId,
-                ]);
+                    $item['id'] = $user['id'];
+                    $this->attachCustomerRole([
+                        'user' => $user['id'],
+                        'role' => $customersRoleId,
+                    ]);
 
-                $this->createProfile($item);
-                $item['group_id'] = $groups[$item['group_name']]['id'];
-                $this->createContract($item);
+                    $this->createProfile($item);
+                    $item['group_id'] = $groups[$item['group_name']]['id'];
+                    $this->createContract($item);
+                    $this->createdItems[] = $item;
+                } else {
+                    $this->rejectedItems[] = $item;
+                }
             } catch (InvalidRequestException $ex) {
-                $rejected++;
+                $this->rejectedItems[] = $item;
             } catch (DuplicateItemException $ex) {
-                $rejected++;
+                $this->rejectedItems[] = $item;
             } catch (UnprocessableEntityException $ex) {
-                $rejected++;
+                $this->rejectedItems[] = $item;
             }
         }
     }

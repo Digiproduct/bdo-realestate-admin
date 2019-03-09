@@ -594,25 +594,6 @@
 	<row>
 		<field name="id">32</field>
 		<field name="status">invited</field>
-		<field name="first_name">דירה כרמל- 804</field>
-		<field name="last_name">דירה כרמל- 804</field>
-		<field name="email">dv119903@gmail.com</field>
-		<field name="password">$2y$04$MsOVY36X7qR.JSuCLOH3qOePxdtl/ZHs9/6p1uo5.GjLwhEq8l33a</field>
-		<field name="token" xsi:nil="true" />
-		<field name="timezone">Asia/Jerusalem</field>
-		<field name="locale">en-US</field>
-		<field name="locale_options" xsi:nil="true" />
-		<field name="avatar" xsi:nil="true" />
-		<field name="company" xsi:nil="true" />
-		<field name="title" xsi:nil="true" />
-		<field name="email_notifications">0</field>
-		<field name="last_access_on" xsi:nil="true" />
-		<field name="last_page" xsi:nil="true" />
-		<field name="external_id" xsi:nil="true" />
-	</row>
-	<row>
-		<field name="id">33</field>
-		<field name="status">invited</field>
 		<field name="first_name">גולדברג מנחם (קירזון פנחס)- 804</field>
 		<field name="last_name">גולדברג מנחם (קירזון פנחס)- 804</field>
 		<field name="email">mvaknin3232@gmail.com</field>
@@ -630,7 +611,7 @@
 		<field name="external_id" xsi:nil="true" />
 	</row>
 	<row>
-		<field name="id">34</field>
+		<field name="id">33</field>
 		<field name="status">invited</field>
 		<field name="first_name">אהרונוביץ במקום ריזל-804</field>
 		<field name="last_name">אהרונוביץ במקום ריזל-804</field>
@@ -813,11 +794,6 @@
 	<row>
 		<field name="id">33</field>
 		<field name="user">33</field>
-		<field name="role">3</field>
-	</row>
-	<row>
-		<field name="id">34</field>
-		<field name="user">34</field>
 		<field name="role">3</field>
 	</row>
 	</table_data>
@@ -1213,42 +1189,29 @@
 		<field name="home_address">רח אריה בן אליעזר 15 פתח תקוה</field>
 	</row>
 	<row>
-		<field name="id">31</field>
-		<field name="status">published</field>
-		<field name="created_by">32</field>
-		<field name="created_on">2019-03-06 02:29:03</field>
-		<field name="modified_by" xsi:nil="true" />
-		<field name="modified_on" xsi:nil="true" />
-		<field name="passport" xsi:nil="true" />
-		<field name="phone_1">972548450737</field>
-		<field name="phone_2">97236196480</field>
-		<field name="customer">32</field>
-		<field name="home_address">שרי ישראל 1 כניסה ב ירושלים</field>
-	</row>
-	<row>
 		<field name="id">32</field>
 		<field name="status">published</field>
-		<field name="created_by">33</field>
+		<field name="created_by">32</field>
 		<field name="created_on">2019-03-06 02:29:03</field>
 		<field name="modified_by" xsi:nil="true" />
 		<field name="modified_on" xsi:nil="true" />
 		<field name="passport">43235688</field>
 		<field name="phone_1">972533172895</field>
 		<field name="phone_2">972533107908</field>
-		<field name="customer">33</field>
+		<field name="customer">32</field>
 		<field name="home_address">ישעיהו 6 בני ברק</field>
 	</row>
 	<row>
 		<field name="id">33</field>
 		<field name="status">published</field>
-		<field name="created_by">34</field>
+		<field name="created_by">33</field>
 		<field name="created_on">2019-03-06 02:29:03</field>
 		<field name="modified_by" xsi:nil="true" />
 		<field name="modified_on" xsi:nil="true" />
 		<field name="passport">301339651</field>
 		<field name="phone_1">972548443412</field>
 		<field name="phone_2" xsi:nil="true" />
-		<field name="customer">34</field>
+		<field name="customer">33</field>
 		<field name="home_address">חזני 1139/11 נתיבות</field>
 	</row>
 	</table_data>
@@ -1508,9 +1471,9 @@
 	</row>
 	<row>
 		<field name="status">published</field>
-		<field name="created_by">34</field>
+		<field name="created_by">33</field>
 		<field name="created_on">2019-03-06 03:30:36</field>
-		<field name="customer">34</field>
+		<field name="customer">33</field>
 		<field name="building_plot">804</field>
 		<field name="building_number">C12</field>
 		<field name="floor">3</field>
@@ -1664,9 +1627,9 @@
 	</row>
 	<row>
 		<field name="status">published</field>
-		<field name="created_by">33</field>
+		<field name="created_by">32</field>
 		<field name="created_on">2019-03-06 03:29:53</field>
-		<field name="customer">33</field>
+		<field name="customer">32</field>
 		<field name="building_plot">804</field>
 		<field name="building_number">C12</field>
 		<field name="floor">3</field>

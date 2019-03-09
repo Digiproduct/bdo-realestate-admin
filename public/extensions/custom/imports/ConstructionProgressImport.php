@@ -26,7 +26,8 @@ class ConstructionProgressImport extends AbstractImport
      */
     public function execute(array $data)
     {
-        $rejected = 0;
+        $this->createdItems = [];
+        $this->rejectedItems = [];
 
         $groups = array_reduce($data, function($carry, $item) {
             if (!empty($item['group_name']) && !array_key_exists($item['group_name'], $carry)) {
@@ -56,12 +57,13 @@ class ConstructionProgressImport extends AbstractImport
             try {
                 $progress['group'] = $groups[$progress['group_name']]['id'];
                 $this->createConstructionProgress($progress);
+                $this->createdItems[] = $progress;
             } catch (InvalidRequestException $ex) {
-                $rejected++;
+                $this->rejectedItems[] = $progress;
             } catch (DuplicateItemException $ex) {
-                $rejected++;
+                $this->rejectedItems[] = $progress;
             } catch (UnprocessableEntityException $ex) {
-                $rejected++;
+                $this->rejectedItems[] = $progress;
             }
         }
     }

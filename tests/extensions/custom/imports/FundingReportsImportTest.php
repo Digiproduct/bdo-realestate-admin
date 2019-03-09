@@ -29,12 +29,15 @@ class FundingReportsImportTest extends DatabaseTestCase
      * @covers ::execute
      * @dataProvider provideReportsData
      */
-    public function testExecute($reportsData)
+    public function testExecute($reportsData, $expectedCreatedCount)
     {
         $expectedFixture = $this->createMySQLXMLDataSet(__DIR__ . '/files/funding_expected.xml');
 
         $import = new FundingReportsImport(self::$container);
         $import->execute($reportsData);
+
+        $this->assertEquals($expectedCreatedCount, $import->getCreatedCount());
+        $this->assertEquals(count($reportsData) - $expectedCreatedCount, $import->getRejectedCount());
 
         // assert funding reports data tables
         $actualReportsTable = $this->getConnection()->createQueryTable(
@@ -90,6 +93,7 @@ class FundingReportsImportTest extends DatabaseTestCase
         return [
             [
                 $fundingReports,
+                6,
             ],
         ];
     }
