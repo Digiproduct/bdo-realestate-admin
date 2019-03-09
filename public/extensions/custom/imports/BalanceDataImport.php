@@ -56,6 +56,7 @@ class BalanceDataImport extends AbstractImport
 
         foreach ($filtered as $balance) {
             try {
+                $this->container->get('acl')->setUserId($balance['created_by']);
                 $this->createBalanceData($balance);
                 $this->createdItems[] = $balance;
             } catch (InvalidRequestException $ex) {

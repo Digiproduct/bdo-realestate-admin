@@ -173,7 +173,7 @@ class ReceiptsXlsParserTest extends TestCase {
                 'contract_number' => null,
                 'request_amount' => '300000',
                 'request_description' => null,
-                'request_date' => 435110,
+                'request_date' => '3091-04-15',
                 'request_amount_2' => null,
                 'request_description_2' => null,
                 'request_date_2' => null,

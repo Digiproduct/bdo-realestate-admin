@@ -56,6 +56,7 @@ class ReceiptsImport extends AbstractImport
 
         foreach ($filtered as $receipt) {
             try {
+                $this->container->get('acl')->setUserId($receipt['created_by']);
                 $this->createReceipt($receipt);
                 $this->createdItems[] = $receipt;
             } catch (InvalidRequestException $ex) {

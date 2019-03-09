@@ -53,7 +53,11 @@ class ConstructionProgressImport extends AbstractImport
         $stmt = $conn->prepare("TRUNCATE `{$truncatedTable}`");
         $stmt->execute();
 
-        foreach ($data as $progress) {
+        $filtered = array_filter($data, function($item)  {
+            return (array_key_exists('group_name', $item) && !empty($item['group_name']));
+        });
+
+        foreach ($filtered as $progress) {
             try {
                 $progress['group'] = $groups[$progress['group_name']]['id'];
                 $this->createConstructionProgress($progress);

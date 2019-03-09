@@ -88,6 +88,7 @@ final class ProfilesImport extends AbstractImport
                         'role' => $customersRoleId,
                     ]);
 
+                    $this->container->get('acl')->setUserId($user['id']);
                     $this->createProfile($item);
                     $item['group_id'] = $groups[$item['group_name']]['id'];
                     $this->createContract($item);

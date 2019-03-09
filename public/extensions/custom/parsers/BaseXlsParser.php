@@ -150,13 +150,9 @@ class BaseXlsParser
 
         switch ($dataType) {
             case XlsParserHeading::TYPE_DATE:
-                if (Date::isDateTime($cell)) {
-                    $excelDateValue = ($cell->isFormula()) ? trim($cell->getCalculatedValue()) : $cell->getValue();
-                    $dateTime = Date::excelToDateTimeObject($excelDateValue);
-                    $value = $dateTime->format('Y-m-d');
-                    break;
-                }
-                $value = ($cell->isFormula()) ? trim($cell->getCalculatedValue()) : trim($cell->getValue());
+                $excelDateValue = ($cell->isFormula()) ? trim($cell->getCalculatedValue()) : $cell->getValue();
+                $dateTime = Date::excelToDateTimeObject($excelDateValue);
+                $value = ($dateTime && $dateTime->format('Y-m-d') !== '1970-01-01') ? $dateTime->format('Y-m-d') : null;
                 break;
             case XlsParserHeading::TYPE_BOOLEAN:
                 $value = !empty(trim($cell->getValue()));

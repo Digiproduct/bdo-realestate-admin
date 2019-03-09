@@ -67,6 +67,7 @@ class FundingReportsImport extends AbstractImport
                     array_key_exists('transactions', $reportData)
                     && count($reportData['transactions'])
                 ) {
+                    $this->container->get('acl')->setUserId($reportData['created_by']);
                     $transactions = $reportData['transactions'];
                     unset($reportData['transactions']);
                     $report = $this->createFundingReport($reportData);
