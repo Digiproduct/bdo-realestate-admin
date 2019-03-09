@@ -62,13 +62,20 @@ class FundingReportsImport extends AbstractImport
 
         foreach ($filtered as $reportData) {
             try {
-                $transactions = $reportData['transactions'];
-                unset($reportData['transactions']);
-                $report = $this->createFundingReport($reportData);
-                foreach ($transactions as $transactionData) {
-                    $transactionData['funding_report'] = $report['id'];
-                    $transactionData['created_by'] = $reportData['created_by'];
-                    $this->createTransaction($transactionData);
+                if (
+                    array_key_exists('transactions', $reportData)
+                    && count($reportData['transactions'])
+                ) {
+                    $transactions = $reportData['transactions'];
+                    unset($reportData['transactions']);
+                    $report = $this->createFundingReport($reportData);
+                    foreach ($transactions as $transactionData) {
+                        $transactionData['funding_report'] = $report['id'];
+                        $transactionData['created_by'] = $reportData['created_by'];
+                        $this->createTransaction($transactionData);
+                    }
+                } else {
+                    $rejected++;
                 }
             } catch (InvalidRequestException $ex) {
                 $rejected++;

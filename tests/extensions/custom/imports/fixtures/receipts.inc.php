@@ -100,6 +100,11 @@ return [
         'updated_date' => '2019-01-08',
     ],
     [
+        'contract_number' => '804001',// 34
+        'foo' => 'bar',
+        'message' => 'hello world',
+    ],
+    [
         'contract_number' => '780007',// 26
         'request_amount' => '30000',
         'request_description' => 'השלמת הון עצמי לפני מימון',

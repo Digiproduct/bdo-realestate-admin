@@ -786,6 +786,11 @@ return [
         'rooms' => '3 חד\'',
     ],
     [
+        'contract_number' => '804016',
+        'foo' => 'bar',
+        'message' => 'hello world',
+    ],
+    [
         'updated_date' => '2018-12-31',
         'contract_number' => NULL,
         'group_name' => 'נתיבות',

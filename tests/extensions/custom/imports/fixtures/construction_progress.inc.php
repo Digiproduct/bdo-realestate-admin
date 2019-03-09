@@ -40,6 +40,12 @@ return [
     [
         'updated_date' => '2019-01-08',
         'group_name' => 'קבוצת אחיסמך',
+        'foo' => 'bar',
+        'message' => 'hello world',
+    ],
+    [
+        'updated_date' => '2019-01-08',
+        'group_name' => 'קבוצת אחיסמך',
         'milestone_name' => 'דצמבר 2016- סיום שלד',
         'is_complete' => false,
     ],

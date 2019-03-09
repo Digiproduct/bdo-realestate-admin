@@ -235,6 +235,27 @@ return [
     ],
     [
         'contract_number' => '804010',// 27
+        'foo' => 'bar',
+        'message' => 'hello world',
+        'transactions' => [
+            [
+                'title' => 28,
+                'move' => 56,
+                'ration' => 2,
+                'counter_account' => '999998',
+                'date_1' => '2018-09-06',
+                'date_2' => '2018-09-06',
+                'reference_1' => 0,
+                'reference_2' => 0,
+                'details' => 'יתרת פתיחה 6.9.18',
+                'debit' => null,
+                'credit' => 220000,
+                'balance' => 220000,
+            ],
+        ],
+    ],
+    [
+        'contract_number' => '804010',// 27
         'date_range' => 'תאריך מ..עד ‎01/01/1980  >> 31/12/2029 ; תאריך ערך מ..עד ‎01/01/1980  >> 31/12/2029 ; תאריך 3 מ..עד ‎01/01/1980  >> 31/12/2029',
         'transactions' => [
             [

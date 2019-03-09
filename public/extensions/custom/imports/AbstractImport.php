@@ -10,7 +10,7 @@ use libphonenumber\PhoneNumberFormat;
 
 /**
  * Abstract import class.
- * 
+ *
  * @codeCoverageIgnore
  */
 abstract class AbstractImport
@@ -20,7 +20,7 @@ abstract class AbstractImport
 
     /**
      * Class constructor.
-     * 
+     *
      * @param Container $container
      */
     public function __construct($container)
@@ -37,9 +37,9 @@ abstract class AbstractImport
 
     /**
      * Removes invisible characters from all payload properties.
-     * 
+     *
      * @param array $payload Payload
-     * 
+     *
      * @return array
      */
     final protected function stripPayloadStrings(array $payload)
@@ -54,9 +54,9 @@ abstract class AbstractImport
 
     /**
      * Removes invisible charachters and white spaces from string.
-     * 
+     *
      * @param string $value String
-     * 
+     *
      * @return string
      */
     final protected function stripString($value)
@@ -74,10 +74,10 @@ abstract class AbstractImport
 
     /**
      * Extracts phone from provided string.
-     * 
+     *
      * @param string $phoneStr      Text with formatted phone
      * @param string $defaultLocale Default phone country (optional)
-     * 
+     *
      * @return null|string Phone in E164 format or null when phone string is invalid
      */
     final protected function parsePhone($phoneStr, $defaultLocale = 'IL')

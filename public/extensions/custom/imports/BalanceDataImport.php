@@ -8,6 +8,7 @@ use Directus\Application\Container;
 use Directus\Validator\Exception\InvalidRequestException;
 use Directus\Database\Exception\DuplicateItemException;
 use Directus\Database\Exception\ItemNotFoundException;
+use Directus\Exception\UnprocessableEntityException;
 use DateTime;
 
 class BalanceDataImport extends AbstractImport
@@ -55,9 +56,11 @@ class BalanceDataImport extends AbstractImport
         foreach ($filtered as $balance) {
             try {
                 $this->createBalanceData($balance);
-            }  catch (InvalidRequestException $ex) {
+            } catch (InvalidRequestException $ex) {
                 $rejected++;
             } catch (DuplicateItemException $ex) {
+                $rejected++;
+            } catch (UnprocessableEntityException $ex) {
                 $rejected++;
             }
         }
@@ -86,6 +89,8 @@ class BalanceDataImport extends AbstractImport
         } catch (InvalidRequestException $ex) {
             throw $ex;
         } catch (DuplicateItemException $ex) {
+            throw $ex;
+        } catch (UnprocessableEntityException $ex) {
             throw $ex;
         }
         return $balanceItem['data'];

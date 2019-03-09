@@ -9,6 +9,7 @@ use Directus\Application\Container;
 use Directus\Validator\Exception\InvalidRequestException;
 use Directus\Database\Exception\DuplicateItemException;
 use Directus\Database\Exception\ItemNotFoundException;
+use Directus\Exception\UnprocessableEntityException;
 use Directus\Database\Schema\SchemaManager;
 use Directus\Util\StringUtils;
 use DateTime;
@@ -46,9 +47,11 @@ final class ProfilesImport extends AbstractImport
             try {
                 $group = $this->createGroupInfo($groupName);
                 $groups[$groupName] = $group;
-            }  catch (InvalidRequestException $ex) {
+            } catch (InvalidRequestException $ex) {
                 throw $ex;
             } catch (DuplicateItemException $ex) {
+                throw $ex;
+            } catch (UnprocessableEntityException $ex) {
                 throw $ex;
             }
         }
@@ -62,13 +65,15 @@ final class ProfilesImport extends AbstractImport
             // as soon as user will not use password right away we can reduce crypto cost
             $password = StringUtils::random();
             $hashed = password_hash($password, PASSWORD_BCRYPT, ['cost' => 4]);
+            $fullname = (array_key_exists('fullname', $item)) ? $item['fullname'] : null;
+            $email = (array_key_exists('email', $item)) ? $item['email'] : null;
 
             try {
                 $user = $this->createUser([
                     'status' => 'invited',
-                    'first_name' => $item['fullname'],
-                    'last_name' => $item['fullname'],
-                    'email' => $item['email'],
+                    'first_name' => $fullname,
+                    'last_name' => $fullname,
+                    'email' => $email,
                     'password' => $hashed,
                     'timezone' => 'Asia/Jerusalem',
                     'email_notifications' => 0,
@@ -86,6 +91,8 @@ final class ProfilesImport extends AbstractImport
             } catch (InvalidRequestException $ex) {
                 $rejected++;
             } catch (DuplicateItemException $ex) {
+                $rejected++;
+            } catch (UnprocessableEntityException $ex) {
                 $rejected++;
             }
         }
@@ -120,6 +127,8 @@ final class ProfilesImport extends AbstractImport
             throw $ex;
         } catch (DuplicateItemException $ex) {
             return null;
+        } catch (UnprocessableEntityException $ex) {
+            throw $ex;
         }
         return $contract['data'];
     }
@@ -150,6 +159,8 @@ final class ProfilesImport extends AbstractImport
             throw $ex;
         } catch (DuplicateItemException $ex) {
             throw $ex;
+        } catch (UnprocessableEntityException $ex) {
+            throw $ex;
         }
         return $group['data'];
     }
@@ -162,6 +173,8 @@ final class ProfilesImport extends AbstractImport
         } catch (InvalidRequestException $ex) {
             throw $ex;
         } catch (DuplicateItemException $ex) {
+            throw $ex;
+        } catch (UnprocessableEntityException $ex) {
             throw $ex;
         }
         return $user['data'];
@@ -176,17 +189,23 @@ final class ProfilesImport extends AbstractImport
             throw $ex;
         } catch (DuplicateItemException $ex) {
             throw $ex;
+        } catch (UnprocessableEntityException $ex) {
+            throw $ex;
         }
     }
 
     private function findCustomerRoleId($roleName)
     {
         $itemsService = new ItemsService($this->container);
-        $customersRole = $itemsService->findOne(SchemaManager::COLLECTION_ROLES, [
-            'filter' => [
-                'name' => $roleName,
-            ],
-        ]);
+        try {
+            $customersRole = $itemsService->findOne(SchemaManager::COLLECTION_ROLES, [
+                'filter' => [
+                    'name' => $roleName,
+                ],
+            ]);
+        } catch (ItemNotFoundException $ex) {
+            throw $ex;
+        }
 
         return $customersRole['data'];
     }
@@ -216,6 +235,8 @@ final class ProfilesImport extends AbstractImport
             throw $ex;
         } catch (DuplicateItemException $ex) {
             return null;
+        } catch (UnprocessableEntityException $ex) {
+            throw $ex;
         }
 
         return $profile['data'];

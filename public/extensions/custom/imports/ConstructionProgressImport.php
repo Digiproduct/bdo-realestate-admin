@@ -8,6 +8,7 @@ use Directus\Application\Container;
 use Directus\Validator\Exception\InvalidRequestException;
 use Directus\Database\Exception\DuplicateItemException;
 use Directus\Database\Exception\ItemNotFoundException;
+use Directus\Exception\UnprocessableEntityException;
 use DateTime;
 
 class ConstructionProgressImport extends AbstractImport
@@ -53,11 +54,13 @@ class ConstructionProgressImport extends AbstractImport
 
         foreach ($data as $progress) {
             try {
-                $progress['group_id'] = $groups[$progress['group_name']]['id'];
+                $progress['group'] = $groups[$progress['group_name']]['id'];
                 $this->createConstructionProgress($progress);
-            }  catch (InvalidRequestException $ex) {
+            } catch (InvalidRequestException $ex) {
                 $rejected++;
             } catch (DuplicateItemException $ex) {
+                $rejected++;
+            } catch (UnprocessableEntityException $ex) {
                 $rejected++;
             }
         }
@@ -97,23 +100,16 @@ class ConstructionProgressImport extends AbstractImport
     {
         $itemsService = new ItemsService($this->container);
         $createdOn = new DateTime();
-        $groupId = $payload['group_id'];
-        $milestoneName = (!empty($payload['milestone_name'])) ? $payload['milestone_name'] : null;
-        $isComplete = (bool) $payload['is_complete'];
-        $updatedDate =(!empty($payload['updated_date'])) ? $payload['updated_date'] : null;
+        $payload['status'] = 'published';
+        $payload['created_on'] = $createdOn->format('Y-m-d H:i:s');
+        unset($payload['group_name']);
         try {
-            $progress = $itemsService->createItem(self::COLLECTION_CONSTRUCTION_PROGRESS, [
-                'status' => 'published',
-                'created_by' => 1,
-                'created_on' => $createdOn->format('Y-m-d H:i:s'),
-                'group' => $groupId,
-                'milestone_name' => $milestoneName,
-                'is_complete' => $isComplete,
-                'updated_date' => $updatedDate,
-            ]);
+            $progress = $itemsService->createItem(self::COLLECTION_CONSTRUCTION_PROGRESS, $payload);
         } catch (InvalidRequestException $ex) {
             throw $ex;
         } catch (DuplicateItemException $ex) {
+            throw $ex;
+        } catch (UnprocessableEntityException $ex) {
             throw $ex;
         }
         return $progress['data'];
