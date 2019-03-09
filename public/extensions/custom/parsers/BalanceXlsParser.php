@@ -24,7 +24,7 @@ final class BalanceXlsParser extends BaseXlsParser
             new XlsParserHeading('construction_completeness', 'שיעור השלמה בניה', XlsParserHeading::TYPE_PERCENT),
             new XlsParserHeading('management_amount', 'ניהול וכלליות', XlsParserHeading::TYPE_INTEGER),
             new XlsParserHeading('management_completeness', 'שיעור השלמה ניהול', XlsParserHeading::TYPE_PERCENT),
-            new XlsParserHeading('balance', 'יתרת רוכש 15/12/18', XlsParserHeading::TYPE_INTEGER),
+            new XlsParserHeading('balance', 'יתרת רוכש', XlsParserHeading::TYPE_INTEGER),
             new XlsParserHeading('updated_date', 'תאריך עדכון', XlsParserHeading::TYPE_DATE),
         ]);
     }

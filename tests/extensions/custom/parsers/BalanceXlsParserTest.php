@@ -175,7 +175,7 @@ class BalanceXlsParserTest extends TestCase {
 
         return [
             [
-                __DIR__ . '/files/balance_items.xlsx',
+                __DIR__ . '/files/balance_items.xls',
                 $records,
             ],
         ];
