@@ -35,6 +35,5 @@ class AfterCreateUser implements HookInterface
         } catch (Swift_RfcComplianceException $ex) {
 
         }
-        return $payload;
     }
 }

@@ -4,6 +4,7 @@ namespace Directus\Custom\Hooks\Profiles;
 
 use Directus\Hook\HookInterface;
 use Directus\Hook\Payload;
+use Directus\Application\Application;
 
 use Directus\Custom\Exceptions\UnprocessablePhoneException;
 use Directus\Custom\Exceptions\UnprocessableSecondPhoneException;
@@ -25,10 +26,15 @@ class BeforeUpdateProfiles implements HookInterface
      */
     public function handle($payload = null)
     {
+        $app = Application::getInstance();
+        $container = $app->getContainer();
+        $logger = $container->get('logger');
+        $logger->info('BeforeUpdateProfiles', ['payload' => $payload->getData()]);
+
         // first phone validation
         if ($payload->has('phone_1')) {
 
-            if (!empty($payload->get('phone_1'))) {
+            if ($payload->get('phone_1') !== '') {
                 $phoneUtil = PhoneNumberUtil::getInstance();
                 $phoneError = 'נא להזין מספר טלפון תקין';
                 try {
@@ -51,7 +57,7 @@ class BeforeUpdateProfiles implements HookInterface
         // secondary phone validation
         if ($payload->has('phone_2')) {
 
-            if (!empty($payload->get('phone_2'))) {
+            if ($payload->get('phone_2') !== '') {
                 $phoneUtil = PhoneNumberUtil::getInstance();
                 $secondPhoneError = 'נא להזין מספר טלפון תקין';
                 try {
@@ -74,7 +80,7 @@ class BeforeUpdateProfiles implements HookInterface
         // home address validation
         if ($payload->has('home_address')) {
 
-            if (!empty($payload->get('home_address'))) {
+            if ($payload->get('home_address') !== '') {
                 $validator = Validation::createValidator();
                 $violations = $validator->validate($payload->get('home_address'), [
                     new Length([
