@@ -1,0 +1,25 @@
+{% extends "base.twig" %}
+{% block content %}
+
+<h3>User {{ fullname }} just changed his profile:</h3>
+
+{% if 'phone_1' in updatedFields %}
+<p>First phone: <b>{{ phone1 }}</b></p>
+{% else %}
+<p>First phone: {{ phone1 }}</p>
+{% endif %}
+
+{% if 'phone_2' in updatedFields %}
+<p>Second phone: <b>{{ phone2 }}</b></p>
+{% else %}
+<p>Second phone: {{ phone2 }}</p>
+{% endif %}
+
+{% if 'home_address' in updatedFields %}
+<p>Home address: <b>{{ homeAddress }}</b></p>
+{% else %}
+<p>Home address: {{ homeAddress }}</p>
+{% endif %}
+
+<p>Love,<br>Directus</p>
+{% endblock %}
