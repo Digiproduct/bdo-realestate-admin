@@ -45,6 +45,8 @@ composer.lock
 !/public/extensions/custom/hooks/feedback
 !/public/extensions/custom/hooks/profiles
 !/public/extensions/custom/hooks/messages
+!/public/extensions/custom/hooks/imports
+!/public/extensions/custom/hooks/users
 !/public/extensions/custom/parsers/*
 !/public/extensions/custom/imports/*
 
