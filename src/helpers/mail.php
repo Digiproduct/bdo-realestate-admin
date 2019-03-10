@@ -113,6 +113,7 @@ if (!function_exists('parse_twig')) {
 
         $mailDefaultSettings = [
             'project_url' => get_url(),
+            'front_url' => $app->getConfig()['app_settings']['front_url'],
         ];
 
         $settings = $app->getContainer()->get('app_settings');

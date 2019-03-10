@@ -12,6 +12,10 @@ return [
         ],
     ],
 
+    'app_settings' => [
+        'front_url' => 'http://localhost:8080/',
+    ],
+
     'database' => [
         'type' => 'mysql',
         'host' => 'localhost',
