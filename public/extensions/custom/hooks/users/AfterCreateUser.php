@@ -27,9 +27,9 @@ class AfterCreateUser implements HookInterface
             $datetime = DateTimeUtils::nowInUTC();
             $invitationToken = $auth->generateInvitationToken([
                 'date' => $datetime->toString(),
-                'exp' => $datetime->inDays(30)->toString(),
+                'exp' => $datetime->inDays(30)->getTimestamp(),
                 'email' => $payload['email'],
-                'sender' => $container->get('acl')->getUserId(),
+                'id' => $payload['id'],
             ]);
             send_user_invitation_email($payload['email'], $invitationToken);
         } catch (Swift_RfcComplianceException $ex) {

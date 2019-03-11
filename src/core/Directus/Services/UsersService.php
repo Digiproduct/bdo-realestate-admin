@@ -16,6 +16,7 @@ use Directus\Exception\ForbiddenLastAdminException;
 use Directus\Util\ArrayUtils;
 use Directus\Util\DateTimeUtils;
 use Directus\Util\JWTUtils;
+use Directus\Permissions\Acl;
 use Zend\Db\Sql\Delete;
 use Zend\Db\Sql\Select;
 
@@ -262,6 +263,17 @@ class UsersService extends AbstractService
 
         $auth = $this->getAuth();
         $auth->validatePayloadOrigin($payload);
+
+        $this->getAcl()->setUserId($payload->id);
+        $this->getAcl()->setUserEmail($payload->email);
+        $this->getAcl()->setPermissions([
+            'directus_users' => [
+                [
+                    Acl::ACTION_READ   => Acl::LEVEL_MINE,
+                    Acl::ACTION_UPDATE => Acl::LEVEL_FULL,
+                ],
+            ],
+        ]);
 
         $tableGateway = $this->getTableGateway();
         try {
