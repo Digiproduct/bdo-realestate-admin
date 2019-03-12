@@ -7,8 +7,10 @@ use Directus\Hook\HookInterface;
 use Directus\Hook\Payload;
 use Directus\Util\DateTimeUtils;
 use Directus\Util\JWTUtils;
+use Directus\Mail\Message;
 use Swift_RfcComplianceException;
-use function Directus\send_user_invitation_email;
+use function Directus\send_mail_with_template;
+use function Directus\get_directus_setting;
 
 class AfterCreateUser implements HookInterface
 {
@@ -31,7 +33,15 @@ class AfterCreateUser implements HookInterface
                 'email' => $payload['email'],
                 'id' => $payload['id'],
             ]);
-            send_user_invitation_email($payload['email'], $invitationToken);
+
+            $email = $payload['email'];
+            $data = ['token' => $invitationToken];
+            send_mail_with_template('custom-user-invitation.twig', $data, function (Message $message) use ($email) {
+                $message->setSubject(
+                    sprintf('Invitation to Instance: %s', get_directus_setting('project_name', ''))
+                );
+                $message->setTo($email);
+            });
         } catch (Swift_RfcComplianceException $ex) {
 
         }

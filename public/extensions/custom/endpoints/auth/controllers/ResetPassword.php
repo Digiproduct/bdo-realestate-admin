@@ -1,0 +1,64 @@
+<?php
+
+use Directus\Application\Http\Request;
+use Directus\Application\Http\Response;
+use Directus\Application\Route;
+use Directus\Authentication\Exception\ExpiredResetPasswordToken;
+use Directus\Authentication\Exception\InvalidResetPasswordTokenException;
+use Directus\Authentication\Exception\UserNotFoundException;
+use Directus\Exception\InvalidPayloadException;
+use Directus\Util\JWTUtils;
+
+class ResetPassword extends Route
+{
+    public function __invoke(Request $request, Response $response)
+    {
+        if (!$request->getParsedBodyParam('new_password', null)) {
+            throw new InvalidPayloadException();
+        }
+
+        $this->resetPasswordWithToken(
+            $request->getAttribute('token'),
+            $request->getParsedBodyParam('new_password')
+        );
+
+        return $this->responseWithData($request, $response, []);
+    }
+
+    protected function resetPasswordWithToken($token, $newPassword)
+    {
+        if (!JWTUtils::isJWT($token)) {
+            throw new InvalidResetPasswordTokenException($token);
+        }
+
+        if (JWTUtils::hasExpired($token)) {
+            throw new ExpiredResetPasswordToken($token);
+        }
+
+        $payload = JWTUtils::getPayload($token);
+
+        if (!JWTUtils::hasPayloadType(JWTUtils::TYPE_RESET_PASSWORD, $payload)) {
+            throw new InvalidResetPasswordTokenException($token);
+        }
+
+        /** @var Provider $auth */
+        $auth = $this->container->get('auth');
+        $auth->validatePayloadOrigin($payload);
+
+        $userProvider = $auth->getUserProvider();
+        $user = $userProvider->find($payload->id);
+
+        if (!$user) {
+            throw new UserNotFoundException();
+        }
+
+        // Throw invalid token if the payload email is not the same as the current user email
+        if (!property_exists($payload, 'email') || $payload->email !== $user->getEmail()) {
+            throw new InvalidResetPasswordTokenException($token);
+        }
+
+        $userProvider->update($user, [
+            'password' => $auth->hashPassword($newPassword),
+        ]);
+    }
+}

@@ -22,7 +22,6 @@ class Auth extends Route
         $app->post('/authenticate', [$this, 'authenticate']);
         $app->post('/password/request', [$this, 'forgotPassword']);
         $app->get('/password/reset/{token}', [$this, 'resetPassword']);
-        $app->post('/password/reset/{token}', [$this, 'resetPassword']);
         $app->post('/refresh', [$this, 'refresh']);
         $app->get('/sso', [$this, 'listSsoAuthServices']);
         $app->post('/sso/access_token', [$this, 'ssoAccessToken']);
@@ -88,12 +87,9 @@ class Auth extends Route
     {
         /** @var AuthService $authService */
         $authService = $this->container->get('services')->get('auth');
-        $logger = $this->container->get('logger');
-        $logger->info('NEW PASSWORD', ['pass' => $request->getParsedBodyParam('new_password', null)]);
 
         $authService->resetPasswordWithToken(
-            $request->getAttribute('token'),
-            $request->getParsedBodyParam('new_password', null)
+            $request->getAttribute('token')
         );
 
         return $this->responseWithData($request, $response, []);

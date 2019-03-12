@@ -35,6 +35,7 @@ composer.lock
 ##  Endpoints
 !/public/extensions/custom/endpoints/_directory/
 !/public/extensions/custom/endpoints/_example.php
+!/public/extensions/custom/endpoints/auth
 
 ##  Hashers
 !/public/extensions/custom/hashers/_CustomHasher.php
@@ -49,6 +50,9 @@ composer.lock
 !/public/extensions/custom/hooks/users
 !/public/extensions/custom/parsers/*
 !/public/extensions/custom/imports/*
+
+## Mails
+!/public/extensions/custom/mail/*
 
 # Storage
 /public/uploads/*/

@@ -332,7 +332,7 @@ class AuthService extends AbstractService
         \Directus\send_forgot_password_email($user->toArray(), $resetToken);
     }
 
-    public function resetPasswordWithToken($token, $newPassword = null)
+    public function resetPasswordWithToken($token)
     {
         if (!JWTUtils::isJWT($token)) {
             throw new InvalidResetPasswordTokenException($token);
@@ -363,14 +363,12 @@ class AuthService extends AbstractService
             throw new InvalidResetPasswordTokenException($token);
         }
 
-        $randomPass = StringUtils::randomString(16);
+        $newPassword = StringUtils::randomString(16);
         $userProvider->update($user, [
-            'password' => ($newPassword === null) ? $auth->hashPassword($randomPass) : $auth->hashPassword($newPassword),
+            'password' => $auth->hashPassword($newPassword)
         ]);
 
-        if ($newPassword === null) {
-            \Directus\send_reset_password_email($user->toArray(), $randomPass);
-        }
+        \Directus\send_reset_password_email($user->toArray(), $newPassword);
     }
 
     public function refreshToken($token)
