@@ -1,10 +1,16 @@
 {% extends "base.twig" %}
 {% block content %}
 
-<p>You have been invited to {{ settings.project_name }}. Please click the link below to join:</p>
+<p>רוכש  נכבד,</p>
+<p>ברוך הבא לפורטל הנדל"ן  של BDO,
+  על מנת להמשיך בתהליך הרישום לכניסה לפורטל עליך לעבור תהליך זיהוי ,
+  להמשך  יש ללחוץ על הלינק מטה</p>
+
+<p>שימו לב, הלינק פעיל במשך חודש</p>
 
 {% set invitation_url = settings.front_url|trim('/') ~ '/invitation/' ~ token %}
 <p><a href="{{ invitation_url }}">{{ invitation_url }}</a></p>
 
-<p>Love,<br>Directus</p>
+<p>בהצלחה,</p>
+<p>צוות BDO</p>
 {% endblock %}
