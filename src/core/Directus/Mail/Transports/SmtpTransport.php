@@ -30,6 +30,13 @@ class SmtpTransport extends AbstractTransport
 
             if ($this->config->has('encryption')) {
                 $transport->setEncryption($this->config->get('encryption'));
+                $transport->setStreamOptions([
+                    'ssl' => [
+                        'allow_self_signed' => true,
+                        'verify_peer' => false,
+                        'verify_peer_name' => false,
+                    ],
+                ]);
             }
 
             $this->smtp = $transport;
