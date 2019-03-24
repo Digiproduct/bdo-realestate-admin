@@ -9,6 +9,7 @@ use Directus\Util\DateTimeUtils;
 use Directus\Util\JWTUtils;
 use Directus\Mail\Message;
 use Swift_RfcComplianceException;
+use Swift_TransportException;
 use function Directus\send_mail_with_template;
 use function Directus\get_directus_setting;
 
@@ -43,6 +44,8 @@ class AfterCreateUser implements HookInterface
                 $message->setTo($email);
             });
         } catch (Swift_RfcComplianceException $ex) {
+
+        } catch (Swift_TransportException $ex) {
 
         }
     }
