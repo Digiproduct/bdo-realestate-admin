@@ -60,11 +60,11 @@ class BalanceDataImport extends AbstractImport
                 $this->createBalanceData($balance);
                 $this->createdItems[] = $balance;
             } catch (InvalidRequestException $ex) {
-                $this->rejectedItems[] = $balance;
+                $this->addRejectedItem($balance, $ex->getMessage());
             } catch (DuplicateItemException $ex) {
-                $this->rejectedItems[] = $balance;
+                $this->addRejectedItem($balance, $ex->getMessage());
             } catch (UnprocessableEntityException $ex) {
-                $this->rejectedItems[] = $balance;
+                $this->addRejectedItem($balance, $ex->getMessage());
             }
         }
     }

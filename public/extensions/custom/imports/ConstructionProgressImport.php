@@ -63,11 +63,11 @@ class ConstructionProgressImport extends AbstractImport
                 $this->createConstructionProgress($progress);
                 $this->createdItems[] = $progress;
             } catch (InvalidRequestException $ex) {
-                $this->rejectedItems[] = $progress;
+                $this->addRejectedItem($progress, $ex->getMessage());
             } catch (DuplicateItemException $ex) {
-                $this->rejectedItems[] = $progress;
+                $this->addRejectedItem($progress, $ex->getMessage());
             } catch (UnprocessableEntityException $ex) {
-                $this->rejectedItems[] = $progress;
+                $this->addRejectedItem($progress, $ex->getMessage());
             }
         }
     }

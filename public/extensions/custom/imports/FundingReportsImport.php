@@ -79,13 +79,14 @@ class FundingReportsImport extends AbstractImport
                     $this->createdItems[] = $reportData;
                 } else {
                     $this->rejectedItems[] = $reportData;
+                    $this->addRejectedItem($reportData, 'Missed transactions records');
                 }
             } catch (InvalidRequestException $ex) {
-                $this->rejectedItems[] = $reportData;
+                $this->addRejectedItem($reportData, $ex->getMessage());
             } catch (DuplicateItemException $ex) {
-                $this->rejectedItems[] = $reportData;
+                $this->addRejectedItem($reportData, $ex->getMessage());
             } catch (UnprocessableEntityException $ex) {
-                $this->rejectedItems[] = $reportData;
+                $this->addRejectedItem($reportData, $ex->getMessage());
             }
         }
     }

@@ -44,6 +44,8 @@ class BeforeCreateImport implements HookInterface
     {
         $app = Application::getInstance();
         $container = $app->getContainer();
+        // Monolog\Logger instance
+        $logger = $container->get('logger');
         $basePath = $container['path_base'];
         $importTarget = $payload->get('import_target');
         $parser;
@@ -80,6 +82,13 @@ class BeforeCreateImport implements HookInterface
         $import->execute($parsedData);
         $payload->set('items_created', $import->getCreatedCount());
         $payload->set('items_rejected', $import->getRejectedCount());
+        if ($import->getRejectedCount() > 0) {
+            $logger->warn('Rejected items', [
+                'file_path' => $filePath,
+                'import_type' => $importTarget,
+                'items' => $import->getRejectedItems(),
+            ]);
+        }
         return $payload;
     }
 }

@@ -60,11 +60,11 @@ class ReceiptsImport extends AbstractImport
                 $this->createReceipt($receipt);
                 $this->createdItems[] = $receipt;
             } catch (InvalidRequestException $ex) {
-                $this->rejectedItems[] = $receipt;
+                $this->addRejectedItem($receipt, $ex->getMessage());
             } catch (DuplicateItemException $ex) {
-                $this->rejectedItems[] = $receipt;
+                $this->addRejectedItem($receipt, $ex->getMessage());
             } catch (UnprocessableEntityException $ex) {
-                $this->rejectedItems[] = $receipt;
+                $this->addRejectedItem($receipt, $ex->getMessage());
             }
         }
     }

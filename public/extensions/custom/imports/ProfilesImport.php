@@ -94,14 +94,14 @@ final class ProfilesImport extends AbstractImport
                     $this->createContract($item);
                     $this->createdItems[] = $item;
                 } else {
-                    $this->rejectedItems[] = $item;
+                    $this->addRejectedItem($item, 'Missed contract number');
                 }
             } catch (InvalidRequestException $ex) {
-                $this->rejectedItems[] = $item;
+                $this->addRejectedItem($item, $ex->getMessage());
             } catch (DuplicateItemException $ex) {
-                $this->rejectedItems[] = $item;
+                $this->addRejectedItem($item, $ex->getMessage());
             } catch (UnprocessableEntityException $ex) {
-                $this->rejectedItems[] = $item;
+                $this->addRejectedItem($item, $ex->getMessage());
             }
         }
     }

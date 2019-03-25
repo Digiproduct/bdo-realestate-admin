@@ -140,4 +140,18 @@ abstract class AbstractImport
     {
         return count($this->rejectedItems);
     }
+
+    /**
+     * Adds rejected item.
+     *
+     * @param array       $payload Rejected item payload
+     * @param string|null $reason  Rejected reason
+     */
+    final public function addRejectedItem(array $payload, $reason = null)
+    {
+        $this->rejectedItems[] = [
+            'reason' => $reason,
+            'payload' => $payload,
+        ];
+    }
 }
