@@ -42,6 +42,9 @@ class BeforeCreateImport implements HookInterface
      */
     public function handle($payload = null)
     {
+        // might take a lot of time
+        set_time_limit(600);
+
         $app = Application::getInstance();
         $container = $app->getContainer();
         // Monolog\Logger instance
