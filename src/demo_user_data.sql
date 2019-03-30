@@ -582,7 +582,7 @@ CREATE TABLE `directus_users` (
 
 LOCK TABLES `directus_users` WRITE;
 /*!40000 ALTER TABLE `directus_users` DISABLE KEYS */;
-INSERT INTO `directus_users` VALUES (1,'active','Admin','User','admin@example.com','$2y$10$v2lxYD5LANkUsmzj19AyceEE9IScwTsjsG1qMXuezGI86drvdcreK',NULL,'Asia/Jerusalem','en-US',NULL,NULL,NULL,NULL,0,'2019-03-30 18:19:50','/users',NULL),(2,'active','ישראל ישראלי','ישראל ישראלי','demo@example.com','$2y$10$VRcx5zhtZiCd3eTMWKjBv.IzI8jfMWD5hOa.t4WZn9i32ge/YNDjO',NULL,'Asia/Jerusalem','en-US',NULL,NULL,NULL,NULL,0,'2019-01-24 07:24:01','/collections','5d1d1125-b406-456f-9c79-23303cea4ad4');
+INSERT INTO `directus_users` VALUES (1,'active','Admin','User','ZipiF@bdo.co.il','$2y$10$v2lxYD5LANkUsmzj19AyceEE9IScwTsjsG1qMXuezGI86drvdcreK',NULL,'Asia/Jerusalem','en-US',NULL,NULL,NULL,NULL,0,'2019-03-30 18:19:50','/users',NULL),(2,'active','ישראל ישראלי','ישראל ישראלי','demo@example.com','$2y$10$VRcx5zhtZiCd3eTMWKjBv.IzI8jfMWD5hOa.t4WZn9i32ge/YNDjO',NULL,'Asia/Jerusalem','en-US',NULL,NULL,NULL,NULL,0,'2019-01-24 07:24:01','/collections','5d1d1125-b406-456f-9c79-23303cea4ad4');
 /*!40000 ALTER TABLE `directus_users` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -863,4 +863,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-03-30 23:19:58
+-- Dump completed on 2019-03-30 23:24:35
