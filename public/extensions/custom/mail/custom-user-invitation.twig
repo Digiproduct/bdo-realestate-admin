@@ -11,6 +11,11 @@
 {% set invitation_url = settings.front_url|trim('/') ~ '/invitation/' ~ token %}
 <p><a href="{{ invitation_url }}">{{ invitation_url }}</a></p>
 
+<p>אחרי סיום תהליך הרישום הפורטל יהיה זמין לך בלינק מטה:</p>
+
+{% set front_url = settings.front_url|trim('/') %}
+<a href="{{ front_url }}">{{ front_url }}</a>
+
 <p>בהצלחה,</p>
 <p>צוות BDO</p>
 {% endblock %}
