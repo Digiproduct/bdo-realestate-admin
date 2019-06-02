@@ -515,7 +515,7 @@ CREATE TABLE `directus_settings` (
 
 LOCK TABLES `directus_settings` WRITE;
 /*!40000 ALTER TABLE `directus_settings` DISABLE KEYS */;
-INSERT INTO `directus_settings` VALUES (1,'project_name','BDO Realestate'),(2,'project_url',''),(3,'app_url',''),(4,'logo',''),(5,'color','red'),(6,'default_limit','200'),(7,'sort_null_last','1'),(8,'auto_sign_out','180'),(9,'youtube_api_key',''),(10,'trusted_proxies',''),(11,'thumbnail_dimensions','200x200'),(12,'thumbnail_quality_tags','{\"poor\": 25, \"good\": 50, \"better\":  75, \"best\": 100}'),(13,'thumbnail_actions','{\"contain\":{\"options\":{\"resizeCanvas\":false,\"position\":\"center\",\"resizeRelative\":false,\"canvasBackground\":\"ccc\"}},\"crop\":{\"options\":{\"position\":\"center\"}}}'),(14,'thumbnail_cache_ttl','86400'),(15,'thumbnail_not_found_location','');
+INSERT INTO `directus_settings` VALUES (1,'project_name','BDO Realestate'),(2,'project_url',''),(3,'app_url',''),(4,'logo',''),(5,'color','red'),(6,'default_limit','200'),(7,'sort_null_last','1'),(8,'auto_sign_out','30'),(9,'youtube_api_key',''),(10,'trusted_proxies',''),(11,'thumbnail_dimensions','200x200'),(12,'thumbnail_quality_tags','{\"poor\": 25, \"good\": 50, \"better\":  75, \"best\": 100}'),(13,'thumbnail_actions','{\"contain\":{\"options\":{\"resizeCanvas\":false,\"position\":\"center\",\"resizeRelative\":false,\"canvasBackground\":\"ccc\"}},\"crop\":{\"options\":{\"position\":\"center\"}}}'),(14,'thumbnail_cache_ttl','86400'),(15,'thumbnail_not_found_location','');
 /*!40000 ALTER TABLE `directus_settings` ENABLE KEYS */;
 UNLOCK TABLES;
 
