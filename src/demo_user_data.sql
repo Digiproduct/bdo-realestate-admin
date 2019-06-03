@@ -304,7 +304,7 @@ CREATE TABLE `directus_files` (
   `metadata` text,
   `checksum` varchar(32) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -313,7 +313,7 @@ CREATE TABLE `directus_files` (
 
 LOCK TABLES `directus_files` WRITE;
 /*!40000 ALTER TABLE `directus_files` DISABLE KEYS */;
-INSERT INTO `directus_files` VALUES (6,'local','photo1.jpg','Photo1','image/jpeg',1,'2019-01-24 05:31:54','binary',219786,616,398,NULL,NULL,NULL,'','','',NULL,NULL),(8,'local','photo3.jpg','Photo3','image/jpeg',1,'2019-01-24 05:32:08','binary',243956,616,398,NULL,NULL,NULL,'','','',NULL,NULL),(9,'local','photo2_fullsize.jpg','Photo2 Fullsize','image/jpeg',1,'2019-01-24 05:32:17','binary',451222,1202,801,NULL,NULL,NULL,'','','',NULL,NULL),(10,'local','photo4.jpg','Photo4','image/jpeg',1,'2019-01-24 05:32:23','binary',226412,616,398,NULL,NULL,NULL,'','','',NULL,NULL);
+INSERT INTO `directus_files` VALUES (1,'local','0eaaeabf-328d-5154-8e84-4ee170e9905c.jpg','0eaaeabf 328d 5154 8e84 4ee170e9905c','image/jpeg',1,'2019-06-03 19:22:09','binary',451222,1202,801,NULL,NULL,NULL,'','','',NULL,'242936993caa6e0ee7daa530d9d602a4');
 /*!40000 ALTER TABLE `directus_files` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -506,7 +506,7 @@ CREATE TABLE `directus_settings` (
   `value` text NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `idx_key` (`key`)
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -515,7 +515,7 @@ CREATE TABLE `directus_settings` (
 
 LOCK TABLES `directus_settings` WRITE;
 /*!40000 ALTER TABLE `directus_settings` DISABLE KEYS */;
-INSERT INTO `directus_settings` VALUES (1,'project_name','BDO Realestate'),(2,'project_url',''),(3,'app_url',''),(4,'logo',''),(5,'color','red'),(6,'default_limit','200'),(7,'sort_null_last','1'),(8,'auto_sign_out','30'),(9,'youtube_api_key',''),(10,'trusted_proxies',''),(11,'thumbnail_dimensions','200x200'),(12,'thumbnail_quality_tags','{\"poor\": 25, \"good\": 50, \"better\":  75, \"best\": 100}'),(13,'thumbnail_actions','{\"contain\":{\"options\":{\"resizeCanvas\":false,\"position\":\"center\",\"resizeRelative\":false,\"canvasBackground\":\"ccc\"}},\"crop\":{\"options\":{\"position\":\"center\"}}}'),(14,'thumbnail_cache_ttl','86400'),(15,'thumbnail_not_found_location','');
+INSERT INTO `directus_settings` VALUES (1,'project_name','BDO Realestate'),(2,'project_url',''),(3,'app_url',''),(4,'logo',''),(5,'color','red'),(6,'default_limit','200'),(7,'sort_null_last','1'),(8,'auto_sign_out','30'),(9,'youtube_api_key',''),(10,'trusted_proxies',''),(11,'thumbnail_dimensions','200x200'),(12,'thumbnail_quality_tags','{\"poor\": 25, \"good\": 50, \"better\":  75, \"best\": 100}'),(13,'thumbnail_actions','{\"contain\":{\"options\":{\"resizeCanvas\":false,\"position\":\"center\",\"resizeRelative\":false,\"canvasBackground\":\"ccc\"}},\"crop\":{\"options\":{\"position\":\"center\"}}}'),(14,'thumbnail_cache_ttl','86400'),(15,'thumbnail_not_found_location',''),(16,'file_naming','uuid');
 /*!40000 ALTER TABLE `directus_settings` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -679,7 +679,7 @@ CREATE TABLE `group_info` (
 
 LOCK TABLES `group_info` WRITE;
 /*!40000 ALTER TABLE `group_info` DISABLE KEYS */;
-INSERT INTO `group_info` VALUES (1,'published',1,'2019-01-24 00:33:09',1,'2019-01-24 00:43:35',972737145300,'bdo@bdo.co.il',6,9,8,10,'אחיסמך');
+INSERT INTO `group_info` VALUES (1,'published',1,'2019-01-24 00:33:09',1,'2019-06-03 19:22:53',972737145300,'bdo@bdo.co.il',1,1,1,1,'אחיסמך');
 /*!40000 ALTER TABLE `group_info` ENABLE KEYS */;
 UNLOCK TABLES;
 
