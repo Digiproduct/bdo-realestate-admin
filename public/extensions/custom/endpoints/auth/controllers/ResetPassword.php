@@ -7,6 +7,8 @@ use Directus\Authentication\Exception\ExpiredResetPasswordToken;
 use Directus\Authentication\Exception\InvalidResetPasswordTokenException;
 use Directus\Authentication\Exception\UserNotFoundException;
 use Directus\Exception\InvalidPayloadException;
+use Directus\Services\UsersService;
+use Directus\Permissions\Acl;
 use Directus\Util\JWTUtils;
 use Directus\Custom\Exceptions\WeakPasswordException;
 use Directus\Custom\Exceptions\PasswordMatchCredentialsException;
@@ -72,8 +74,16 @@ class ResetPassword extends Route
             throw new InvalidResetPasswordTokenException($token);
         }
 
-        $userProvider->update($user, [
-            'password' => $auth->hashPassword($newPassword),
+        $this->container->get('acl')->setPermissions([
+            'directus_users' => [
+                [
+                    Acl::ACTION_UPDATE => Acl::LEVEL_MINE,
+                ],
+            ],
+        ])->setUserId($payload->id);
+        $userService = new UsersService($this->container);
+        $userService->update($user->getId(), [
+            'password' => $newPassword,
         ]);
     }
 

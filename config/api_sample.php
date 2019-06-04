@@ -14,6 +14,7 @@ return [
 
     'app_settings' => [
         'front_url' => 'http://localhost:8080/',
+        'security_password_period' => 'P3M',
     ],
 
     'database' => [
