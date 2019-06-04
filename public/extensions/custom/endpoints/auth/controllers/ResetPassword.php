@@ -8,6 +8,7 @@ use Directus\Authentication\Exception\InvalidResetPasswordTokenException;
 use Directus\Authentication\Exception\UserNotFoundException;
 use Directus\Exception\InvalidPayloadException;
 use Directus\Util\JWTUtils;
+use Directus\Custom\Exceptions\WeakPasswordException;
 
 class ResetPassword extends Route
 {
@@ -41,6 +42,10 @@ class ResetPassword extends Route
             throw new InvalidResetPasswordTokenException($token);
         }
 
+        if (!$this->isStrongPassword($newPassword)) {
+            throw new WeakPasswordException('Password is too weak');
+        }
+
         /** @var Provider $auth */
         $auth = $this->container->get('auth');
         $auth->validatePayloadOrigin($payload);
@@ -60,5 +65,20 @@ class ResetPassword extends Route
         $userProvider->update($user, [
             'password' => $auth->hashPassword($newPassword),
         ]);
+    }
+
+    /**
+     * Checks password strength
+     *
+     * @param string $password Password
+     *
+     * @return bool
+     */
+    protected function isStrongPassword($password)
+    {
+        return mb_strlen($password, mb_detect_encoding($password)) >= 8
+            && preg_match('/[A-Z]/', $password) === 1
+            && preg_match('/[a-z]/', $password) === 1
+            && preg_match('/\d/', $password) === 1;
     }
 }
