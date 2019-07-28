@@ -489,7 +489,7 @@ CREATE TABLE `directus_roles` (
 
 LOCK TABLES `directus_roles` WRITE;
 /*!40000 ALTER TABLE `directus_roles` DISABLE KEYS */;
-INSERT INTO `directus_roles` VALUES (1,'Super Admin','Admins have access to all managed data within the system by default',NULL,NULL,NULL,NULL),(2,'Public','This sets the data that is publicly available through the API without a token',NULL,NULL,NULL,NULL),(3,'Customers',NULL,NULL,NULL,'6157098c-8bc6-4377-96db-ae232c9606f4',NULL);
+INSERT INTO `directus_roles` VALUES (1,'Super Admin','Admins have access to all managed data within the system by default','80.74.110.129,80.74.110.130,80.74.110.131,80.74.110.132,80.74.110.133,80.74.110.134,80.74.110.135,80.74.110.136,80.74.110.137,80.74.110.138,80.74.110.139,80.74.110.140,80.74.110.141,80.74.110.142,80.74.110.143,194.36.108.154,160.116.0.22',NULL,NULL,NULL),(2,'Public','This sets the data that is publicly available through the API without a token',NULL,NULL,NULL,NULL),(3,'Customers',NULL,NULL,NULL,'6157098c-8bc6-4377-96db-ae232c9606f4',NULL);
 /*!40000 ALTER TABLE `directus_roles` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -895,4 +895,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-03-31  4:55:17
+-- Dump completed on 2019-07-28  6:06:34
