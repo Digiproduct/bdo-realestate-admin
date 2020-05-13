@@ -32,8 +32,16 @@ class AuthRequestCredentials implements HookInterface
         ]);
         $securityPasswordPeriod = $app->getConfig()['app_settings']['security_password_period'];
 
+        if (1 === (int) $user->getId()) {
+            // admin no need to reset password
+            $logger->info('Is Admin');
+            return;
+        } elseif ($user->getEmail() === 'demo@example.com') {
+            // demo user no need to reset password
+            $logger->info('Is demo user');
+            return;
+        }
 
-        $auth = $container->get('auth');
         $container->get('acl')->setPermissions([
             'directus_activity' => [
                 [Acl::ACTION_READ   => Acl::LEVEL_FULL],
